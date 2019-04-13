@@ -18,9 +18,18 @@ tribe-events-location
 ```
 /tribe-events/month/
 ```
-- /tribe-events/pro/month/ --> Override templates for events created with the standard editor for The Events Calendar <strong>Pro</strong> Plugin
-- /tribe/events/month/ --> Override templates for events created with the block editor for The Events Calendar Plugin
-- /tribe/events/pro/month/ --> Override templates for events created with the block editor for The Events Calendar <strong>Pro</strong> Plugin
+- Override templates for events created with the standard editor for The Events Calendar <strong>Pro</strong> Plugin
+```
+/tribe-events/pro/month/ 
+```
+- Override templates for events created with the block editor for The Events Calendar Plugin
+```
+/tribe/events/month/
+```
+- Override templates for events created with the block editor for The Events Calendar <strong>Pro</strong> Plugin
+```
+/tribe/events/pro/month/
+```
 
 ## Notice:
 <strong>Note:</strong> You must de-activate The Events Calendar plugin itself after disabling or enabling this plugin for the changes to be reflected on the front-end.
