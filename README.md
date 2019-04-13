@@ -14,7 +14,10 @@ tribe-events-location
 ```
 
 ## Folder Structure
-- /tribe-events/month/ --> Override templates for events created with the standard editor for The Events Calendar Plugin
+- Override templates for events created with the standard editor for The Events Calendar Plugin
+```
+/tribe-events/month/
+```
 - /tribe-events/pro/month/ --> Override templates for events created with the standard editor for The Events Calendar <strong>Pro</strong> Plugin
 - /tribe/events/month/ --> Override templates for events created with the block editor for The Events Calendar Plugin
 - /tribe/events/pro/month/ --> Override templates for events created with the block editor for The Events Calendar <strong>Pro</strong> Plugin
