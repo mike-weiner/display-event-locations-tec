@@ -7,5 +7,5 @@ Add the venue/location for an event to the tooltip that is displayed when a user
 3. Activate this plugin
 4. Deactivate & Re-Activate The Events Calendar plugin to have the changes be reflected
 
-### Note!
+## Notice
 Note: You much deactivate The Events Calendar plugin itself after disabling or enabling this plugin for the changes to be reflected on the front-end.
