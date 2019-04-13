@@ -7,6 +7,9 @@ Add the venue/location for an event to the tooltip that is displayed when a user
 3. Activate this plugin
 4. Deactivate & Re-Activate The Events Calendar plugin to have the changes be reflected
 
+## CSS Class:
+- To change the text of the location in the tooltip, use the CSS Class: tribe-events-location
+
 ## Folder Structure
 - /tribe-events/month/ --> Override templates for events created with the standard editor for The Events Calendar Plugin
 - /tribe-events/pro/month/ --> Override templates for events created with the standard editor for The Events Calendar <strong>Pro</strong> Plugin
