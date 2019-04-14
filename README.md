@@ -1,12 +1,12 @@
 # Add Event Venue to Month View Tooltip - The Events Calendar Extension
-Contributors: vikings412
-Tags: events, customization, modern-tribe, override, template
-Requires at least: 4.6
-Tested up to: 5.1.1
-Stable tag: 1.0
-Requires PHP: 5.4 or later
-License: GPLv2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Contributors: vikings412 <br>
+Tags: events, customization, modern-tribe, override, template <br>
+Requires at least: 4.6 <br>
+Tested up to: 5.1.1 <br>
+Stable tag: 1.0 <br>
+Requires PHP: 5.4 or later <br>
+License: GPLv2 or later <br>
+License URI: https://www.gnu.org/licenses/gpl-2.0.html <br>
 
 This plugin overrides the template for the tooltip on the month view of The Events Calendar to include the event's location in the tooltip.
 
@@ -52,13 +52,13 @@ Yes. This plugin will modify the tooltip for events created with the classic/sta
 
 ## Changelog 
 
-### 1.0 
+### 1.0 🎉 
 * Released on April 11, 2019
 * Initial release
 
 ## Upgrade Notice 
 
-### 1.0 
+### 1.0 🎉
 Initial release!
 
 ## Arbitrary section
