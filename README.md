@@ -52,21 +52,21 @@ Yes. This plugin will modify the tooltip for events created with the classic/sta
 
 ## Changelog 
 
-# 1.0 
+### 1.0 
 * Released on April 11, 2019
 * Initial release
 
 ## Upgrade Notice 
 
-# 1.0 
+### 1.0 
 Initial release!
 
 ## Arbitrary section
 
-# References:
+### References:
 1. https://theeventscalendar.com/support/forums/topic/altering-event-tooltip-display-displaying-additional-fields-in-tooltips/
 2. https://theeventscalendar.com/support/forums/topic/override-templates-via-custom-plugin/
 3. https://support.theeventscalendar.com/153124-Themers-Guide
 
-# CSS Class:
+### CSS Class:
 To target the design of "Location: EVENT-LOCATION-HERE" ---> USE the CSS Class: tribe-events-location
