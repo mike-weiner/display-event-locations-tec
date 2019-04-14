@@ -31,13 +31,13 @@ Make sure that the plugin 'Add Event Venue to Month View Tooltip - The Events Ca
 
 #### What plugins are required for these changes to take effect?
 
-Your website must use 'The Events Calendar 4.8' or 'The Events Calendar Pro 4.8' or later for Add Event Venue to Month View Tooltip - The Events Calendar Extension to correctly modify the tooltip.
+Your website must use 'The Events Calendar 4.8' or 'The Events Calendar Pro 4.8' or higher for this plugin to correctly modify the tooltip.
 
 #### Does this plugin change the tooltip for both regular and featured events?
 
 Yes, this plugin will change the tooltip for both regular and featured events.
 
-#### Does this plugin display anything other than the name of the event's location?
+#### Does this plugin add anything other than the name of the event's location to the tooltip?
 
 No. At this time, this plugin only adds the name of the event's location/venue to the tooltip.
 
