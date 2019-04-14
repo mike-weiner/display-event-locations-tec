@@ -25,23 +25,23 @@ This section describes how to install the plugin and get it working.
 
 ## Frequently Asked Questions 
 
-# I have activated the plugin, but the tooltip still looks the same. Why does the tooltip not list the event's location? 
+#### I have activated the plugin, but the tooltip still looks the same. Why does the tooltip not list the event's location? 
 
 Make sure that the plugin 'Add Event Venue to Month View Tooltip - The Events Calendar Extension' is enabled in the backend. Once it is enabled and active, deactivate the plugin for 'The Events Calendar' or 'The Events Calendar Pro' and then re-enable it. When you hover over an event on the month view, the tooltip should now display the event's location name.
 
-# What plugins are required for these changes to take effect? 
+#### What plugins are required for these changes to take effect? 
 
 Your website must use 'The Events Calendar 4.8' or 'The Events Calendar Pro 4.8' or later for Add Event Venue to Month View Tooltip - The Events Calendar Extension to correctly modify the tooltip.
 
-# Does this plugin change the tooltip for both regular and featured events? 
+#### Does this plugin change the tooltip for both regular and featured events? 
 
 Yes, this plugin will change the tooltip for both regular and featured events.
 
-# Does this plugin display anything other than the name of the event's location? 
+#### Does this plugin display anything other than the name of the event's location? 
 
 No. At this time, this plugin only adds the name of the event's location/venue to the tooltip.
 
-# Does this plugin work for events created with the block editor? 
+#### Does this plugin work for events created with the block editor? 
 
 Yes. This plugin will modify the tooltip for events created with the classic/standard editor or the block editor for both the standard and pro versions of 'The Events Calendar'.
 
