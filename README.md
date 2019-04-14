@@ -13,7 +13,7 @@ Add the venue/location for an event to the tooltip that is displayed when a user
 tribe-events-location
 ```
 
-## Folder Structure
+## Directory Structure
 - Override templates for events created with the standard editor for The Events Calendar Plugin
 ```
 /tribe-events/month/
