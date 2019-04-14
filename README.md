@@ -1,5 +1,5 @@
 # Add Event Venue to Month View Tooltip - The Events Calendar Extension
-Contributors: vikings412 <br>
+Contributors: [Michael Weiner] <br>
 Tags: events, customization, modern-tribe, override, template <br>
 Requires at least: 4.6 <br>
 Tested up to: 5.1.1 <br>
@@ -46,6 +46,7 @@ No. At this time, this plugin only adds the name of the event's location/venue t
 Yes. This plugin will modify the tooltip for events created with the classic/standard editor or the block editor for both the standard and pro versions of 'The Events Calendar'.
 
 ## Screenshots
+*** All screenshots can be found in /assets/ <br>
 
 1. This is what the tooltip for a regular event will look like after activating this plugin.
 2. This is what the tooltip for a featured event will look like after activating this plugin.
@@ -70,3 +71,5 @@ Initial release!
 
 ### CSS Class:
 To target the design of "Location: EVENT-LOCATION-HERE" ---> USE the CSS Class: tribe-events-location
+
+[Michael Weiner]: https://profiles.wordpress.org/vikings412/
