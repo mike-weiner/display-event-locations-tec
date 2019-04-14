@@ -1,4 +1,4 @@
-### Display Event Venue on Monthly Calendar Tooltip
+# Display Event Venue on Monthly Calendar Tooltip
 Add the venue/location for an event to the tooltip that is displayed when a user hovers over an event in the month view.
 
 ## Instructions to Activate:
