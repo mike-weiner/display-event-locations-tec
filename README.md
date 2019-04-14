@@ -8,7 +8,7 @@ Add the venue/location for an event to the tooltip that is displayed when a user
 4. Deactivate & Re-Activate The Events Calendar plugin to have the changes be reflected
 
 ## CSS Class:
-- To change the design of "Location: EVENT-LOCATION-HERE" ---> USE the CSS Class:
+- To target the design of "Location: EVENT-LOCATION-HERE" ---> USE the CSS Class:
 ```CSS
 tribe-events-location
 ```
