@@ -13,7 +13,7 @@
 // Exit plugin if it is being accessed directlu
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
-}
+} 
 
 // Call 'trive_filter_template_paths' to add an additional directory to look for template overrides
 function tribe_filter_template_paths ( $file, $template ) {
