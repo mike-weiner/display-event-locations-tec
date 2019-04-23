@@ -18,7 +18,7 @@
 				<abbr class="tribe-events-abbr updated published dtstart">[[=dateDisplay]] </abbr>
 			</div>
 			[[ if(venue) { ]]
-			<p class="tribe-events-location">Locaiton: [[=venue]]</p>
+			<p class="tribe-events-location">Location: [[=venue]]</p>
 			[[ } ]]
 			[[ if(imageTooltipSrc.length) { ]]
 			<div class="tribe-events-event-thumb">
@@ -49,7 +49,7 @@
 			<\/div>
 
 			[[ if(venue) { ]]
-			<p class="tribe-events-location">Locaiton: [[=venue]]</p>
+			<p class="tribe-events-location">Location: [[=venue]]</p>
 			<br>
 			[[ } ]]
 
