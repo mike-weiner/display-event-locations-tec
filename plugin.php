@@ -19,12 +19,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 function tribe_filter_template_paths ( $file, $template ) {
 
 	// Set the path for the event system to look for additional overrides for events created with the classic editor for the standard and pro version of The Events Calendar
-	$custom_file_path = ABSPATH . 'wp-content/plugins/tribe-extension-venue-on-tooltip/tribe-events/' . $template;
-	$custom_file_path_pro = ABSPATH . 'wp-content/plugins/tribe-extension-venue-on-tooltip/tribe-events/pro/' . $template;
+	$custom_file_path = ABSPATH . 'wp-content/plugins/add-event-venue-to-month-view-tooltip-the-events-calendar-extension/tribe-events/' . $template;
+	$custom_file_path_pro = ABSPATH . 'wp-content/plugins/add-event-venue-to-month-view-tooltip-the-events-calendar-extension/tribe-events/pro/' . $template;
 
 	// Set the path for the event system to look for additional overrides for events created with the block editor for the standard and pro version of The Events Calendar
-	$custom_file_path_block = ABSPATH . 'wp-content/plugins/tribe-extension-venue-on-tooltip/tribe/events/' . $template;
-	$custom_file_path_block_pro = ABSPATH . 'wp-content/plugins/tribe-extension-venue-on-tooltip/tribe/events/pro/' . $template;
+	$custom_file_path_block = ABSPATH . 'wp-content/plugins/add-event-venue-to-month-view-tooltip-the-events-calendar-extension/tribe/events/' . $template;
+	$custom_file_path_block_pro = ABSPATH . 'wp-content/plugins/add-event-venue-to-month-view-tooltip-the-events-calendar-extension/tribe/events/pro/' . $template;
 
 	// If the event system does not find any template overrides in the directory specified --> return the default template files
 	if ( !file_exists($custom_file_path) ) {

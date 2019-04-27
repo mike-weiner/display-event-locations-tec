@@ -38,7 +38,6 @@ Your website must use 'The Events Calendar 4.8' or 'The Events Calendar Pro 4.8'
 
 Yes, this plugin will change the tooltip for both regular and featured events.
 
-
 = Does this plugin display anything other than the name of the event's location? =
 
 No. At this time, this plugin only adds the name of the event's location/venue to the tooltip.
@@ -71,4 +70,4 @@ Initial release!
 1. https://support.theeventscalendar.com/153124-Themers-Guide
 
 === CSS Class: ===
-To target the design of "Location: EVENT-LOCATION-HERE" ---> USE the CSS Class: tribe-events-location
+To target the design of "Location: EVENT-LOCATION-HERE" ---> Use the CSS Class: tribe-events-location
