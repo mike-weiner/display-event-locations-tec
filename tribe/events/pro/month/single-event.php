@@ -2,14 +2,9 @@
 /**
  * Month Single Event
  * This file contains one event in the month view
- *
- * Override this template in your own theme by creating a file at [your-theme]/tribe-events/month/single-event.php
- *
- * @package TribeEventsCalendar
- * @version 4.6.21
- *
  */
 
+// Exit file if it is being accessed directly
 if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
