@@ -38,11 +38,8 @@ Your website must use 'The Events Calendar 4.8' or 'The Events Calendar Pro 4.8'
 
 Yes, this plugin will change the tooltip for both regular and featured events.
 
-<<<<<<< HEAD
+
 = Does this plugin display anything other than the name of the event's location? =
-=======
-#### Does this plugin add anything other than the name of the event's location to the tooltip?
->>>>>>> 1373ec96932d12bdd43a4aeb2a3890643f13905e
 
 No. At this time, this plugin only adds the name of the event's location/venue to the tooltip.
 
