@@ -16,6 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Call 'trive_filter_template_paths' to add an additional directory to look for template overrides
+// tribe_events_template() comes from the Modern Tribe The Events Claendar Plugin installled on the site
 function tribe_filter_template_paths ( $file, $template ) {
 
 	// Set the path for the event system to look for additional overrides for events created with the classic editor for the standard and pro version of The Events Calendar
