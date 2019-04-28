@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Add Event Venue to Month View Tooltip - The Events Calendar Extension
- * Plugin URL: https://thetechsurge.com/
+ * Plugin URI: https://thetechsurge.com/
  * Description: Add the event venue/location to the tooltip that is displayed on hover over in the month view of the claendar when using The Events Calenar or The Events Calendar Pro by Modern Tribe.
  * Author: Michael Weiner
  * Author URI: https://thetechsurge.com/
