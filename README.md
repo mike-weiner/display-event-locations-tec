@@ -1,4 +1,4 @@
-=== Add Event Venue to Month View Tooltip - The Events Calendar Extension ===
+=== Add Event Venue to Month View ===
 Contributors: vikings412
 Donate Link: https://paypal.me/michaelw13?locale.x=en_US
 Tags: events, customization, modern-tribe, override, template
@@ -9,7 +9,7 @@ Requires PHP: 5.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-This plugin overrides the template for the tooltip on the month view of The Events Calendar to include the event's location in the tooltip.
+This plugin works with The Events Calendar by Modern Tribe. It changes the popup on the month view to include the event's location in the popup.
 
 == Description ==
 
@@ -19,7 +19,7 @@ This plugin overrides the standard template for the tooltip that is displayed wh
 
 This section describes how to install the plugin and get it working.
 
-1. Upload the plugin files to the `/wp-content/plugins/tribe-extension-venue-on-tooltip/` directory, or install the plugin through the WordPress plugins screen directly.
+1. Upload the plugin files to the `/wp-content/plugins/` directory, or install the plugin through the WordPress plugins screen directly.
 1. Activate the plugin through the 'Plugins' screen in WordPress
 1. Disable 'The Events Calendar' or 'The Events Calendar Pro'
 1. Re-Enable 'The Events Calendar' or 'The Events Calendar Pro'
