@@ -1,4 +1,4 @@
-=== Add Event Venue to Month View ===
+=== Add Event Venue to Full Calendar ===
 Contributors: vikings412
 Donate Link: https://paypal.me/michaelw13?locale.x=en_US
 Tags: events, customization, modern-tribe, override, template
@@ -19,8 +19,8 @@ This plugin overrides the standard template for the tooltip that is displayed wh
 
 This section describes how to install the plugin and get it working.
 
-1. Upload the plugin files to the `/wp-content/plugins/` directory, or install the plugin through the WordPress plugins screen directly.
-1. Activate the plugin through the 'Plugins' screen in WordPress
+1. Upload the plugin files to the plugins directory, or install the plugin through the WordPress Plugins panel directly.
+1. Activate the plugin through the Plugins panel in WordPress Admin Backend
 1. Disable 'The Events Calendar' or 'The Events Calendar Pro'
 1. Re-Enable 'The Events Calendar' or 'The Events Calendar Pro'
 
