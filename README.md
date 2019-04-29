@@ -4,7 +4,7 @@ Donate Link: https://paypal.me/michaelw13?locale.x=en_US
 Tags: events, customization, modern-tribe, override, template
 Requires at least: 4.6
 Tested up to: 5.1.1
-Stable tag: 1.0
+Stable tag: 1.0.1
 Requires PHP: 5.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -53,11 +53,17 @@ Yes. This plugin will modify the tooltip for events created with the classic/sta
 
 == Changelog ==
 
+= 1.0.1 =
+* FIXED - Adjusted readme.txt to display screenshots
+
 = 1.0 =
-* Released on April 28, 2019
+* Released on April 29, 2019
 * Initial release
 
 == Upgrade Notice ==
+
+= 1.0.1 =
+Fixed typos in readme.txt
 
 = 1.0 =
 Initial release!
@@ -70,4 +76,4 @@ Initial release!
 1. https://support.theeventscalendar.com/153124-Themers-Guide
 
 === CSS Classes: ===
-*tribe-events-location - Within the tooltip/popup the text 'Location: Event-Location-Here' is wrapped in this class. Use this to style the information within the popup.
+* tribe-events-location - Within the tooltip/popup the text 'Location: Event-Location-Here' is wrapped in this class. Use this to style the information within the popup.
