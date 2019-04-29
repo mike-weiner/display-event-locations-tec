@@ -1,4 +1,4 @@
-=== Add Event Venue to Full Calendar ===
+=== Display Event Location for The Events Calendar ===
 Contributors: vikings412
 Donate Link: https://paypal.me/michaelw13?locale.x=en_US
 Tags: events, customization, modern-tribe, override, template
@@ -9,7 +9,7 @@ Requires PHP: 5.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-This plugin works with The Events Calendar by Modern Tribe. It changes the popup on the month view to include the event's location in the popup.
+This plugin works with The Events Calendar by Modern Tribe. It changes the popup on the month view to include the event's location within the popup.
 
 == Description ==
 
