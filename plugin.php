@@ -15,6 +15,28 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+/*
+Admin Settings Page
+*/
+// Call venue_on_month_settings_page_create() to create a settings pgae to display in the admin sidebar
+add_action('admin_menu', 'venue_on_month_settings_page_create');
+// Create Settings Page for the Plugin
+function venue_on_month_settings_page_create() {
+		$page_title = 'Add Event Venue to Month View';
+    $menu_title = 'Add Event Venue to Month View';
+    $capability = 'activate_plugins';
+    $menu_slug = 'event_venue_on_month_view';
+    $function = 'venue_on_month_settings_page_display';
+    $icon_url = 'dashicons-calendar';
+    $position = 7;
+		// Call add_menu_page() using the defined variables above to be passed in
+    add_menu_page($page_title, $menu_title, $capability, $menu_slug, $function, $icon_url, $position);
+}
+// Callback function used in venue_on_month_settings_page_create() to populate the settings page
+function venue_on_month_settings_page_display() {
+    echo '<h1>Add Event Venue to Month View</h1>';
+}
+
 // Establish directory paths for the template overrides to be used the The Events Calendar Plugin already installed separately by the user
 // Call 'trive_filter_template_paths' to add an additional directory to look for template overrides
 // tribe_events_template() comes from the Modern Tribe The Events Claendar Plugin installled on the site

@@ -1,4 +1,8 @@
 <?php
+// Exit plugin if it is being accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 ?>
 
 <script type="text/html" id="tribe_tmpl_tooltip">
