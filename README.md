@@ -55,6 +55,8 @@ Yes. This plugin will modify the tooltip for events created with the classic/sta
 
 = 1.0.1 =
 * FIXED - Adjusted readme.txt to display screenshots
+* CHANGED - Changed CSS Class from 'tribe-events-location' to 'deltec-tribe-events-location'
+* MISC. - Added Plugin Logo Assets
 
 = 1.0 =
 * Released on April 29, 2019
@@ -64,6 +66,8 @@ Yes. This plugin will modify the tooltip for events created with the classic/sta
 
 = 1.0.1 =
 Fixed typos in readme.txt
+Added Logos
+Changed CSS Class from 'tribe-events-location' to 'deltec-tribe-events-location'
 
 = 1.0 =
 Initial release!
@@ -76,4 +80,4 @@ Initial release!
 1. https://support.theeventscalendar.com/153124-Themers-Guide
 
 === CSS Classes: ===
-* tribe-events-location - Within the tooltip/popup the text 'Location: Event-Location-Here' is wrapped in this class. Use this to style the information within the popup.
+* deltec-tribe-events-location - Within the tooltip/popup the text 'Location: Event-Location-Here' is wrapped in this class. Use this to style the information within the popup.
