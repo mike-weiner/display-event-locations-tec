@@ -28,7 +28,7 @@ This section describes how to install the plugin and get it working.
 
 = I have activated the plugin, but the tooltip still looks the same. Why does the tooltip not list the event's location? =
 
-Make sure that the plugin 'Add Event Venue to Full Calendar' is enabled in the backend. Once it is enabled and active, deactivate the plugin for 'The Events Calendar' or 'The Events Calendar Pro' and then re-enable it. When you hover over an event on the month view, the tooltip should now display the event's location name.
+Make sure that the plugin 'Display Event Locations for The Events Calendar' is enabled in the backend. Once it is enabled and active, deactivate the plugin for 'The Events Calendar' or 'The Events Calendar Pro' and then re-activate it. When you hover over an event on the month view, the tooltip should now display the event's location name.
 
 = Does this plugin display anything other than the name of the event's location? =
 
