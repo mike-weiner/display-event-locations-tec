@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<abbr class="tribe-events-abbr updated published dtstart">[[=dateDisplay]] </abbr>
 			</div>
 			[[ if(venue) { ]]
-			<p class="tribe-events-location">Location: [[=venue]]</p>
+			<p class="deltec-tribe-events-location">Location: [[=venue]]</p>
 			[[ } ]]
 			[[ if(imageTooltipSrc.length) { ]]
 			<div class="tribe-events-event-thumb">
