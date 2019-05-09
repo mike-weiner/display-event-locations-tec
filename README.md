@@ -1,5 +1,5 @@
 # Display Event Location for The Events Calendar 
-Contributors: vikings412 <br>
+Contributors: [vikings412](https://profiles.wordpress.org/vikings412/) <br>
 Donate Link: https://paypal.me/michaelw13?locale.x=en_US <br>
 Tags: events, customization, modern-tribe, override, template <br>
 Requires at least: 4.6 <br>
@@ -53,23 +53,23 @@ Yes. This plugin will modify the tooltip for events created with the classic/sta
 
 ## Changelog
 
-# 1.0.1 
+### 1.0.1 
 * FIXED - Adjusted readme.txt to display screenshots
 * CHANGED - Changed CSS Class from 'tribe-events-location' to 'deltec-tribe-events-location'
 * MISC. - Added Plugin Logo Assets
 
-# 1.0
+### 1.0 🎉
 * Released on April 29, 2019
 * Initial release
 
 ## Upgrade Notice
 
-# 1.0.1
+### 1.0.1
 * Fixed typos in readme.txt
 * Added Logos
 * Changed CSS Class from 'tribe-events-location' to 'deltec-tribe-events-location'
 
-# 1.0 
+### 1.0 🎉
 * Initial release!
 
 ## Arbitrary section
