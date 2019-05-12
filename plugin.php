@@ -51,3 +51,16 @@ function deltec_tribe_filter_template_paths ( $file, $template ) {
 }
 
 add_filter( 'tribe_events_template', 'deltec_tribe_filter_template_paths', 10, 2 ); // Call the function created to check for additional overrides
+
+
+
+function deltec_tribe_template_data_array ( $json, $event, $additional ){
+	$venue = tribe_get_venue_id( $event );
+	if ( $venue ){
+		$json['venue'] = $venue;
+		$json['venue_link'] = tribe_get_venue_link( $venue, false );
+		$json['venue_title'] = tribe_get_venue( $venue );
+	}
+	return $json;
+}
+add_filter( 'tribe_events_template_data_array', 'deltec_tribe_template_data_array', 10, 3 ); // Add hook to add additional information to the array of data used for the template
