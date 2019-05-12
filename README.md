@@ -28,7 +28,15 @@ This section describes how to install the plugin and get it working.
 
 ### I have activated the plugin, but the tooltip still looks the same. Why does the tooltip not list the event's location?
 
-Make sure that the plugin 'Display Event Locations for The Events Calendar' is enabled in the backend. Once it is enabled and active, deactivate the plugin for 'The Events Calendar' or 'The Events Calendar Pro' and then re-activate it. When you hover over an event on the month view, the tooltip should now display the event's location name.
+The changes can take about a minute to be reflected.
+
+First, make sure that the plugin 'Display Event Locations for The Events Calendar' is enabled in the backend.
+
+If you click on an event within the calendar and then click the "< All Events" link to go back to the calendar, the changes should then be reflected.
+
+If you still aren't seeing the location displayed within the tooltip, you can also try viewing your calendar in a different browser or try clearing your browser's cache and then viewing your calendar again.
+
+If you still cannot figure out why the location is not displaying, feel free to submit a support ticket and we will be more than happy to help you!
 
 ### Does this plugin display anything other than the name of the event's location?
 
