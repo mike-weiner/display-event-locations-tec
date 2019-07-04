@@ -69,6 +69,7 @@ Yes. This plugin will modify the tooltip for events created with the classic/sta
 * Added: Quick links to our settings page & support page can be found within our plugin listing on the Plugins page. 
 * Tested: Supporting Wordpress 5.2.2+
 * Tested: Supporting The Events Calendar 4.9.4+
+* Tested: Supporting PHP 7.0+
 * Fixed: Unneeded HTML has been removed from all tooltip.php files
 * Fixed: All typos in commenting of the code have been removed
 
