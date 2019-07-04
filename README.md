@@ -59,6 +59,17 @@ Yes. This plugin will modify the tooltip for events created with the classic/sta
 
 ## Changelog
 
+### 2.0
+* Planned for release on July 9, 2019
+* Added: Settings page titled "Display Event Location for The Events Calendar" has been added as as sub-menu page under the "Setting" section in the backend
+* Added: Preview of tooltip text on settings page
+* Added: All setting fields are sanitized before being added to your site's database
+* Added: Saved settings & options are now removed from your database upon the uninstalling of the Display Events for The Event Calendar Plugin
+* Tested: Supporting Wordpress 5.2.2+
+* Tested: Supporting The Events Calendar 4.9.4+
+* Fixed: Unneeded HTML has been removed from all tooltip.php files
+* Fixed: All typos in commenting of the code have been removed
+
 ### 1.1
 * Released on May 12, 2019
 * FIXED - Deactivation/Reactivation Bug
