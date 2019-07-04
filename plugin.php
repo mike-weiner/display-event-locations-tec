@@ -5,25 +5,14 @@
  * Description: Add the event venue/location to the tooltip that is displayed on hover over in the month view of the claendar when using The Events Calenar or The Events Calendar Pro by Modern Tribe.
  * Author: Michael Weiner
  * Author URI: https://thetechsurge.com/
- * Version: 1.1
+ * Version: 2.0
  * License: GPL2+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  */
 
 // Exit plugin if it is being accessed directly
 if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
-
-/********************************************************************
- *
- * DEPENDENCIES
- * Import needed files within the plugin folder
- *
- *********************************************************************/
-// Pull in files related to the admin area of the WP backend
-if (is_admin()) {
-    require_once plugin_dir_path(__FILE__) . 'admin/admin-menu.php';
+    exit;
 }
 
 /********************************************************************
@@ -34,14 +23,9 @@ if (is_admin()) {
 // Create function & call hook to add links to the left-hand side of the plugin listing on the admin page
 function deltec_register_action_links($deltec_links) {
     // Add action link to settings page
-    $deltec_settings_url = '/wp-admin/options-general.php?page=deltec_settings';
+    $deltec_settings_url = menu_page_url('deltec_settings', false);
     $deltec_settings_link = '<a href="'.$deltec_settings_url.'">' . __( 'Settings', 'settings' ) . '</a>';
     $deltec_links[] = $deltec_settings_link; // Add settings_link to array of links to be returned
-
-    // Add action link to donate/PayPal page
-    $deltec_donate_url = 'https://paypal.me/michaelw13?locale.x=en_US';
-    $deltec_donate_link = '<a href="'.$deltec_donate_url.'" target="_blank">' . __( 'Support Our Work', 'support-our-work' ) . '</a>';
-    $deltec_links[] = $deltec_donate_link; // Add donate_link to array of links to be returned
 
     // Return the array of custom links established above
     return $deltec_links;
@@ -52,7 +36,7 @@ add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'deltec_register
 function deltec_register_meta_links ($deltec_links, $deltec_file) {
     $deltec_base = plugin_basename(__FILE__);
     if ($deltec_file == $deltec_base) { // Check to make sure we are editing our plugin listing
-        $deltec_links[] = '<a href="/wp-admin/options-general.php?page=deltec_settings">' . __('Settings') . '</a>';
+        $deltec_links[] = '<a href="'.menu_page_url('deltec_settings', false).'">' . __( 'Settings', 'settings' ) . '</a>';
         $deltec_links[] = '<a href="https://paypal.me/michaelw13?locale.x=en_US" target="_blank">' . __('Support Our Work') . '</a>';
     }
     return $deltec_links;
@@ -61,8 +45,22 @@ add_filter('plugin_row_meta',  'deltec_register_meta_links', 10, 2);
 
 /********************************************************************
  * Establish settings page for plugin
+ * Establish custom WP database options -- deltec_options
  * Uses: (1) Settings Wordpress API, (2) Options Wordpress API
  *********************************************************************/
+
+//Add submenu page item under settings
+function deltec_settings_page_add_sub_level_menu() {
+    add_submenu_page(
+        'options-general.php', // Where submenu item is listed
+        'Display Event Locations for The Events Calendar', // Page Title
+        'Display Event Locations for The Events Calendar', // Submenu Title
+        'manage_options', // User Requirements Needed to Access this Settings Page
+        'deltec_settings', // Submenu Slug
+        'deltec_display_settings_page' // Callback Function
+    );
+}
+add_action('admin_menu', 'deltec_settings_page_add_sub_level_menu');
 
 
 // Add items to the Display Event Locations for The Events Calendar settings page
@@ -87,6 +85,14 @@ function deltec_display_settings_page() {
             submit_button();
             ?>
         </form>
+        <h2>Live Preview of Tooltip</h2>
+        <p>Below is a preview of your tooltip! The phrase you have entered in the field above is bolded below. The name of the event, address, city, state, zip code, and country will be replaced with the information that is entered within the individual event on the front-end of the site for visitors.  </p>
+
+        <p>Event Title<br />
+            <strong><?php $deltec_options = get_option('deltec_options'); $tooltip_message = $deltec_options['pre-venue-message']; echo $tooltip_message ?> </strong>Event Location Name<br />
+            Fake Address 1234<br />
+            Fake City, Fake State<br />
+        </p>
     </div>
 
     <?php
@@ -131,7 +137,6 @@ function deltec_callback_pre_venue_message_text_field($args) {
 
     $id = isset($args['id']) ? $args['id'] : '';
     $label = isset($args['label']) ? $args['label'] : '';
-
     $value = isset($options[$id]) ? sanitize_text_field($options[$id]) : '';
 
     echo '<input id="deltec_options_'.$id.'"name="deltec_options['.$id.']" type="text" size="40" value="'.$value.'"><br />';
@@ -156,6 +161,25 @@ function deltec_validate_options($input)
 }
 
 /********************************************************************
+ * Remove deltec_options from WP database on uninstall
+ * Uses register_uninstall_hook()
+ *********************************************************************/
+function deltec_on_activate(){
+
+    // Set the values of the options on the settings page to their defaults on first activation of the plugin
+    $options = update_option('deltec_options', deltec_options_default());
+
+    if ( function_exists('register_uninstall_hook')) { // Check for a register_uninstall_hook()
+        register_uninstall_hook(__FILE__, 'deltec_on_uninstall'); // If register_uninstall_hook() exists, call deltec_on_uninstall()
+    }
+}
+register_activation_hook(__FILE__,'deltec_on_activate'); // Call deltec_on_activate() when the plugin in activated
+
+function deltec_on_uninstall() {
+    delete_option('deltec_options'); // Remove deltec_options from the WP database
+}
+
+/********************************************************************
  * Establish directory paths for the template overrides to be used the The Events Calendar Plugin already installed separately by the user
  * deltec_ is the custom prefix used for all classes and functions within the plugin
  *********************************************************************/
@@ -164,47 +188,45 @@ function deltec_validate_options($input)
 // tribe_events_template() comes from the Modern Tribe The Events Calendar Plugin installed on the site
 function deltec_tribe_filter_template_paths ( $file, $template ) {
 
-	// Set the path for the event system to look for additional overrides for events created with the classic editor for the standard and pro version of The Events Calendar
-	$deltec_custom_file_path = plugin_dir_path(__FILE__) . 'tribe-events/' . $template;
-	$deltec_custom_file_path_pro = plugin_dir_path(__FILE__) . 'tribe-events/' . $template;
+    // Set the path for the event system to look for additional overrides for events created with the classic editor for the standard and pro version of The Events Calendar
+    $deltec_custom_file_path = plugin_dir_path(__FILE__) . 'tribe-events/' . $template;
+    $deltec_custom_file_path_pro = plugin_dir_path(__FILE__) . 'tribe-events/' . $template;
 
-	// Set the path for the event system to look for additional overrides for events created with the block editor for the standard and pro version of The Events Calendar
-	$deltec_custom_file_path_block = plugin_dir_path(__FILE__) . 'tribe/events/' . $template;
-	$deltec_custom_file_path_block_pro = plugin_dir_path(__FILE__) . 'tribe/events/' . $template;
+    // Set the path for the event system to look for additional overrides for events created with the block editor for the standard and pro version of The Events Calendar
+    $deltec_custom_file_path_block = plugin_dir_path(__FILE__) . 'tribe/events/' . $template;
+    $deltec_custom_file_path_block_pro = plugin_dir_path(__FILE__) . 'tribe/events/' . $template;
 
-	// If the event system does not find any template overrides in the directory specified --> return the default template files
-	if ( !file_exists($deltec_custom_file_path) ) {
-		return $file;
-	}
-	if ( !file_exists($deltec_custom_file_path_pro) ) {
-		return $file;
-	}
-	if ( !file_exists($deltec_custom_file_path_block) ) {
-		return $file;
-	}
-	if ( !file_exists($deltec_custom_file_path_block_pro) ) {
-		return $file;
-	}
+    // If the event system does not find any template overrides in the directory specified --> return the default template files
+    if ( !file_exists($deltec_custom_file_path) ) {
+        return $file;
+    }
+    if ( !file_exists($deltec_custom_file_path_pro) ) {
+        return $file;
+    }
+    if ( !file_exists($deltec_custom_file_path_block) ) {
+        return $file;
+    }
+    if ( !file_exists($deltec_custom_file_path_block_pro) ) {
+        return $file;
+    }
 
-	// If the event system does find any template overrides in any of the directories specified --> return the new template override
-	return $deltec_custom_file_path;
-	return $deltec_custom_file_path_pro;
-	return $deltec_custom_file_path_block;
-	return $deltec_custom_file_path_block_pro;
+    // If the event system does find any template overrides in any of the directories specified --> return the new template override
+    return $deltec_custom_file_path;
+    return $deltec_custom_file_path_pro;
+    return $deltec_custom_file_path_block;
+    return $deltec_custom_file_path_block_pro;
 }
 add_filter( 'tribe_events_template', 'deltec_tribe_filter_template_paths', 10, 2 ); // Call the function created to check for additional overrides
 
 
 // Add function & hook to add additional information to the array of data used for the template
 function deltec_tribe_template_data_array ( $json, $event, $additional ){
-	$venue = tribe_get_venue_id($event);
-	if ($venue){
-		$json['venue'] = $venue;
-		$json['venue_link'] = tribe_get_venue_link($venue, false);
-		$json['venue_title'] = tribe_get_venue($venue);
-	}
-	return $json;
+    $venue = tribe_get_venue_id($event);
+    if ($venue){
+        $json['venue'] = $venue;
+        $json['venue_link'] = tribe_get_venue_link($venue, false);
+        $json['venue_title'] = tribe_get_venue($venue);
+    }
+    return $json;
 }
 add_filter( 'tribe_events_template_data_array', 'deltec_tribe_template_data_array', 10, 3 );
-
-?>
