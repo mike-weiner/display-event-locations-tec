@@ -54,7 +54,7 @@ Yes. This plugin will modify the tooltip for events created with the classic/sta
 
 ## Screenshots
 
-1. The settings page for the Display Event Location for The Events Calendar plugin. This is where you can change what is displayed on your tooltip when a user hovers over an event on your website's calendar.
+1. The settings page for the Display Event Locations for The Events Calendar plugin. This is where you can change what is displayed on your tooltip when a user hovers over an event on your website's calendar.
 2. This is what the tooltip for a regular event will look like after activating this plugin.
 3. This is what the tooltip for a featured event will look like after activating this plugin.
 
@@ -62,10 +62,10 @@ Yes. This plugin will modify the tooltip for events created with the classic/sta
 
 ### 2.0
 * Planned for release on July 9, 2019
-* Added: Settings page titled "Display Event Location for The Events Calendar" has been added as as sub-menu page under the "Setting" section in the backend
+* Added: Settings page titled "Display Event Locations for The Events Calendar" has been added as as sub-menu page under the "Setting" section in the backend
 * Added: Preview of tooltip text on settings page
 * Added: All setting fields are sanitized before being added to your site's database
-* Added: Saved settings & options are now removed from your database upon the uninstalling of the Display Events for The Event Calendar Plugin
+* Added: Saved settings & options are now removed from your database upon the uninstalling of the Display Event Locations for The Event Calendar Plugin
 * Added: Quick links to our settings page & support page can be found within our plugin listing on the Plugins page. 
 * Tested: Supporting Wordpress 5.2.2+
 * Tested: Supporting The Events Calendar 4.9.4+
@@ -90,7 +90,7 @@ Yes. This plugin will modify the tooltip for events created with the classic/sta
 ## Upgrade Notice
 
 ### 2.0
-* Version 2.0 is a major quality of life overhaul. There are too many small changes here and there to cover, however let me give you a quick-ish overview. You can now quickly change that message that is displayed on the tooltip when a user hovers over an even on your website's calendar. This is done through the Display Events for The Events Calendar settings page. You can find within the Setting's area of your site's backend as a sub-menu page of the Settings dropdown/flyout. Unneeded code & increased security measures have been implemented. All of our saved settings are now removed upon you uninstalling our plugin from your website. We have also done extensive testing with the latest versions of WordPress and The Events Calendar. All human typos have also been dealt with. Thank you for sticking with me! You should notice lots of little improvements as you use the plugin. Please let me know what features you would like to see next!  
+* Version 2.0 is a major quality of life overhaul. There are too many small changes here and there to cover. Let me give you a quick-ish overview. You can now quickly change the message that is displayed on the tooltip when a user hovers over an event on your website's calendar. This is done through the Display Event Locations for The Events Calendar settings page. You can find this within the Settings area of your site's backend as a sub-menu page of the Settings dropdown/flyout. Unneeded code & increased security measures have been implemented. All of our saved settings are now removed upon you uninstalling our plugin from your website. We have also done extensive testing with the latest versions of WordPress and The Events Calendar. All human typos have also been dealt with. Thank you for sticking with me! You should notice lots of little improvements as you use the plugin. Please let me know what features you would like to see next!  
 
 ### 1.1
 * Version 1.1 addresses and fixes the need to deactivate and then reactivate the Modern Tribe Events System plugin. Feel free to activate our plugin and go about your business!
