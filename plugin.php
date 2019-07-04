@@ -16,9 +16,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Establish directory paths for the template overrides to be used the The Events Calendar Plugin already installed separately by the user
-// deltec_ is the custom prefix used for all classes and functions within the plugiin
+// deltec_ is the custom prefix used for all classes and functions within the plugin
+
+
 // Call 'deltec_trive_filter_template_paths' to add additional directory paths to look for template overrides
-// tribe_events_template() comes from the Modern Tribe The Events Claendar Plugin installled on the site -- this cannot be changed
+// tribe_events_template() comes from the Modern Tribe The Events Calendar Plugin installed on the site
 function deltec_tribe_filter_template_paths ( $file, $template ) {
 
 	// Set the path for the event system to look for additional overrides for events created with the classic editor for the standard and pro version of The Events Calendar

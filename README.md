@@ -21,8 +21,6 @@ This section describes how to install the plugin and get it working.
 
 1. Upload the plugin files to the plugins directory, or install the plugin through the WordPress Plugins panel directly.
 2. Activate the plugin through the Plugins panel in the WordPress Admin Backend
-3. Disable 'The Events Calendar' or 'The Events Calendar Pro'
-4. Re-Enable 'The Events Calendar' or 'The Events Calendar Pro'
 
 ## Frequently Asked Questions
 
