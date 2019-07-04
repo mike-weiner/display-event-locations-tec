@@ -87,6 +87,9 @@ Yes. This plugin will modify the tooltip for events created with the classic/sta
 
 ## Upgrade Notice
 
+### 2.0
+* Version 2.0 is a major quality of life overhaul. You can now quickly change that message that is displayed on the tooltip when a user hovers over an even on your website's calendar. This is done through the Display Events for The Events Calendar settings page. You can find within the Setting's area of your site's backend as a sub-menu page of the Settings dropdown/flyout. Unneeded code & increased security measures have been implemented. All of our saved settings are now removed upon you uninstalling our plugin from your website. We have also done extensive testing with the latest versions of WordPress and The Events Calendar. All human typos have also been dealt with. Thank you for sticking with me! Please let me know what features you would like to see next!  
+
 ### 1.1
 * Version 1.1 addresses and fixes the need to deactivate and then reactivate the Modern Tribe Events System plugin. Feel free to activate our plugin and go about your business!
 
