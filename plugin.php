@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Display Event Locations for The Events Calendar
  * Plugin URI: https://thetechsurge.com/
- * Description: Add the event venue/location to the tooltip that is displayed on hover over in the month view of the claendar when using The Events Calenar or The Events Calendar Pro by Modern Tribe.
+ * Description: Add the event venue/location to the tooltip that is displayed on hover over in the month view of the calendar when using The Events Calendar or The Events Calendar Pro by Modern Tribe.
  * Author: Michael Weiner
  * Author URI: https://thetechsurge.com/
  * Version: 2.0
@@ -16,10 +16,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /********************************************************************
+ * Call in all dependencies to other files
+ * Check to make sure a user is an admin before calling in /includes/settings-page/*
+ *********************************************************************/
+// Check to make sure the user is an admin before pulling in sensitive settings page dependencies
+if (is_admin()) {
+    //Get Files
+    require_once plugin_dir_path(__FILE__) . 'includes/settings-page/admin-menu.php';
+    require_once plugin_dir_path(__FILE__) . 'includes/settings-page/settings-page.php';
+    require_once plugin_dir_path(__FILE__) . 'includes/settings-page/settings-register.php';
+    require_once plugin_dir_path(__FILE__) . 'includes/settings-page/settings-callbacks.php';
+    require_once plugin_dir_path(__FILE__) . 'includes/settings-page/settings-validate.php';
+}
+
+/********************************************************************
  * Modify Display Event Locations plugin admin page listing
  * Adds additional links for: (1) Settings Page, (2) Support/PayPal Page
  *********************************************************************/
-
 // Create function & call hook to add links to the left-hand side of the plugin listing on the admin page
 function deltec_register_action_links($deltec_links) {
     // Add action link to settings page
@@ -44,125 +57,9 @@ function deltec_register_meta_links ($deltec_links, $deltec_file) {
 add_filter('plugin_row_meta',  'deltec_register_meta_links', 10, 2);
 
 /********************************************************************
- * Establish settings page for plugin
- * Establish custom WP database options -- deltec_options
- * Uses: (1) Settings Wordpress API, (2) Options Wordpress API
- *********************************************************************/
-
-//Add submenu page item under settings
-function deltec_settings_page_add_sub_level_menu() {
-    add_submenu_page(
-        'options-general.php', // Where submenu item is listed
-        'Display Event Locations for The Events Calendar', // Page Title
-        'Display Event Locations for The Events Calendar', // Submenu Title
-        'manage_options', // User Requirements Needed to Access this Settings Page
-        'deltec_settings', // Submenu Slug
-        'deltec_display_settings_page' // Callback Function
-    );
-}
-add_action('admin_menu', 'deltec_settings_page_add_sub_level_menu');
-
-
-// Add items to the Display Event Locations for The Events Calendar settings page
-function deltec_display_settings_page() {
-    // Check to make sure the user has access to the page (via Admin account)
-    if (!current_user_can('manage_options')) {
-        return; // If they do not have the needed permissions to view this page => return nothing
-    }
-    ?>
-
-    <div class="wrap">
-        <h1><?php echo esc_html(get_admin_page_title()); ?></h1>
-        <form action="options.php" method="post">
-            <?php
-            //Output Security Fields
-            settings_fields( 'deltec_options');
-
-            //Output Setting Sections
-            do_settings_sections('deltec_settings');
-
-            //Submit Button
-            submit_button();
-            ?>
-        </form>
-        <h2>Live Preview of Tooltip</h2>
-        <p>Below is a preview of your tooltip! The phrase you have entered in the field above is bolded below. The name of the event, address, city, state, zip code, and country will be replaced with the information that is entered within the individual event on the front-end of the site for visitors.  </p>
-
-        <p>Event Title<br />
-            <strong><?php $deltec_options = get_option('deltec_options'); $tooltip_message = $deltec_options['pre-venue-message']; echo $tooltip_message ?> </strong>Event Location Name<br />
-            Fake Address 1234<br />
-            Fake City, Fake State<br />
-        </p>
-    </div>
-
-    <?php
-}
-
-// Register settings for the deltec_settings_page
-function deltec_register_settings(){
-    register_setting(
-        'deltec_options',
-        'deltec_options',
-        'deltec_validate_options'
-    );
-
-    // Adds Setting Section for Tooltip Message Options
-    add_settings_section (
-        'deltec_section_tool_tip', // Section Name/ID
-        'Customize Tooltip Message', // Title of section on page
-        'deltec_callback_settings_section_tool_tip', // Callback fFunction
-        'deltec_settings' //Slug of page on which to display
-    );
-
-    // Adds settings field for tooltip message before the venue/location name of the event in the tooltip
-    add_settings_field (
-        'pre-venue-message', // Setting ID
-        'Tooltip Message Before Venue/Location Name', // Title of the setting displayed on the page
-        'deltec_callback_pre_venue_message_text_field', // Callback function
-        'deltec_settings', // Page on which setting is displayed
-        'deltec_section_tool_tip', // Section that should display the setting on the settings page
-        ['id' => 'pre-venue-message', 'label' => "Enter the message/phrase that you would like to display before the event's location name in the tooltip."] // Array that contains data for the callback function
-    );
-}
-add_action('admin_init', 'deltec_register_settings');
-
-//Callback function for tooltip settings section on the Deltec Settings page
-function deltec_callback_settings_section_tool_tip() {
-    echo '<p>Use the text field below to modify the message/phrase that is displayed before the event venue/location in the tooltip that is displayed on hover for the user.</p>';
-}
-
-// Callback function for the pre-venue-message field on the deltec settings page
-function deltec_callback_pre_venue_message_text_field($args) {
-    $options = get_option('deltec_options', deltec_options_default());
-
-    $id = isset($args['id']) ? $args['id'] : '';
-    $label = isset($args['label']) ? $args['label'] : '';
-    $value = isset($options[$id]) ? sanitize_text_field($options[$id]) : '';
-
-    echo '<input id="deltec_options_'.$id.'"name="deltec_options['.$id.']" type="text" size="40" value="'.$value.'"><br />';
-    echo '<label for="deltec_options_'.$id.'">'.$label.'</label>';
-}
-
-// Create a function that establishes a set of default options for each field if they cannot be pulled from the database
-function deltec_options_default() {
-    return array (
-        'pre-venue-message' => 'Location:'
-    );
-}
-
-// Validate & Clean settings fields on the deltec settings page
-function deltec_validate_options($input)
-{
-    if (isset ($input['pre-venue-message'])) {
-        $input['pre-venue-message'] = sanitize_text_field($input['pre-venue-message']); // Santitize the pre-venue-message text field to make sure that only plain text is being saved into the database
-    }
-
-    return $input;
-}
-
-/********************************************************************
  * Remove deltec_options from WP database on uninstall
- * Uses register_uninstall_hook()
+ * Uses register_uninstall_hook() and register_activation hook
+ * Upon activation get the default option for 'deltec_options' and check for a register_uninstall hook
  *********************************************************************/
 function deltec_on_activate(){
 
@@ -177,6 +74,17 @@ register_activation_hook(__FILE__,'deltec_on_activate'); // Call deltec_on_activ
 
 function deltec_on_uninstall() {
     delete_option('deltec_options'); // Remove deltec_options from the WP database
+}
+
+/********************************************************************
+ * Function to establish a set of default values for the stored deltec_options array
+ * Called by deltec_on_activate() to give the settings their default values on activation
+ *********************************************************************/
+// Create a function that establishes a set of default options for each field if they cannot be pulled from the database
+function deltec_options_default() {
+    return array (
+        'pre-venue-message' => 'Location:'
+    );
 }
 
 /********************************************************************
