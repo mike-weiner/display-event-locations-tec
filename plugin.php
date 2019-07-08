@@ -124,7 +124,7 @@ function deltec_tribe_filter_template_paths ( $file, $template ) {
     return $deltec_custom_file_path_block;
     return $deltec_custom_file_path_block_pro;
 }
-add_filter( 'tribe_events_template', 'deltec_tribe_filter_template_paths', 10, 2 ); // Call the function created to check for additional overrides
+add_filter('tribe_events_template', 'deltec_tribe_filter_template_paths', 10, 2); // Call the function created to check for additional overrides
 
 
 // Add function & hook to add additional information to the array of data used for the template
@@ -137,4 +137,4 @@ function deltec_tribe_template_data_array ( $json, $event, $additional ){
     }
     return $json;
 }
-add_filter( 'tribe_events_template_data_array', 'deltec_tribe_template_data_array', 10, 3 );
+add_filter('tribe_events_template_data_array', 'deltec_tribe_template_data_array', 10, 3);

@@ -61,7 +61,7 @@ Yes. This plugin will modify the tooltip for events created with the classic/sta
 ## Changelog
 
 ### 2.0
-* Planned for release on July 9, 2019
+* Released on July 8, 2019
 * Added: Settings page titled "Display Event Locations for The Events Calendar" has been added as as sub-menu page under the "Setting" section in the backend
 * Added: /includes/ 
 * Added: /includes/settings-page/admin-menu.php
@@ -97,7 +97,7 @@ Yes. This plugin will modify the tooltip for events created with the classic/sta
 ## Upgrade Notice
 
 ### 2.0
-* Version 2.0 is a major quality of life overhaul. There are too many small changes here and there to cover. Let me give you a quick-ish overview. You can now quickly change the message that is displayed on the tooltip when a user hovers over an event on your website's calendar. This is done through the Display Event Locations for The Events Calendar settings page. You can find this within the Settings area of your site's backend as a sub-menu page of the Settings dropdown/flyout. Unneeded code & increased security measures have been implemented. All of our saved settings are now removed upon you uninstalling our plugin from your website. We have also done extensive testing with the latest versions of WordPress and The Events Calendar. All human typos have also been dealt with. Thank you for sticking with me! You should notice lots of little improvements as you use the plugin. Please let me know what features you would like to see next!  
+* Version 2.0 is a major quality of life overhaul. There are too many small changes here and there to cover. Let me give you a quick-ish overview. You can now quickly change the message that is displayed on the tooltip when a user hovers over an event on your website's calendar. This is done through the Display Event Locations for The Events Calendar settings page. You can find this within the Settings area of your site's backend as a sub-menu page of the Settings dropdown/flyout. Unneeded code & increased security measures have been implemented. All of our saved settings are now removed upon you uninstalling our plugin from your website. We have also done extensive testing with the latest versions of WordPress, The Events Calendar, and PHP 7.0. All human typos have also been dealt with. Thank you for sticking with me! You should notice lots of little improvements as you use the plugin. Please let me know what features you would like to see next!  
 
 ### 1.1
 * Version 1.1 addresses and fixes the need to deactivate and then reactivate the Modern Tribe Events System plugin. Feel free to activate our plugin and go about your business!
