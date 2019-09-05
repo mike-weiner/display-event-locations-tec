@@ -3,8 +3,8 @@ Contributors: [vikings412](https://profiles.wordpress.org/vikings412/) <br>
 Donate Link: https://paypal.me/michaelw13?locale.x=en_US <br>
 Tags: events, customization, modern-tribe, override, template <br>
 Requires at least: 4.6 <br>
-Tested up to: 5.2.2 <br>
-Stable tag: 2.0 <br>
+Tested up to: 5.2.3 <br>
+Stable tag: 2.0.1 <br>
 Requires PHP: 5.4 <br>
 License: GPLv2 or later <br>
 License URI: https://www.gnu.org/licenses/gpl-2.0.html <br>
@@ -101,7 +101,7 @@ Yes. This plugin will modify the tooltip for events created with the classic/sta
 ## Upgrade Notice
 
 ### 2.0.1
-Version 2.0.1 is a very minor update. Support with WordPress 5.2.3 has been tested and confirmed. Thank you for your support!
+* Version 2.0.1 is a very minor update. Support with WordPress 5.2.3 has been tested and confirmed. Thank you for your support!
 
 ### 2.0
 * Version 2.0 is a major quality of life overhaul. There are too many small changes here and there to cover. Let me give you a quick-ish overview. You can now quickly change the message that is displayed on the tooltip when a user hovers over an event on your website's calendar. This is done through the Display Event Locations for The Events Calendar settings page. You can find this within the Settings area of your site's backend as a sub-menu page of the Settings dropdown/flyout. Unneeded code & increased security measures have been implemented. All of our saved settings are now removed upon you uninstalling our plugin from your website. We have also done extensive testing with the latest versions of WordPress, The Events Calendar, and PHP 7.0. All human typos have also been dealt with. Thank you for sticking with me! You should notice lots of little improvements as you use the plugin. Please let me know what features you would like to see next!  
