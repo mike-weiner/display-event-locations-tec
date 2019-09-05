@@ -5,7 +5,7 @@
  * Description: Add the event venue/location to the tooltip that is displayed on hover over in the month view of the calendar when using The Events Calendar or The Events Calendar Pro by Modern Tribe.
  * Author: Michael Weiner
  * Author URI: https://thetechsurge.com/
- * Version: 2.0
+ * Version: 2.0.1
  * License: GPL2+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  */
