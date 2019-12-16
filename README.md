@@ -1,4 +1,8 @@
 # Display Event Location for The Events Calendar
+![WordPress Plugin Downloads](https://img.shields.io/wordpress/plugin/dt/display-event-locations-tec)
+![WordPress Plugin Active Installs](https://img.shields.io/wordpress/plugin/installs/display-event-locations-tec)
+![GitHub All Releases](https://img.shields.io/github/downloads/mike-weiner/display-event-locations-tec/total)
+
 Contributors: [vikings412](https://profiles.wordpress.org/vikings412/) <br>
 Donate Link: https://paypal.me/michaelw13?locale.x=en_US <br>
 Tags: events, customization, modern-tribe, override, template <br>
