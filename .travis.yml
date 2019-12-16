@@ -1,0 +1,19 @@
+language: php
+php:
+    - '5.6'
+    - '7.0'
+    - '7.1'
+    - '7.2'
+    - '7.3'
+    - '7.4'
+script:
+  php -l plugin.php
+  php -l includes/settings-page/admin-menu.php
+  php -l includes/settings-page/settings-callbacks.php
+  php -l includes/settings-page/settings-page.php
+  php -l inlucdes/settings-page/settings-register.php
+  php -l inlucdes/settings-page/settings-validate.php
+  php -l tribe-events/month/tooltip.php
+  php -l tribe-events/pro/month/tooltip.php
+  php -l tribe/events/month/tooltip.php
+  php -l tribe/events/pro/month/tooltip.php
