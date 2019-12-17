@@ -6,6 +6,8 @@ php:
     - '7.2'
     - '7.3'
     - '7.4'
+matrix:
+  fast_finish: true
 script:
   php -l plugin.php
   php -l includes/settings-page/admin-menu.php
