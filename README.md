@@ -68,7 +68,7 @@ Yes. This plugin will modify the tooltip for events created with the classic/sta
 
 ### 2.0.1
 * Released on September 5, 2019
-* Added: Support for WordPress 5.2.3 has been tested and confirmed
+* Added: Support for WordPress 5.3.2 has been tested and confirmed
 
 ### 2.0
 * Released on July 8, 2019
