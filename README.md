@@ -29,16 +29,18 @@ This section describes how to install the plugin and activate it on your Wordpre
 ### From the WordPress Plugin Directory
 The official Display Event Location for The Events Calendar WordPress Plugin can be found here: https://wordpress.org/plugins/display-event-locations-tec/
 
-The plugin can be downloaded and installed right from your Wordpress administration area or directly from the link above. 
+The plugin can be downloaded and installed right from your Wordpress administration area by going to ```Plugins > Add New``` and searching for "Display Event Location for The Events Calendar by Weiner" and clicking "Install" and then by clicing the blue "Activate" after the installation has completed. 
+
+The ```.zip``` of the Display Event Location for The Events Calendar Wordpress Plugin can be downloarded right from Wordpress.org using the link above.
 
 ### From this repository
 Go to the [releases](https://github.com/mike-weiner/display-event-locations-tec/releases) section of the repository and download the display-event-locations-tec.zip from the most recent release.
 
-Once you have downloaded the display-event-locations-tec.zip from the releases section of this repo, from your WordPress administration panel, go to Plugins > Add New and click the Upload Plugin button at the top of the page. Select the display-event-locations-tec.zip file to upload. 
+Once you have downloaded the display-event-locations-tec.zip from the releases section of this repo, from your WordPress administration panel, go to ```Plugins > Add New``` and click the gray ```Upload Plugin``` button at the top of the page. Select the display-event-locations-tec.zip file to upload from your machine when prompted.
 
 Wordpress will install the plugin. Once the installation is complete, you will be able to activate the plugin and begin using it!
 
-Enjoy! If you have any questions or issues please open a new issue on this repo or submit a support ticket on the Wordpress Plugin directory listing for the Display Event Location for The Events Calendar plugin found here: https://wordpress.org/support/plugin/display-event-locations-tec/. 
+Enjoy! If you have any questions or issues please open a new issue on this repository or submit a support ticket on the Wordpress Plugin directory listing for the Display Event Location for The Events Calendar plugin found here: https://wordpress.org/support/plugin/display-event-locations-tec/. 
 
 ## Frequently Asked Questions
 
@@ -52,7 +54,7 @@ If you still aren't seeing the location displayed within the tooltip, you can al
 
 If you still cannot figure out why the location is not displaying, feel free to submit a support ticket and we will be more than happy to help you!
 
-**TLDR;** Sometimes data is cached in your browser. If your tooltip does not change after a page refresh, try clearing your browser's cache. You can also try viewing the calendar on a different device to determine if it is indeed a caching issue. If that does not work, please submit a support ticket. 
+>**TLDR;** Sometimes data is cached in your browser. If your tooltip does not change after a page refresh, try clearing your >browser's cache. You can also try viewing the calendar on a different device to determine if it is indeed a caching issue. >If that does not work, please submit a support ticket. 
 
 ### Does this plugin display anything other than the name of the event's location?
 
