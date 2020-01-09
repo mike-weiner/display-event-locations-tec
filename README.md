@@ -11,7 +11,7 @@ Tags: events, customization, modern-tribe, override, template <br>
 Requires at least: 4.6 <br>
 Tested up to: 5.3.2 <br>
 Stable tag: 2.0.1 <br>
-Requires PHP: 5.4 <br>
+Requires PHP: 5.6 <br>
 License: GPLv2 or later <br>
 License URI: https://www.gnu.org/licenses/gpl-2.0.html <br>
 
