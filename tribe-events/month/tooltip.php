@@ -6,7 +6,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 // Get the value of the text-field for the pre-venue-message from the deltec settings page
 $deltec_options = get_option('deltec_options');
-$tooltip_message = $deltec_options['pre-venue-message'];
+$deltec_tooltip_message = $deltec_options['pre-venue-message'];
+$deltec_display_full_address = $deltec_options['display-full-address'];
 
 ?>
 
@@ -18,9 +19,26 @@ $tooltip_message = $deltec_options['pre-venue-message'];
 			<div class="duration">
 				<abbr class="tribe-events-abbr updated published dtstart">[[=dateDisplay]] </abbr>
 			</div>
+
+			
+			<!-- **************************************************************** -->
+			<!-- If a location is entered with the event, add its name to tooltip -->
 			[[ if(venue) { ]]
-			<p class="deltec-tribe-events-location"><?php echo $tooltip_message ?> [[=venue_title]]</p>
+			<p class="deltec-tribe-events-location"><?php echo $deltec_tooltip_message ?> [[=venue_title]]
+
+			<!-- Check to see if the user wants to dispay the full address below the location name -->
+			<?php if ($deltec_display_full_address == 1) {
+				$deltec_html = '<br>[[=venue_address]]<br>[[=venue_city]], [[=venue_state]] [[=venue_zip]]</p>';
+				echo $deltec_html;
+			} else {
+				$deltec_html = '</p>';
+				echo $deltec_html;
+			}
+			?>
 			[[ } ]]
+			<!-- **************************************************************** -->
+
+
 			[[ if(imageTooltipSrc.length) { ]]
 			<div class="tribe-events-event-thumb">
 				<img src="[[=imageTooltipSrc]]" alt="[[=title]]" />
@@ -49,10 +67,24 @@ $tooltip_message = $deltec_options['pre-venue-message'];
 				<abbr class="tribe-events-abbr tribe-event-date-start">[[=dateDisplay]]</abbr>
 			</div>
 
+
+			<!-- **************************************************************** -->
+			<!-- If a location is entered with the event, add its name to tooltip -->
 			[[ if(venue) { ]]
-			<p class="deltec-tribe-events-location"><?php echo $tooltip_message ?> [[=venue_title]]</p>
-			<br>
+			<p class="deltec-tribe-events-location"><?php echo $deltec_tooltip_message ?> [[=venue_title]]
+
+			<!-- Check to see if the user wants to dispay the full address below the location name -->
+			<?php if ($deltec_display_full_address == 1) {
+				$deltec_html = '<br>[[=venue_address]]<br>[[=venue_city]], [[=venue_state]] [[=venue_zip]]</p><p></p>';
+				echo $deltec_html;
+			} else {
+				$deltec_html = '</p><p></p>';
+				echo $deltec_html;
+			}
+			?>
 			[[ } ]]
+			<!-- **************************************************************** -->
+
 
 			[[ if(excerpt.length) { ]]
 			<div class="tribe-event-description">[[=raw excerpt]]</div>

@@ -5,7 +5,7 @@
  * Description: Add the event venue/location to the tooltip that is displayed on hover over in the month view of the calendar when using The Events Calendar or The Events Calendar Pro by Modern Tribe.
  * Author: Michael Weiner
  * Author URI: https://thetechsurge.com/
- * Version: 2.0.1
+ * Version: 2.1
  * License: GPL2+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  */
@@ -14,6 +14,7 @@
 if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
+
 
 /********************************************************************
  * Call in all dependencies to other files
@@ -28,6 +29,7 @@ if (is_admin()) {
     require_once plugin_dir_path(__FILE__) . 'includes/settings-page/settings-callbacks.php';
     require_once plugin_dir_path(__FILE__) . 'includes/settings-page/settings-validate.php';
 }
+
 
 /********************************************************************
  * Modify Display Event Locations plugin admin page listing
@@ -50,31 +52,29 @@ function deltec_register_meta_links ($deltec_links, $deltec_file) {
     $deltec_base = plugin_basename(__FILE__);
     if ($deltec_file == $deltec_base) { // Check to make sure we are editing our plugin listing
         $deltec_links[] = '<a href="'.menu_page_url('deltec_settings', false).'">' . __( 'Settings', 'settings' ) . '</a>';
-        $deltec_links[] = '<a href="https://paypal.me/michaelw13?locale.x=en_US" target="_blank">' . __('Support Our Work') . '</a>';
+        $deltec_links[] = '<a href="https://paypal.me/michaelw13" target="_blank">' . __('Support Our Work') . '</a>';
     }
     return $deltec_links;
 }
 add_filter('plugin_row_meta',  'deltec_register_meta_links', 10, 2);
 
+
 /********************************************************************
  * Remove deltec_options from WP database on uninstall
- * Uses register_uninstall_hook() and register_activation hook
- * Upon activation get the default option for 'deltec_options' and check for a register_uninstall hook
+ * Uses register_uninstall and register_activation hooks
+ * Upon activation get the default option for 'deltec_options' 
  *********************************************************************/
 function deltec_on_activate(){
-
     // Set the values of the options on the settings page to their defaults on first activation of the plugin
     $options = update_option('deltec_options', deltec_options_default());
-
-    if ( function_exists('register_uninstall_hook')) { // Check for a register_uninstall_hook()
-        register_uninstall_hook(__FILE__, 'deltec_on_uninstall'); // If register_uninstall_hook() exists, call deltec_on_uninstall()
-    }
 }
 register_activation_hook(__FILE__,'deltec_on_activate'); // Call deltec_on_activate() when the plugin in activated
 
 function deltec_on_uninstall() {
-    delete_option('deltec_options'); // Remove deltec_options from the WP database
+    delete_option('deltec_options'); // Remove deltec_options from the WP database upon uninstallation
 }
+register_uninstall_hook( __FILE__, 'deltec_on_uninstall' );
+
 
 /********************************************************************
  * Function to establish a set of default values for the stored deltec_options array
@@ -83,15 +83,16 @@ function deltec_on_uninstall() {
 // Create a function that establishes a set of default options for each field if they cannot be pulled from the database
 function deltec_options_default() {
     return array (
-        'pre-venue-message' => 'Location:'
+        'pre-venue-message' => 'Location:',
+        'display-full-address' => '',
     );
 }
+
 
 /********************************************************************
  * Establish directory paths for the template overrides to be used the The Events Calendar Plugin already installed separately by the user
  * deltec_ is the custom prefix used for all classes and functions within the plugin
  *********************************************************************/
-
 // Call 'deltec_trive_filter_template_paths' to add additional directory paths to look for template overrides
 // tribe_events_template() comes from the Modern Tribe The Events Calendar Plugin installed on the site
 function deltec_tribe_filter_template_paths ( $file, $template ) {
@@ -126,7 +127,6 @@ function deltec_tribe_filter_template_paths ( $file, $template ) {
 }
 add_filter('tribe_events_template', 'deltec_tribe_filter_template_paths', 10, 2); // Call the function created to check for additional overrides
 
-
 // Add function & hook to add additional information to the array of data used for the template
 function deltec_tribe_template_data_array ( $json, $event, $additional ){
     $venue = tribe_get_venue_id($event);
@@ -134,7 +134,12 @@ function deltec_tribe_template_data_array ( $json, $event, $additional ){
         $json['venue'] = $venue;
         $json['venue_link'] = tribe_get_venue_link($venue, false);
         $json['venue_title'] = tribe_get_venue($venue);
+        $json['venue_address'] = tribe_get_address($venue);
+        $json['venue_city'] = tribe_get_city($venue);
+        $json['venue_state'] = tribe_get_state($venue);
+        $json['venue_zip'] = tribe_get_zip($venue);
     }
     return $json;
 }
 add_filter('tribe_events_template_data_array', 'deltec_tribe_template_data_array', 10, 3);
+

@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-//Add submenu page item under settings
+// Add submenu page item under settings
 function deltec_settings_page_add_sub_level_menu() {
     add_submenu_page(
         'options-general.php', // Where submenu item is listed
