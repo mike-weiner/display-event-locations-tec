@@ -101,7 +101,7 @@ Yes. This plugin will modify the tooltip for events created with the classic/sta
 ## Changelog
 
 ### 2.1
-* Released on Janurary 8, 2020
+* Released on January 8, 2020
 * Added: The event street address can now be displayed within the tooltip underneath the location name.
 * Added: Uninstallation Hook (Your settings for this plugin will now be deleted from the wp_ database when you uninstall this plugin.)
 * Added: An additional line break has been added to featured event tooltips to make things more readable!
