@@ -50,7 +50,7 @@ Enjoy! If you have any questions or issues please open a new issue on this repos
 
 First, make sure that the plugin 'Display Event Locations for The Events Calendar' is enabled in the backend.
 
-If you click on an event within the calendar and then click the "< All Events" link to go back to the calendar, the changes should then be reflected.
+If you click on an event within the calendar and then click the `< All Events` link to go back to the calendar, the changes should then be reflected.
 
 If you still aren't seeing the location displayed within the tooltip, you can also try viewing your calendar in a different browser or try clearing your browser's cache and then viewing your calendar again.
 
@@ -60,9 +60,9 @@ If you still cannot figure out why the location is not displaying, feel free to 
 
 ### Does this plugin display anything other than the name of the event's location?
 
-Yes. You can choose to display just the name of the location or the name of the location and the full address of the location underneath. Please see the screenshots for all of the different options you have about what information you can add to the tooltip.
+Yes. You can choose to display just the name of the location or the name of the location and the full address of the location underneath. See the [screenshots](https://github.com/mike-weiner/display-event-locations-tec/tree/master/assets) for all of the different ways you can display information within the tooltip.
 
-Please see the FAQ titled ["How do I display the street address underneath the location name within the looptip?"](https://github.com/mike-weiner/display-event-locations-tec/blob/master/README.md#how-do-i-display-the-street-address-underneath-the-location-name-within-the-looptip) to learn how to enanle the street address within the tooltip. 
+See the FAQ titled ["How do I display the street address underneath the location name within the looptip?"](https://github.com/mike-weiner/display-event-locations-tec/blob/master/README.md#how-do-i-display-the-street-address-underneath-the-location-name-within-the-looptip) to learn how to enanle the street address within the tooltip. 
 
 ### How do I display the street address underneath the location name within the looptip?
 
@@ -76,7 +76,7 @@ Once the page reloads, scroll to the bottom of the page and under the "Preview T
 
 This plugin uses the location/venue name and address that is entered within the [Modern Tribe Event System](https://theeventscalendar.com/product/wordpress-events-calendar/) itself. To chagne the name or street address of an event location/venue hover over ```Events``` in the admininstration sidebar and select ```Venue``` from the flyout that appears. 
 
-Then selecit the location that you wish to change the name or address of. Once the page loads you will be able to change the name and address. Once you finish making updates, clikc the blue ```Update``` button. 
+Then select the location that you wish to change the name or address of. Once the page loads you will be able to change the name and address. Once you finish making updates, clikc the blue ```Update``` button. 
 
 ### What plugins are required for these changes to take effect?
 
@@ -166,24 +166,22 @@ Yes. This plugin will modify the tooltip for events created with the classic/sta
 
 ## Upgrade Notice
 ### 2.1
-* Happy New Year!! Version 2.1 is a small, powerful update to welcome the new decade. You can now opt to display an event's location underneath the location name within the tooltip! Support for WordPress 5.2.3 has also been added. 
+Happy New Year!! Version 2.1 is a small, powerful update to welcome the new decade. You can now opt to display an event's location underneath the location name within the tooltip! Support for WordPress 5.2.3 has also been added. 
 
 ### 2.0.1
-* Version 2.0.1 is a very minor update. Support with WordPress 5.2.3 has been tested and confirmed. Thank you for your support!
+Version 2.0.1 is a very minor update. Support with WordPress 5.2.3 has been tested and confirmed. Thank you for your support!
 
 ### 2.0
-* Version 2.0 is a major quality of life overhaul. There are too many small changes here and there to cover. Let me give you a quick-ish overview. You can now quickly change the message that is displayed on the tooltip when a user hovers over an event on your website's calendar. This is done through the Display Event Locations for The Events Calendar settings page. You can find this within the Settings area of your site's backend as a sub-menu page of the Settings dropdown/flyout. Unneeded code & increased security measures have been implemented. All of our saved settings are now removed upon you uninstalling our plugin from your website. We have also done extensive testing with the latest versions of WordPress, The Events Calendar, and PHP 7.0. All human typos have also been dealt with. Thank you for sticking with me! You should notice lots of little improvements as you use the plugin. Please let me know what features you would like to see next!  
+Version 2.0 is a major quality of life overhaul. There are too many small changes here and there to cover. Let me give you a quick-ish overview. You can now quickly change the message that is displayed on the tooltip when a user hovers over an event on your website's calendar. This is done through the Display Event Locations for The Events Calendar settings page. You can find this within the Settings area of your site's backend as a sub-menu page of the Settings dropdown/flyout. Unneeded code & increased security measures have been implemented. All of our saved settings are now removed upon you uninstalling our plugin from your website. We have also done extensive testing with the latest versions of WordPress, The Events Calendar, and PHP 7.0. All human typos have also been dealt with. Thank you for sticking with me! You should notice lots of little improvements as you use the plugin. Please let me know what features you would like to see next!  
 
 ### 1.1
-* Version 1.1 addresses and fixes the need to deactivate and then reactivate the Modern Tribe Events System plugin. Feel free to activate our plugin and go about your business!
+Version 1.1 addresses and fixes the need to deactivate and then reactivate the Modern Tribe Events System plugin. Feel free to activate our plugin and go about your business!
 
 ### 1.0.1
-* Fixed typos in readme.txt
-* Added Logos
-* Changed CSS Class from 'tribe-events-location' to 'deltec-tribe-events-location'
+Fixed typos in readme.txt. Added Logos. Changed CSS Class from `tribe-events-location` to `deltec-tribe-events-location`.
 
 ### 1.0 🎉
-* Initial release!
+Initial release!
 
 ## Arbitrary section
 
