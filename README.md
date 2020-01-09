@@ -188,6 +188,10 @@ Initial release!
 ### CSS Classes:
 * **deltec-tribe-events-location** - Within the tooltip/popup the text 'Location: Event-Location-Here' is wrapped in this class. Use this to style the information within the popup.
 
+### Github Repository
+
+The Github Repository can be found here: https://github.com/mike-weiner/display-event-locations-tec.
+
 ### References:
 * https://theeventscalendar.com/support/forums/topic/altering-event-tooltip-display-displaying-additional-fields-in-tooltips/
 * https://theeventscalendar.com/support/forums/topic/override-templates-via-custom-plugin/
