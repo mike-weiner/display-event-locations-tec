@@ -24,16 +24,23 @@ This plugin overrides the standard template for the tooltip that is displayed wh
 
 ## Installation
 
-This section describes how to install the plugin and get it working.
+This section describes how to install the plugin and activate it on your Wordpress installation. 
 
-1. Upload the plugin files to the plugins directory, or install the plugin through the WordPress Plugins panel directly.
-2. Activate the plugin through the Plugins panel in the WordPress administration area.
+### From the WordPress Plugin Directory
+The official Display Event Location for The Events Calendar WordPress Plugin can be found here: https://wordpress.org/plugins/display-event-locations-tec/
+
+The plugin can be downloaded and installed right from your Wordpress administration area or directly from the link above. 
+
+### From this repository
+Go to the [releases](https://github.com/mike-weiner/display-event-locations-tec/releases) section of the repository and download the display-event-locations-tec.zip from the most recent release.
+
+Once you have downloaded the display-event-locations-tec.zip from the releases section of this repo, from your WordPress administration panel, go to Plugins > Add New and click the Upload Plugin button at the top of the page. Select the display-event-locations-tec.zip file to upload. 
+
+Wordpress will install the plugin. Once the installation is complete, you will be able to activate the plugin and begin using it!
+
+Enjoy! If you have any questions or issues please open a new issue on this repo or submit a support ticket on the Wordpress Plugin directory listing for the Display Event Location for The Events Calendar plugin found here: https://wordpress.org/support/plugin/display-event-locations-tec/. 
 
 ## Frequently Asked Questions
-
-### How do I display the street address underneath the location name within the looptip?
-
-Hover over "Settings" in the black left-hand admin sidebar. Click on "Display Event Locations for The Events Calendar" from the dropdown that appears. Once the page loads, click the checkbox for the "Show Full Venue Address Inside Tooltip" option. Once the checkbox is selected, click the blue "Save Changes" button. Once the page reloads, scroll to the bottom of the page and under the "Preview Tooltip" area, the fake tooltip should display the location and fake street address underneath. 
 
 ### I have activated the plugin, but the tooltip still looks the same. Why does the tooltip not list the event's location and/or address?
 
@@ -45,11 +52,21 @@ If you still aren't seeing the location displayed within the tooltip, you can al
 
 If you still cannot figure out why the location is not displaying, feel free to submit a support ticket and we will be more than happy to help you!
 
-tldr; Sometimes data is cached in your browser. If your tooltip does not change after a page refresh, try clearing your browser's cache. You can also try viewing the calendar on a different device to determine if it is indeed a caching issue. If that does not work, please submit a support ticket. 
+**TLDR;** Sometimes data is cached in your browser. If your tooltip does not change after a page refresh, try clearing your browser's cache. You can also try viewing the calendar on a different device to determine if it is indeed a caching issue. If that does not work, please submit a support ticket. 
 
 ### Does this plugin display anything other than the name of the event's location?
 
 Yes. You can choose to display just the name of the location or the name of the location and the full address of the location underneath. Please see the screenshots for all of the different options you have about what information you can add to the tooltip.
+
+Please see the FAQ titled "How do I display the street address underneath the location name within the looptip?" to learn how to enanle the street address within the tooltip. 
+
+### How do I display the street address underneath the location name within the looptip?
+
+Hover over "Settings" in the left-hand sidebar within the administration area of your Wordpress installation. Click on "Display Event Locations for The Events Calendar" from the flyout that appears. 
+
+Once the page loads, click the checkbox for the "Show Full Venue Address Inside Tooltip" option. Once the checkbox is selected, click the blue "Save Changes" button. 
+
+Once the page reloads, scroll to the bottom of the page and under the "Preview Tooltip" area, the fake tooltip should display the location and fake street address underneath. 
 
 ### What plugins are required for these changes to take effect?
 
