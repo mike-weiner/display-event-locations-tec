@@ -1,29 +1,29 @@
 ---
 name: Bug Report
 about: Create a bug report to help us improve
-title: "[BUG]"
+title: "[BUG]:"
 labels: bug
 assignees: mike-weiner
 
 ---
 
-**Describe the bug**
+**Describe the Bug:**
 A clear and concise description of what the bug is.
 
-**To Reproduce**
+**To Reproduce:**
 Please describe steps to reproduce the behavior:
 1. Go to '...'
 2. Click on '....'
 3. Scroll down to '....'
 4. See error
 
-**Expected behavior**
+**Expected Behavior:**
 Please include a clear and concise description of what you expected to happen.
 
-**Screenshots/Videos**
+**Screenshots/Videos:**
 If applicable, add screenshots or videos (or links to them) to help explain your problem.
 
-**Wordpress Information (please complete the following information):**
+**Wordpress Information:**
 Please fill out this information to the best of your ability. 
 
 You can find all of this information by logging into your Wordpress dashboard, hover over `Settings` in the left-hand admin sidebar, and select `Site Health` from the flyout that appears. 
@@ -44,7 +44,7 @@ Server Dropdown:
 - PHP Memory Limit [e.g.: 256M]
 - Upload Max Filesize [e.g.: 256M]
 
-**Device Information (please complete the following information):**
+**Device Information:**
 Please fill out this information to the best of your ability: 
 
  - OS: [e.g.: macOS, Windows 10, Windows 7, iPad OS, iOS]
@@ -52,5 +52,7 @@ Please fill out this information to the best of your ability:
  - Browser [e.g.: Chrome, Safari, Firefox, Edge, Brave]
  - Browser Versions [e.g.: 13.0.4, 72.0.1]
 
-**Additional context**
+**Additional Context:**
 Please include any additional information that you think would be helpful for us!
+
+*Thank you for your interest and dedication to make our project better together!*
