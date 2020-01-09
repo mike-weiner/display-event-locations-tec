@@ -19,7 +19,7 @@ This plugin works with The Events Calendar by Modern Tribe. It changes the popup
 
 ## Description
 
-This plugin overrides the standard template for the tooltip that is displayed when a user hovers over an event on the month display of The Events Calendar. The name of the event's venue/location that is entered with the event will be displayed under the date and time that the event occurs. All of the other elements of the template remain unchanged.
+This plugin overrides the standard template for the tooltip that is displayed when a user hovers over an event on the month display of The Events Calendar. The name of the event's venue/location that is entered with the event will be displayed under the date and time that the event occurs. The full street address for the location can also be enabled to be displayed directly underneath the name of the venue of the event. The location name and address are pulled in from each individual event. All of the other elements of the template remain unchanged.
 
 ## Installation
 
@@ -30,9 +30,11 @@ This section describes how to install the plugin and get it working.
 
 ## Frequently Asked Questions
 
-### I have activated the plugin, but the tooltip still looks the same. Why does the tooltip not list the event's location?
+### How do I display the street address underneath the location name within the looptip?
 
-The changes can take about a minute to be reflected.
+Hover over "Settings" in the black left-hand admin sidebar. Click on "Display Event Locations for The Events Calendar" from the dropdown that appears. Once the page loads, click the checkbox for the "Show Full Venue Address Inside Tooltip" option. Once the checkbox is selected, click the blue "Save Changes" button. Once the page reloads, scroll to the bottom of the page and under the "Preview Tooltip" area, the fake tooltip should display the location and fake street address underneath. 
+
+### I have activated the plugin, but the tooltip still looks the same. Why does the tooltip not list the event's location and/or address?
 
 First, make sure that the plugin 'Display Event Locations for The Events Calendar' is enabled in the backend.
 
@@ -42,9 +44,11 @@ If you still aren't seeing the location displayed within the tooltip, you can al
 
 If you still cannot figure out why the location is not displaying, feel free to submit a support ticket and we will be more than happy to help you!
 
+tldr; Sometimes data is cached in your browser. If your tooltip does not change after a page refresh, try clearing your browser's cache. You can also try viewing the calendar on a different device to determine if it is indeed a caching issue. If that does not work, please submit a support ticket. 
+
 ### Does this plugin display anything other than the name of the event's location?
 
-No. At this time, this plugin only adds the name of the event's location/venue to the tooltip.
+Yes. You can choose to display just the name of the location or the name of the location and the full address of the location underneath. Please see the screenshots for all of the different options you have about what information you can add to the tooltip.
 
 ### What plugins are required for these changes to take effect?
 
@@ -61,10 +65,37 @@ Yes. This plugin will modify the tooltip for events created with the classic/sta
 ## Screenshots
 
 1. The settings page for the Display Event Locations for The Events Calendar plugin. This is where you can change what is displayed on your tooltip when a user hovers over an event on your website's calendar.
-2. This is what the tooltip for a regular event will look like after activating this plugin.
-3. This is what the tooltip for a featured event will look like after activating this plugin.
+2. This is what the tooltip for a regular event will look like after activating this plugin with only the location name enabled.
+3. This is what the tooltip for a regular event will look like after activating this plugin with the location name and street address enabled.
+4. This is what the tooltip for a featured event will look like after activating this plugin with only the location name enabled.
+5. This is what the tooltip for a featured event will look like after activating this plugin with the location name and street address enabled.
 
 ## Changelog
+
+### 2.1
+* Released on Janurary 8, 2020
+* Added: The event street address can now be displayed within the tooltip underneath the location name.
+* Added: Uninstallation Hook (Your settings for this plugin will now be deleted from the wp_ database when you uninstall this plugin.)
+* Added: An additional line break has been added to featured event tooltips to make things more readable!
+* Added: Travis CI has been implemented to automatically check for any syntax and compatibility issues with modern and common versions of PHP. 
+* Added: New screenshots of the plugin to show the new feature of being able to add the street address to the tooltip.
+* Edited: /includes/settings-page/settings-page.php
+* Edited: /includes/settings-page/settings-register.php
+* Edited: /includes/settings-page/settings-callbacks.php
+* Edited: /includes/settings-page/settings-validate.php
+* Edited: /tribe/events/month/tooltip.php
+* Edited: /tribe/events/month/pro/tooltip.php
+* Edited: /tribe-events/month/tooltip.php
+* Edited: /tribe-events/month/pro/tooltip.php
+* Edited: /assets/screenshot1.png
+* Edited: /assets/screenshot2.png
+* Edited: /assets/screenshot3.png
+* Edited: /assets/screenshot4.png
+* Edited: /assets/screenshot5.png
+* Edited: plugin.php
+* Edited: README.md
+* Tested: Support up to WordPress 5.2.3 has been tested and confirmed
+* Tested: Support up to PHP 7.4 has been tested and confirmed
 
 ### 2.0.1
 * Released on September 5, 2019
@@ -105,6 +136,8 @@ Yes. This plugin will modify the tooltip for events created with the classic/sta
 * Initial release
 
 ## Upgrade Notice
+### 2.1
+Happy New Year!! Version 2.1 is a small, powerful update to welcome the new decade. You can now opt to display an event's location underneath the location name within the tooltip! Support for WordPress 5.2.3 has also been added. 
 
 ### 2.0.1
 * Version 2.0.1 is a very minor update. Support with WordPress 5.2.3 has been tested and confirmed. Thank you for your support!
