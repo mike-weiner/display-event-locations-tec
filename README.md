@@ -20,7 +20,7 @@ This plugin works with The Events Calendar by Modern Tribe. It changes the popup
 
 ## Description
 
-This plugin overrides the standard template for the tooltip that is displayed when a user hovers over an event on the month display of The Events Calendar. The name of the event's venue/location that is entered with the event will be displayed under the date and time that the event occurs. The full street address for the location can also be enabled to be displayed directly underneath the name of the venue of the event. ***The location name and address are pulled in from each individual event. All of the other elements of the template remain unchanged.***
+This plugin overrides the standard template for the tooltip that is displayed when a user hovers over an event on the month display of The Events Calendar. The name of the event's venue/location that is entered with the event will be displayed under the date and time that the event occurs. The full street address for the location can also be enabled to be displayed directly underneath the name of the venue of the event. ***The location name and address are pulled in from the events system itself for each individual event. All of the other elements of the template remain unchanged.***
 
 ## Installation
 
@@ -166,7 +166,7 @@ Yes. This plugin will modify the tooltip for events created with the classic/sta
 
 ## Upgrade Notice
 ### 2.1
-Happy New Year!! Version 2.1 is a small, powerful update to welcome the new decade. You can now opt to display an event's location underneath the location name within the tooltip! Support for WordPress 5.2.3 has also been added. 
+* Happy New Year!! Version 2.1 is a small, powerful update to welcome the new decade. You can now opt to display an event's location underneath the location name within the tooltip! Support for WordPress 5.2.3 has also been added. 
 
 ### 2.0.1
 * Version 2.0.1 is a very minor update. Support with WordPress 5.2.3 has been tested and confirmed. Thank you for your support!
@@ -189,3 +189,8 @@ Happy New Year!! Version 2.1 is a small, powerful update to welcome the new deca
 
 ### CSS Classes:
 * **deltec-tribe-events-location** - Within the tooltip/popup the text 'Location: Event-Location-Here' is wrapped in this class. Use this to style the information within the popup.
+
+### References:
+* https://theeventscalendar.com/support/forums/topic/altering-event-tooltip-display-displaying-additional-fields-in-tooltips/
+* https://theeventscalendar.com/support/forums/topic/override-templates-via-custom-plugin/
+* https://support.theeventscalendar.com/153124-Themers-Guide
