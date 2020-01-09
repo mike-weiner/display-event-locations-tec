@@ -56,7 +56,7 @@ If you still aren't seeing the location displayed within the tooltip, you can al
 
 If you still cannot figure out why the location is not displaying, feel free to submit a support ticket and we will be more than happy to help you!
 
->**TLDR;** Sometimes data is cached in your browser. If your tooltip does not change after a page refresh, try clearing your >browser's cache. You can also try viewing the calendar on a different device to determine if it is indeed a caching issue. >If that does not work, please submit a support ticket. 
+>**TLDR;** Sometimes data is cached in your browser. If your tooltip does not change after a page refresh, try clearing your browser's cache. You can also try viewing the calendar on a different device to determine if it is indeed a caching issue. If that does not work, please submit a support ticket. 
 
 ### Does this plugin display anything other than the name of the event's location?
 
