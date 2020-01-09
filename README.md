@@ -20,13 +20,14 @@ This plugin works with The Events Calendar by Modern Tribe. It changes the popup
 
 ## Description
 
-This plugin overrides the standard template for the tooltip that is displayed when a user hovers over an event on the month display of The Events Calendar. The name of the event's venue/location that is entered with the event will be displayed under the date and time that the event occurs. The full street address for the location can also be enabled to be displayed directly underneath the name of the venue of the event. The location name and address are pulled in from each individual event. All of the other elements of the template remain unchanged.
+This plugin overrides the standard template for the tooltip that is displayed when a user hovers over an event on the month display of The Events Calendar. The name of the event's venue/location that is entered with the event will be displayed under the date and time that the event occurs. The full street address for the location can also be enabled to be displayed directly underneath the name of the venue of the event. ***The location name and address are pulled in from each individual event. All of the other elements of the template remain unchanged.***
 
 ## Installation
 
 This section describes how to install the plugin and activate it on your Wordpress installation. 
 
 ### From the WordPress Plugin Directory
+
 The official Display Event Location for The Events Calendar WordPress Plugin can be found here: https://wordpress.org/plugins/display-event-locations-tec/
 
 The plugin can be downloaded and installed right from your Wordpress administration area by going to ```Plugins > Add New``` and searching for "Display Event Location for The Events Calendar by Weiner" and clicking "Install" and then by clicing the blue "Activate" after the installation has completed. 
@@ -34,6 +35,7 @@ The plugin can be downloaded and installed right from your Wordpress administrat
 The ```.zip``` of the Display Event Location for The Events Calendar Wordpress Plugin can be downloarded right from Wordpress.org using the link above.
 
 ### From this repository
+
 Go to the [releases](https://github.com/mike-weiner/display-event-locations-tec/releases) section of the repository and download the display-event-locations-tec.zip from the most recent release.
 
 Once you have downloaded the display-event-locations-tec.zip from the releases section of this repo, from your WordPress administration panel, go to ```Plugins > Add New``` and click the gray ```Upload Plugin``` button at the top of the page. Select the display-event-locations-tec.zip file to upload from your machine when prompted.
@@ -60,7 +62,7 @@ If you still cannot figure out why the location is not displaying, feel free to 
 
 Yes. You can choose to display just the name of the location or the name of the location and the full address of the location underneath. Please see the screenshots for all of the different options you have about what information you can add to the tooltip.
 
-Please see the FAQ titled "How do I display the street address underneath the location name within the looptip?" to learn how to enanle the street address within the tooltip. 
+Please see the FAQ titled ["How do I display the street address underneath the location name within the looptip?"](https://github.com/mike-weiner/display-event-locations-tec/blob/master/README.md#how-do-i-display-the-street-address-underneath-the-location-name-within-the-looptip) to learn how to enanle the street address within the tooltip. 
 
 ### How do I display the street address underneath the location name within the looptip?
 
@@ -69,6 +71,12 @@ Hover over "Settings" in the left-hand sidebar within the administration area of
 Once the page loads, click the checkbox for the "Show Full Venue Address Inside Tooltip" option. Once the checkbox is selected, click the blue "Save Changes" button. 
 
 Once the page reloads, scroll to the bottom of the page and under the "Preview Tooltip" area, the fake tooltip should display the location and fake street address underneath. 
+
+### How do I change the name and/or street address for event locations? 
+
+This plugin uses the location/venue name and address that is entered within the [Modern Tribe Event System](https://theeventscalendar.com/product/wordpress-events-calendar/) itself. To chagne the name or street address of an event location/venue hover over ```Events``` in the admininstration sidebar and select ```Venue``` from the flyout that appears. 
+
+Then selecit the location that you wish to change the name or address of. Once the page loads you will be able to change the name and address. Once you finish making updates, clikc the blue ```Update``` button. 
 
 ### What plugins are required for these changes to take effect?
 
