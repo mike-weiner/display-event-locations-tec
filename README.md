@@ -34,7 +34,7 @@ The plugin can be downloaded and installed right from your Wordpress administrat
 
 The ```.zip``` of the Display Event Location for The Events Calendar Wordpress Plugin can be downloarded right from Wordpress.org using the link above.
 
-### From this repository
+### From the Github Repository
 
 Go to the [releases](https://github.com/mike-weiner/display-event-locations-tec/releases) section of the repository and download the display-event-locations-tec.zip from the most recent release.
 
