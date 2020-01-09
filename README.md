@@ -193,6 +193,8 @@ Initial release!
 The Github Repository can be found here: https://github.com/mike-weiner/display-event-locations-tec.
 
 ### References:
+Below are resources and references that were used to help develop parts of this plugin:
+
 * https://theeventscalendar.com/support/forums/topic/altering-event-tooltip-display-displaying-additional-fields-in-tooltips/
 * https://theeventscalendar.com/support/forums/topic/override-templates-via-custom-plugin/
 * https://support.theeventscalendar.com/153124-Themers-Guide
