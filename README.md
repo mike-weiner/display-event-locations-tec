@@ -88,7 +88,7 @@ Yes, this plugin will change the tooltip for both regular and featured events.
 
 ### Does this plugin work for events created with the block editor?
 
-Yes. This plugin will modify the tooltip for events created with the classic/standard editor or the block editor for both the standard and pro versions of 'The Events Calendar'.
+No. This plugin will NOT modify the tooltip for events created with the the block editor for either the standard or pro versions of _The Events Calendar_.
 
 ## Screenshots
 
