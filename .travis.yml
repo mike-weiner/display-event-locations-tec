@@ -16,6 +16,3 @@ script:
   php -l inlucdes/settings-page/settings-register.php
   php -l inlucdes/settings-page/settings-validate.php
   php -l tribe-events/month/tooltip.php
-  php -l tribe-events/pro/month/tooltip.php
-  php -l tribe/events/month/tooltip.php
-  php -l tribe/events/pro/month/tooltip.php
