@@ -1,12 +1,27 @@
 <?php
-// Exit plugin if it is being accessed directly
+
+ /*********************************************************************
+ * Exit file if it is being accessed directly
+ * 
+ * @link
+ *
+ * @see 
+ * 
+ * @param 
+ *
+ * @return 
+ *********************************************************************/
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// Get the value of the text-field for the pre-venue-message from the deltec settings page
+// Get the row within the wp_options table for the custom deltec options
 $deltec_options = get_option('deltec_options');
+
+// Get the value of the text-field for the pre-venue-message from the deltec settings page
 $deltec_tooltip_message = $deltec_options['pre-venue-message'];
+
+// Get the value of the option check-box if the full address should be displayed within the tooltip
 $deltec_display_full_address = $deltec_options['display-full-address'];
 
 ?>
@@ -78,7 +93,7 @@ $deltec_display_full_address = $deltec_options['display-full-address'];
 				$deltec_html = '<br>[[=venue_address]]<br>[[=venue_city]], [[=venue_state]] [[=venue_zip]]</p><p></p>';
 				echo $deltec_html;
 			} else {
-				$deltec_html = '</p><p></p>';
+				$deltec_html = '</p>';
 				echo $deltec_html;
 			}
 			?>

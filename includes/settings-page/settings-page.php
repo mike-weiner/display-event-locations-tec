@@ -1,11 +1,32 @@
 <?php
 
-// Exit file if it is being accessed directly
+ /*********************************************************************
+ * Exit file if it is being accessed directly
+ * 
+ * @link
+ *
+ * @see 
+ * 
+ * @param 
+ *
+ * @return 
+ *********************************************************************/
 if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-// Add items to the Display Event Locations for The Events Calendar settings page
+
+ /*********************************************************************
+ *  Add items to the Display Event Locations for The Events Calendar settings page
+ * 
+ * @link
+ *
+ * @see 
+ * 
+ * @param 
+ *
+ * @return 
+ *********************************************************************/
 function deltec_display_settings_page() {
     // Check to make sure the user has access to the page (via Admin account)
     if (!current_user_can('manage_options')) {

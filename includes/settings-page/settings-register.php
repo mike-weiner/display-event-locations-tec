@@ -1,11 +1,32 @@
 <?php
 
-// Exit file if it is being accessed directly
+ /*********************************************************************
+ * Exit file if it is being accessed directly
+ * 
+ * @link
+ *
+ * @see 
+ * 
+ * @param 
+ *
+ * @return 
+ *********************************************************************/
 if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-// Register settings for the deltec_settings_page
+
+ /*********************************************************************
+ *  Register settings for the deltec_settings_page
+ * 
+ * @link
+ *
+ * @see 
+ * 
+ * @param 
+ *
+ * @return 
+ *********************************************************************/
 function deltec_register_settings(){
     // Adds Setting Section for Tooltip Message Options
     add_settings_section (
