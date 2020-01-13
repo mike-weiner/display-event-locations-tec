@@ -9,7 +9,7 @@ php:
 matrix:
   fast_finish: true
 script:
-  # php -l plugin.php
+  php -l plugin.php
   php -l includes/settings-page/admin-menu.php
   php -l includes/settings-page/settings-callbacks.php
   php -l includes/settings-page/settings-page.php
