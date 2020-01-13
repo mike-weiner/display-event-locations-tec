@@ -230,7 +230,6 @@ function deltec_tribe_filter_template_paths_legacy ( string $file, string $templ
     
     }
 
-<<<<<<< HEAD
     */
     
     // For every custom template file path within $deltec_template_paths_legacy --> check if it exists 
@@ -242,13 +241,6 @@ function deltec_tribe_filter_template_paths_legacy ( string $file, string $templ
     
     // If none of the file paths within $deltec_template_paths_legacy use the default template from TEC
 	return $file;
-=======
-    // If the event system does find any template overrides in any of the directories specified --> return the new template override
-    return $deltec_custom_file_path;
-    // return $deltec_custom_file_path_pro;
-    // return $deltec_custom_file_path_block;
-    // return $deltec_custom_file_path_block_pro;
->>>>>>> 325f867df0d31ce261130266c91179acf8dcdfb9
 }
 add_filter('tribe_events_template', 'deltec_tribe_filter_template_paths_legacy', 10, 2);
 
