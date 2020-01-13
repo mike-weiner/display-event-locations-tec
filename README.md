@@ -115,7 +115,7 @@ As great as the block editor is, it can cause issues sometimes. For events that 
 ## Changelog
 
 ### 2.2 
-* Released on January 14, 2020
+* Released on January 13, 2020
 * Added: All code has been cleaned and documented! Rejoice!
 * Added: All function and variable names now use the global plugin prefix: $deltec_
 * Added: Tooltip overrides for events created with the block editor has been re-enabled. 
