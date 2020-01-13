@@ -121,9 +121,9 @@ function deltec_tribe_filter_template_paths ( $file, $template ) {
 
     // If the event system does find any template overrides in any of the directories specified --> return the new template override
     return $deltec_custom_file_path;
-    return $deltec_custom_file_path_pro;
-    return $deltec_custom_file_path_block;
-    return $deltec_custom_file_path_block_pro;
+    // return $deltec_custom_file_path_pro;
+    // return $deltec_custom_file_path_block;
+    // return $deltec_custom_file_path_block_pro;
 }
 add_filter('tribe_events_template', 'deltec_tribe_filter_template_paths', 10, 2); // Call the function created to check for additional overrides
 
