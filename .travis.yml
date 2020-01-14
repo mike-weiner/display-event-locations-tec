@@ -26,10 +26,10 @@ php:
 
 # PHP files to check for syntax errors
 script:
-  php -l plugin.php
-  php -l includes/settings-page/admin-menu.php
-  php -l includes/settings-page/settings-callbacks.php
-  php -l includes/settings-page/settings-page.php
-  php -l includes/settings-page/settings-register.php
-  php -l includes/settings-page/settings-validate.php
-  php -l tribe-events/month/tooltip.php
+  - phpunit --syntax-check plugin.php
+  - phpunit --syntax-check includes/settings-page/admin-menu.php
+  - phpunit --syntax-check includes/settings-page/settings-callbacks.php
+  - phpunit --syntax-check includes/settings-page/settings-page.php
+  - phpunit --syntax-check includes/settings-page/settings-register.php
+  - phpunit --syntax-check includes/settings-page/settings-validate.php
+  - phpunit --syntax-check tribe-events/month/tooltip.php
