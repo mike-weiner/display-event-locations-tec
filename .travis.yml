@@ -1,4 +1,4 @@
-# Set environment OS to linux
+# Set environment to use linux OS
 os: linux
 
 # Set environment to use PHP
