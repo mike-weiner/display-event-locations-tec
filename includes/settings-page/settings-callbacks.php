@@ -1,7 +1,7 @@
 <?php
 
- /*********************************************************************
- * Exit file if it is being accessed directly
+ /**
+ *  Exit plugin if it is being accessed directly
  * 
  * @link
  *
@@ -10,41 +10,39 @@
  * @param 
  *
  * @return 
- *********************************************************************/
+ */
 if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
 
- /*********************************************************************
+ /**
  * Callback function for tooltip settings section on the deltec settings page
  * 
  * @link
  *
- * @see deltec_register_settings 
- *           /includes/settings-register.php
+ * @see deltec_register_settings() located at /includes/settings-register.php
  * 
  * @param 
  *
  * @return 
- *********************************************************************/
+ */
 function deltec_callback_settings_section_tool_tip() {
     echo '<p>Use the text field below to modify the message/phrase that is displayed before the event venue/location in the tooltip that is displayed on hover for the user.</p>';
 }
 
 
- /*********************************************************************
+ /**
  * Callback function for the pre-venue-message field on the deltec settings page
  * 
  * @link
  *
- * @see deltec_register_settings 
- *           /includes/settings-register.php
+ * @see deltec_register_settings() located at /includes/settings-register.php
  * 
  * @param 
  *
  * @return 
- *********************************************************************/
+*/
 function deltec_callback_pre_venue_message_text_field($args) {
     // Get the row within the wp_options table for the custom deltec options
     $options = get_option('deltec_options', deltec_options_default());
@@ -60,7 +58,7 @@ function deltec_callback_pre_venue_message_text_field($args) {
 }
 
 
- /*********************************************************************
+ /**
  * Callback function for the display-full-address field on the deltec settings page
  * 
  * @link
@@ -71,13 +69,17 @@ function deltec_callback_pre_venue_message_text_field($args) {
  * @param 
  *
  * @return 
- *********************************************************************/
+ */
 function deltec_callback_show_full_address_checkbox($args) {
     // Get the option for the check box to dispaly the full address from the Display Event Locations for The Events Calendar settings page 
-    $options = get_option('deltec_options')['display-full-address'];
+    $options = get_option('deltec_options');
+
+    // If the checkbox is not set or not checked -> assign $options a value of 0
+    // If the chekcbox is set -> assign $options a value of 1
+    $options = empty($options['display-full-address']) ? 0 : 1;
 
     // Create an html checkbox and label to display value of the display full address deltec option
-    $deltec_dfahtml = '<input type="checkbox" id="deltec_options_display_full_address" name="deltec_options[display-full-address]" value="1"' . checked( 1, $options['display-full-address'], false ) . '/><br>';
+    $deltec_dfahtml = '<input type="checkbox" id="deltec_options_display_full_address" name="deltec_options[display-full-address]" value="1"' . checked( 1, $options, false ) . '/><br>';
     $deltec_dfahtml .= '<label for="deltec_options_display_full_address">Enable the full address to be displayed underneath the venue/location name within the tooltip.</label>';
 
     // Eacho out the html for the input tag and the label that will be displayed for the 'Show Full Venue Address Inside Tooltip' checkbox

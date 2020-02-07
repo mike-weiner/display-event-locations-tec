@@ -1,7 +1,7 @@
 <?php
 
- /*********************************************************************
- * Exit file if it is being accessed directly
+  /**
+ *  Exit plugin if it is being accessed directly
  * 
  * @link
  *
@@ -10,7 +10,7 @@
  * @param 
  *
  * @return 
- *********************************************************************/
+ */
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
@@ -43,7 +43,7 @@ $deltec_display_full_address = $deltec_options['display-full-address'];
 
 			<!-- Check to see if the user wants to dispay the full address below the location name -->
 			<?php if ($deltec_display_full_address == 1) {
-				$deltec_html = '<br>[[=venue_address]]<br>[[=venue_city]], [[=venue_state]] [[=venue_zip]]</p>';
+				$deltec_html = '<br>[[=venue_address]]<br>[[=venue_city]], [[=venue_state]] [[=venue_zip]]<br>[[=venue_country]]</p>';
 				echo $deltec_html;
 			} else {
 				$deltec_html = '</p>';
@@ -90,10 +90,10 @@ $deltec_display_full_address = $deltec_options['display-full-address'];
 
 			<!-- Check to see if the user wants to dispay the full address below the location name -->
 			<?php if ($deltec_display_full_address == 1) {
-				$deltec_html = '<br>[[=venue_address]]<br>[[=venue_city]], [[=venue_state]] [[=venue_zip]]</p><p></p>';
+				$deltec_html = '<br>[[=venue_address]]<br>[[=venue_city]], [[=venue_state]] [[=venue_zip]]<br>[[=venue_country]]</p><p></p>';
 				echo $deltec_html;
 			} else {
-				$deltec_html = '</p>';
+				$deltec_html = '</p><p></p>';
 				echo $deltec_html;
 			}
 			?>

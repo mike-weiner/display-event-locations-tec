@@ -1,7 +1,7 @@
 <?php
 
- /*********************************************************************
- * Exit file if it is being accessed directly
+ /**
+ *  Exit plugin if it is being accessed directly
  * 
  * @link
  *
@@ -10,13 +10,13 @@
  * @param 
  *
  * @return 
- *********************************************************************/
+ */
 if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
 
- /*********************************************************************
+ /**
  * Add submenu page for 'Display Event Locations for The Events Calendar' under the Settings tab
  * 
  * @link
@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @param 
  *
  * @return 
- *********************************************************************/
+ */
 function deltec_settings_page_add_sub_level_menu() {
     add_submenu_page(
         'options-general.php', // Where submenu item is listed
