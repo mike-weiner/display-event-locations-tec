@@ -1,4 +1,4 @@
-# Display Event Location for The Events Calendar
+# Display Event Location for The Events Calendar 
 [![Build Status](https://travis-ci.com/mike-weiner/display-event-locations-tec.svg?branch=master)](https://travis-ci.com/mike-weiner/display-event-locations-tec)
 ![WordPress Plugin Downloads](https://img.shields.io/wordpress/plugin/dt/display-event-locations-tec)
 ![Wordpress Plugin Activations](https://img.shields.io/wordpress/plugin/installs/display-event-locations-tec)
