@@ -11,7 +11,7 @@ Donate Link: https://paypal.me/michaelw13 <br>
 Tags: events, customization, modern-tribe, override, template <br>
 Requires at least: 4.6 <br>
 Tested up to: 5.3.2 <br>
-Stable tag: 3.0 <br>
+Stable tag: 3.0.1 <br>
 Requires PHP: 5.6 <br>
 License: GPLv2 or later <br>
 License URI: https://www.gnu.org/licenses/gpl-2.0.html <br>
@@ -120,6 +120,12 @@ As great as the block editor is it can cause issues, sometimes. For events that 
 9. This is what the tooltip for a featured event will look like after activating this plugin with the location name and street address enabled with the legacy calendar template.
 
 ## Changelog
+
+### 3.0.1
+* Released on February 7, 2020
+* Fixed: Fixed the file path for the currently active theme within deltec_tribe_custom_template_paths_v2_views(). This will allow TEC to look into your active theme directory (correctly) to grab any additional template overrides after it has pulled the templates from our plugin in. 
+* Edited: plugin.php
+* Edited: README.md
 
 ### 3.0 
 * Released on February 7, 2020
@@ -235,6 +241,10 @@ As great as the block editor is it can cause issues, sometimes. For events that 
 * Initial release
 
 ## Upgrade Notice
+
+### 3.0.1 
+A quick bug fix has been deployed to make sure TEC looks into the correct directory within your active theme to be able to pull in any additional template overrides. Have a great weekend!
+
 ### 3.0 
 Support for the beuatiful v2 calendar views introduced with The Events Calendar 5.0 is here! This update not only adds support for the new tooltip within the v2 calendar views, but it also fixes a handful of bugs, adds greater code documentation, and addresses several quality-of-life issues with the plugin. As ususal, please let us know if you run into any issues! where there's a will there's a way, the deltec dev team.
 
