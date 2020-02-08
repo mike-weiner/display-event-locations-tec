@@ -71,7 +71,7 @@ function deltec_callback_pre_venue_message_text_field($args) {
  * @return 
  */
 function deltec_callback_show_full_address_checkbox($args) {
-    // Get the option for the check box to dispaly the full address from the Display Event Locations for The Events Calendar settings page 
+    // Get the option for the check box to dispaly the full address from the Display Event Location for The Events Calendar settings page 
     $options = get_option('deltec_options');
 
     // If the checkbox is not set or not checked -> assign $options a value of 0

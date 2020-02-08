@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
  /**
- *  Add items to the Display Event Locations for The Events Calendar settings page
+ *  Add items to the Display Event Location for The Events Calendar settings page
  * 
  * @link
  *

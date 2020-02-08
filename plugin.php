@@ -1,11 +1,11 @@
 <?php
 /**
- * Plugin Name: Display Event Locations for The Events Calendar
+ * Plugin Name: Display Event Location for The Events Calendar
  * Plugin URI: https://thetechsurge.com/
  * Description: Add the event venue/location to the tooltip that is displayed on hover over in the month view of the calendar when using The Events Calendar or The Events Calendar Pro by Modern Tribe.
  * Author: Michael Weiner
  * Author URI: https://thetechsurge.com/
- * Version: 3.0.1
+ * Version: 3.0.2
  * License: GPL2+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  */
@@ -48,8 +48,7 @@ if (is_admin()) {
 
 
 /**
- * Modify Display Event Locations plugin admin page listing
- * Adds 'Settings' action link for plugin listing
+ * Modifies the "Display Event Location for The Events Calendar" plugin page listing by adding the 'Settings' action link for plugin listing
  * 
  * @link
  *
@@ -63,7 +62,7 @@ function deltec_register_action_links($deltec_links) {
     // Get the file path to the root directory of this plugin
     $deltec_base = plugin_basename(__FILE__);
 
-    // Get settings page for the Display Event Locations for The Events Calendar settings page
+    // Get settings page for the Display Event Location for The Events Calendar settings page
     $deltec_settings_url = menu_page_url('deltec_settings', false);
 
     // Create HTML ahref to the settings page
@@ -79,8 +78,7 @@ add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'deltec_register
 
 
 /**
- * Modify Display Event Locations plugin admin page listing
- * Adds 'Donate' action link for plugin listing
+ * Modifies the "Display Event Location for The Events Calendar" plugin page listing by adding the 'Donate' action link for plugin listing
  * 
  * @link
  *
@@ -201,10 +199,6 @@ function deltec_tribe_custom_template_paths_legacy_views ( string $file, string 
 		}
     }
 
-    if (tribe_events_views_v2_is_enabled() == '1') {
-        $deltec_global_v2_views_active = 1;
-    }
-    
     // If none of the file paths within $deltec_template_paths_legacy use the default template(s) from TEC
 	return $file;
 }
