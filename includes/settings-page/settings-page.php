@@ -2,14 +2,6 @@
 
  /**
  *  Exit plugin if it is being accessed directly
- * 
- * @link
- *
- * @see 
- * 
- * @param 
- *
- * @return 
  */
 if ( ! defined( 'ABSPATH' ) ) {
     exit;
@@ -18,14 +10,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
  /**
  *  Add items to the Display Event Location for The Events Calendar settings page
- * 
- * @link
- *
- * @see 
- * 
- * @param 
- *
- * @return 
  */
 function deltec_display_settings_page() {
     // Check to make sure the user has access to the page

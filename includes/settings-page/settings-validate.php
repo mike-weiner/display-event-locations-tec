@@ -2,14 +2,6 @@
 
  /**
  * Exit file if it is being accessed directly
- * 
- * @link
- *
- * @see 
- * 
- * @param 
- *
- * @return 
  */
 if ( ! defined( 'ABSPATH' ) ) {
     exit;
@@ -19,12 +11,8 @@ if ( ! defined( 'ABSPATH' ) ) {
  /**
  * Validate & Clean settings fields on the deltec settings page
  * 
- * @link
- *
  * @see deltec_register_settings() located at /includes/settings-register.php
  * 
- * @param 
- *
  * @return string Returns a string containing the sanitized input from the 'Tooltip Message Before Venue/Location Name' textfield
  */
 function deltec_validate_options($input)

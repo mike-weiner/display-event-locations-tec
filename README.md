@@ -10,8 +10,8 @@ Contributors: [vikings412](https://profiles.wordpress.org/vikings412/) <br>
 Donate Link: https://paypal.me/michaelw13 <br>
 Tags: events, customization, modern-tribe, override, template <br>
 Requires at least: 4.6 <br>
-Tested up to: 5.3.2 <br>
-Stable tag: 3.0.2 <br>
+Tested up to: 5.4 <br>
+Stable tag: 3.1 <br>
 Requires PHP: 5.6 <br>
 License: GPLv2 or later <br>
 License URI: https://www.gnu.org/licenses/gpl-2.0.html <br>
@@ -74,6 +74,28 @@ Once the you have edited the message to what you would like, click the blue `Sav
 
 Once the page reloads, scroll to the bottom of the page and under the "Preview Tooltip" area, the fake tooltip should display your custom message before the event's venue/location name.
 
+### How do I remove the phrase "Location: " that is diplayed before the name of an event's venue/location within the tooltip so nothing is displayed before the event venue/location name?
+
+Hover over `Settings` in the left-hand sidebar within the administration area of your Wordpress website. Click on `Display Event Location for The Events Calendar` from the flyout that appears. 
+
+Once the page loads, remove the text within the `Tooltip Message Before Venue/Location Name` textbox.
+
+Once the you have removed all of the text in the box, click the blue `Save Changes` button. 
+
+Once the page reloads, scroll to the bottom of the page and under the "Preview Tooltip" area, the fake tooltip should display no custom message before the event's venue/location name.
+
+### How do I change the font size of the event venue/location name and/or stret address text within the tooltip?
+
+You can add this CSS to your website to change the font size of the “Location: —” text (Note: If you enable the full address to be displayed, this CSS will also modify that text as well):
+
+`.deltec-tribe-events-location {
+	font-size: 14px;
+}`
+
+**Note:** This CSS is very basic and is just meant as a starting point. It could be overwritten by a more specific CSS call.
+
+You might need to modify the 14px font size up or down because every theme looks slightly different. However, this should get you real close!
+
 ### How do I display the street address underneath the location name within the looptip?
 
 Hover over `Settings` in the left-hand sidebar within the administration area of your Wordpress installation. Click on `Display Event Location for The Events Calendar` from the flyout that appears. 
@@ -123,13 +145,35 @@ As great as the block editor is it can cause issues, sometimes. For events that 
 
 ## Changelog
 
+### 3.1
+* Released on March 7, 2020
+* Added: Support with Wordpress 5.4 has been tested and confirmed
+* Added: An error message will be displayed for administrators on the plugin page if The Events Calendar plugin is not activated
+* Added: All functions within plugin.php have been alphabetized 
+* Added: FAQ Question "How do I remove the phrase "Location: " that is diplayed before the name of an event's venue/location within the tooltip so nothing is displayed before the event venue/location name?" has been added
+* Added: FAQ Question: "How do I change the font size of the event venue/location name and/or stret address text within the tooltip?" has been added
+* Fixed: All excess function header comment infromation has been removed
+* Fixed: Fixed typo on Display Event Location for The Events Calendar settings page and within the menu sidebar
+* Fixed: Replaced screenshot-1 with an updated version to reflect removal of typo in settings page title
+* Edited: plugin.php
+* Edited: README.md
+* Edited: /assets/screenshot1.png
+* Edited: /includes/settings-page/admin-page.php
+* Edited: /includes/settings-page/settings-page.php
+* Edited: /includes/settings-page/settings-register.php
+* Edited: /includes/settings-page/settings-callbacks.php
+* Edited: /includes/settings-page/settings-validate.php
+* Edited: /tribe/events/month/calendar-body/day/calendar-events/calendar-event/tooltip/title.php
+* Edited: /tribe-events/month/tooltip.php
+
 ### 3.0.2 
 * Released on February 8, 2020
 * Fixed: Fixed inconsistencies in the plugin name within the files headers.
 * Fixed: Removed unintended logic from plugin.php that used tribe_events_views_v2_is_enabled().
 * Updated: The description of this plugin has been updated to reflect new features.
 * Edited: plugin.php
-* Edited: README.md* Edited: /includes/settings-page/admin-page.php
+* Edited: README.md
+* Edited: /includes/settings-page/admin-page.php
 * Edited: /includes/settings-page/settings-page.php
 * Edited: /includes/settings-page/settings-callbacks.php
 
@@ -253,6 +297,9 @@ As great as the block editor is it can cause issues, sometimes. For events that 
 * Initial release
 
 ## Upgrade Notice
+
+### 3.1
+Happy Saturday! Lots of small things are in the works -- Support for Wordpress 5.4 that is slated to be released at the end of March has been tested and confirmed. A new admin error message will now be displayed if The Events Calendar is not activated when Display Event Location for The Events Calendar is active. Other small source code spring cleaning has ocurred (See the changelog for more details.). As always, thank you for the support and let us know if you encounter any issues!
 
 ### 3.0.2
 More quick updates are on the horizon! Code has been cleaned and further simplified, and plugin names have been made consistent. Please let us know if you experience any issues!

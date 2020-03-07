@@ -1,15 +1,7 @@
 <?php
 
-  /**
+/**
  *  Exit plugin if it is being accessed directly
- * 
- * @link
- *
- * @see 
- * 
- * @param 
- *
- * @return 
  */
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;

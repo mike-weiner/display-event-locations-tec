@@ -5,39 +5,17 @@
  * Description: Add the event venue/location to the tooltip that is displayed on hover over in the month view of the calendar when using The Events Calendar or The Events Calendar Pro by Modern Tribe.
  * Author: Michael Weiner
  * Author URI: https://thetechsurge.com/
- * Version: 3.0.2
+ * Version: 3.1
  * License: GPL2+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  */
 
- /**
- *  Exit plugin if it is being accessed directly
- * 
- * @link
- *
- * @see 
- * 
- * @param 
- *
- * @return 
- */
+// Exit plugin if it is being accessed directly
 if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-
-/**
- * Call in all dependencies to other files
- * User must be an admin before calling in /includes/settings-page/*
- * 
- * @link
- *
- * @see 
- * 
- * @param 
- *
- * @return 
- */
+// Call dependecies to other files for admin views
 if (is_admin()) {
     require_once plugin_dir_path(__FILE__) . 'includes/settings-page/admin-menu.php';
     require_once plugin_dir_path(__FILE__) . 'includes/settings-page/settings-page.php';
@@ -45,124 +23,6 @@ if (is_admin()) {
     require_once plugin_dir_path(__FILE__) . 'includes/settings-page/settings-callbacks.php';
     require_once plugin_dir_path(__FILE__) . 'includes/settings-page/settings-validate.php';
 }
-
-
-/**
- * Modifies the "Display Event Location for The Events Calendar" plugin page listing by adding the 'Settings' action link for plugin listing
- * 
- * @link
- *
- * @see 
- * 
- * @param string $deltec_links A string that contains a placeholder for an array of links to be returned to WP
- * 
- * @return array Returns an array of html ahref links for WP to use on settings page
- */
-function deltec_register_action_links($deltec_links) {
-    // Get the file path to the root directory of this plugin
-    $deltec_base = plugin_basename(__FILE__);
-
-    // Get settings page for the Display Event Location for The Events Calendar settings page
-    $deltec_settings_url = menu_page_url('deltec_settings', false);
-
-    // Create HTML ahref to the settings page
-    $deltec_settings_link = '<a href="'.$deltec_settings_url.'">' . __( 'Settings', 'settings' ) . '</a>';
-
-    // Add settings_link to array of links to be returned
-    $deltec_links[] = $deltec_settings_link; 
-    // Return the array of custom links established above
-
-    return $deltec_links;
-}
-add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'deltec_register_action_links' );
-
-
-/**
- * Modifies the "Display Event Location for The Events Calendar" plugin page listing by adding the 'Donate' action link for plugin listing
- * 
- * @link
- *
- * @see 
- * 
- * @param string $deltec_links A string that acts as a placeholder for an array of links to be returned to WP
- * @param string $deltec_file  A string containing the complete file path to the plugin listing being edited
- * 
- * @return array Returns an array of html ahref links for WP to use on settings page
- */
-function deltec_register_meta_links ($deltec_links, $deltec_file) {
-    // Get the file path to the root directory of this plugin
-    $deltec_base = plugin_basename(__FILE__);
-
-    // Check to make sure we are editing our plugin listing
-    if ($deltec_file == $deltec_base) { 
-        // Add link to the settings page under the plugin description
-        $deltec_links[] = '<a href="'.menu_page_url('deltec_settings', false).'">' . __( 'Settings', 'settings' ) . '</a>';
-
-        // Add link to make a financial contribution under the plugin description
-        $deltec_links[] = '<a href="https://paypal.me/michaelw13" target="_blank">' . __('Support Our Work') . '</a>';
-    }
-    
-    // Return the array of custom links created above
-    return $deltec_links;
-}
-add_filter('plugin_row_meta',  'deltec_register_meta_links', 10, 2);
-
-
- /**
- * Initialize an array to store the deafult deltec_options for WP to use
- * 
- * @link
- *
- * @see deltec_on_activate()
- * 
- * @param 
- * 
- * @return  
- */
-function deltec_options_default() {
-    return array (
-        'pre-venue-message' => 'Location:',
-        'display-full-address' => '',
-    );
-}
-
-
- /**
- * Initialize default deltec_options to WP options database upon installation
- * 
- * @link
- *
- * @see 
- * 
- * @param 
- * 
- * @return  
- */
-function deltec_on_activate(){
-    // Set the values of the deltec options to their defaults on first activation of the plugin
-    $options = update_option('deltec_options', deltec_options_default());
-}
-// Call deltec_on_activate() when the plugin in activated
-register_activation_hook(__FILE__,'deltec_on_activate'); 
-
-
- /**
- * Initialize default deltec_options to WP options database upon installation
- * 
- * @link
- *
- * @see 
- * 
- * @param 
- * 
- * @return  
- */
-function deltec_on_uninstall() {
-    // Remove deltec_options from the WP database upon uninstallation
-    delete_option('deltec_options'); 
-}
-register_uninstall_hook( __FILE__, 'deltec_on_uninstall' );
-
 
 /**
  * Establish directory paths for the template overrides for LEGACY views within TEC
@@ -203,7 +63,6 @@ function deltec_tribe_custom_template_paths_legacy_views ( string $file, string 
 	return $file;
 }
 add_filter('tribe_events_template', 'deltec_tribe_custom_template_paths_legacy_views', 10, 2);
-
 
 /**
  * Establish directory paths for the template overrides for v2 views within TEC
@@ -261,11 +120,139 @@ add_filter( 'tribe_template_theme_path_list', 'deltec_tribe_custom_template_path
 
 
 /**
+ * Display admin notice for admins only on the plugin page if The Events Calendar is not activated
+ * 
+ * @see deltec_plugin_init()
+ */
+function deltec_error_install_tec_plugin() {
+    global $pagenow; // Get pagenow global variable
+
+    // Delcare a variable to store the url for TEC WP plugin directory listing to display within iframe
+    $deltec_url = 'plugin-install.php?tab=plugin-information&plugin=the-events-calendar&TB_iframe=true';
+
+    // If the current page is the plugins page and the current user has administration privileges
+    if ( $pagenow == 'plugins.php' && current_user_can( 'manage_options' ) ) {
+
+        // Display error message to user that is non-dissmissable
+        echo '<div class="error"><p>'
+        .sprintf(
+            '%1s <a href="%2s" class="thickbox" title="%3s">%4s</a>.',
+
+            esc_html__( 'Display Event Location for The Events Calendar requires The Events Claendar to function properly. Please, install and activate the latest version of', 'tribe-events-calendar' ),
+            esc_url( $deltec_url ),
+            esc_html__( 'The Events Calendar', 'tribe-events-calendar' ),
+            esc_html__( 'The Events Calendar', 'tribe-events-calendar' )
+
+            ).
+        '</p></div>';
+    }
+}
+
+
+/**
+ * Check to determine if The Events Calendar pluin is activated anytime a plugin is activated or deactivated
+ * 
+ * @see deltec_error_install_tec_plugin()
+ */
+function deltec_plugin_init() {    
+    // If the Tribe Events Calendar 'Tribe__Main' class does not exists => TEC is either not activated
+    if ( ! class_exists( 'Tribe__Main' ) ) {
+        add_action( 'admin_notices', 'deltec_error_install_tec_plugin' ); // Call action to display error message to user
+    }
+}
+add_action( 'plugins_loaded', 'deltec_plugin_init' );
+
+
+/**
+ * Initialize default deltec_options to WP options database upon installation 
+ */
+function deltec_on_activate(){
+    // Set the values of the deltec options to their defaults on first activation of the plugin
+    $options = update_option('deltec_options', deltec_options_default());
+}
+// Call deltec_on_activate() when the plugin in activated
+register_activation_hook(__FILE__,'deltec_on_activate'); 
+
+
+/**
+ * Initialize default deltec_options to WP options database upon installation
+ */
+function deltec_on_uninstall() {
+    // Remove deltec_options from the WP database upon uninstallation
+    delete_option('deltec_options'); 
+}
+register_uninstall_hook( __FILE__, 'deltec_on_uninstall' );
+
+
+/**
+ * Initialize an array to store the deafult deltec_options for WP to use
+ * 
+ * @see deltec_on_activate()
+ */
+function deltec_options_default() {
+    return array (
+        'pre-venue-message' => 'Location:',
+        'display-full-address' => '',
+    );
+}
+
+
+/**
+ * Modifies the "Display Event Location for The Events Calendar" plugin page listing by adding the 'Settings' action link for plugin listing
+ *
+ * @param string $deltec_links A string that contains a placeholder for an array of links to be returned to WP
+ * 
+ * @return array Returns an array of html ahref links for WP to use on settings page
+ */
+function deltec_register_action_links($deltec_links) {
+    // Get the file path to the root directory of this plugin
+    $deltec_base = plugin_basename(__FILE__);
+
+    // Get settings page for the Display Event Location for The Events Calendar settings page
+    $deltec_settings_url = menu_page_url('deltec_settings', false);
+
+    // Create HTML ahref to the settings page
+    $deltec_settings_link = '<a href="'.$deltec_settings_url.'">' . __( 'Settings', 'settings' ) . '</a>';
+
+    // Add settings_link to array of links to be returned
+    $deltec_links[] = $deltec_settings_link; 
+    // Return the array of custom links established above
+
+    return $deltec_links;
+}
+add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'deltec_register_action_links' );
+
+
+/**
+ * Modifies the "Display Event Location for The Events Calendar" plugin page listing by adding the 'Donate' action link for plugin listing
+ * 
+ * @param string $deltec_links A string that acts as a placeholder for an array of links to be returned to WP
+ * @param string $deltec_file  A string containing the complete file path to the plugin listing being edited
+ * 
+ * @return array Returns an array of html ahref links for WP to use on settings page
+ */
+function deltec_register_meta_links ($deltec_links, $deltec_file) {
+    // Get the file path to the root directory of this plugin
+    $deltec_base = plugin_basename(__FILE__);
+
+    // Check to make sure we are editing our plugin listing
+    if ($deltec_file == $deltec_base) { 
+        // Add link to the settings page under the plugin description
+        $deltec_links[] = '<a href="'.menu_page_url('deltec_settings', false).'">' . __( 'Settings', 'settings' ) . '</a>';
+
+        // Add link to make a financial contribution under the plugin description
+        $deltec_links[] = '<a href="https://paypal.me/michaelw13" target="_blank">' . __('Support Our Work') . '</a>';
+    }
+    
+    // Return the array of custom links created above
+    return $deltec_links;
+}
+add_filter('plugin_row_meta',  'deltec_register_meta_links', 10, 2);
+
+
+/**
  * Returns json with additional information for tooltip to be used with javascript templating functions for tooltip
  * 
- * 
- * @link 
- *
  * @see tribe_events_template_data_array()
  *
  * @param $json       
