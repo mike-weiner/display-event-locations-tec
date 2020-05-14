@@ -27,24 +27,22 @@ $deltec_display_full_address = $deltec_options['display-full-address'];
 				<abbr class="tribe-events-abbr updated published dtstart">[[=dateDisplay]] </abbr>
 			</div>
 
-			
-			<!-- **************************************************************** -->
-			<!-- If a location is entered with the event, add its name to tooltip -->
+
 			[[ if(venue) { ]]
-			<p class="deltec-tribe-events-location"><?php echo $deltec_tooltip_message ?> [[=venue_title]]
+				<div class = "deltec-tooltip-message">
+					<span class = "deltec-tribe-events-location">
 
-			<!-- Check to see if the user wants to dispay the full address below the location name -->
-			<?php if ($deltec_display_full_address == 1) {
-				$deltec_html = '<br>[[=venue_address]]<br>[[=venue_city]], [[=venue_state]] [[=venue_zip]]<br>[[=venue_country]]</p>';
-				echo $deltec_html;
-			} else {
-				$deltec_html = '</p>';
-				echo $deltec_html;
-			}
-			?>
+					<span class="deltec-location-name-prefix"><?php echo $deltec_tooltip_message ?></span> <span class = "deltec-location-name"> [[=venue_title]] </span>
+
+					<?php if ($deltec_display_full_address == 1) {
+						$deltec_html = '<br><span class="deltec-street-address">[[=venue_address]]<br>[[=venue_city]], [[=venue_state]] [[=venue_zip]]<br>[[=venue_country]]</span>';
+						echo $deltec_html;
+					}
+					?>
+
+					</span>
+				</div>
 			[[ } ]]
-			<!-- **************************************************************** -->
-
 
 			[[ if(imageTooltipSrc.length) { ]]
 			<div class="tribe-events-event-thumb">
@@ -75,22 +73,23 @@ $deltec_display_full_address = $deltec_options['display-full-address'];
 			</div>
 
 
-			<!-- **************************************************************** -->
-			<!-- If a location is entered with the event, add its name to tooltip -->
 			[[ if(venue) { ]]
-			<p class="deltec-tribe-events-location"><?php echo $deltec_tooltip_message ?> [[=venue_title]]
+				<div class = "deltec-tooltip-message">
+					<span class = "deltec-tribe-events-location">
 
-			<!-- Check to see if the user wants to dispay the full address below the location name -->
-			<?php if ($deltec_display_full_address == 1) {
-				$deltec_html = '<br>[[=venue_address]]<br>[[=venue_city]], [[=venue_state]] [[=venue_zip]]<br>[[=venue_country]]</p><p></p>';
-				echo $deltec_html;
-			} else {
-				$deltec_html = '</p><p></p>';
-				echo $deltec_html;
-			}
-			?>
+					<span class="deltec-location-name-prefix"><?php echo $deltec_tooltip_message ?></span> <span class = "deltec-location-name"> [[=venue_title]] </span>
+
+					<?php if ($deltec_display_full_address == 1) {
+						$deltec_html = '<br><span class="deltec-street-address">[[=venue_address]]<br>[[=venue_city]], [[=venue_state]] [[=venue_zip]]<br>[[=venue_country]]</span>';
+						echo $deltec_html;
+					}
+					?>
+
+					</span>
+
+					<br><br>
+				</div>
 			[[ } ]]
-			<!-- **************************************************************** -->
 
 
 			[[ if(excerpt.length) { ]]

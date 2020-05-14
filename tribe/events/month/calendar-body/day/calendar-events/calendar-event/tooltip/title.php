@@ -23,7 +23,7 @@ $deltec_options = get_option('deltec_options');
 $deltec_tooltip_message = $deltec_options['pre-venue-message'];
 
 // If the checkbox is not set or not checked -> assign $options a value of 0
-// If the chekcbox is set -> assign $options a value of 1
+// If the checkbox is set -> assign $options a value of 1
 $deltec_display_full_address = empty(get_option('deltec_options')['display-full-address']) ? 0 : 1;
 ?>
 
@@ -41,28 +41,24 @@ $deltec_display_full_address = empty(get_option('deltec_options')['display-full-
 	</a>
 </h3>
 
-<!-- Add DELTEC Tooltip Message and Full Venue Address -->
-<p class="deltec-tribe-events-location tribe-events-calendar-month__calendar-event-tooltip-description">
-	<!-- Check to determine if the current event being hovered over has an address assigned to it -->
-	<!-- If no address (and thus no vuene) exists, then nothing will be added to the tooltip -->
-	<?php
-	// If the venue exists, add the user defined tooltip message and the venue name to the tooltip
-	if ( tribe_address_exists( esc_url( $event->permalink ) ) ) {
-		$deltec_venue_name = tribe_get_venue( esc_url( $event->permalink ) );
+<p class="deltec-tooltip-message tribe-events-calendar-month__calendar-event-tooltip-description">
+	<span class= "deltec-tribe-events-location">
+		
+		<?php
+		if ( tribe_address_exists( esc_url( $event->permalink ) ) ) {
+			$deltec_venue_name = tribe_get_venue( esc_url( $event->permalink ) );
 
-		$deltec_tooltip_message_and_venue_name = '' . $deltec_tooltip_message . ' ' . $deltec_venue_name . '<br>';
-		echo $deltec_tooltip_message_and_venue_name;
-	}
-	?>
+			$deltec_tooltip_message_and_venue_name = '<span class= "deltec-location-name-prefix">' . $deltec_tooltip_message . '</span><span class= "deltec-location-name"> ' . $deltec_venue_name . '</span><br>';
+			echo $deltec_tooltip_message_and_venue_name;
+		}
+		?>
 
-	<!-- Check to see if the user wants to dispay the full address below the location name -->
-	<?php if ($deltec_display_full_address == 1) {
-		// Get the full address of the venue assigned to the event and display it under the tooltip message and venue name
-		$deltec_location_html = tribe_get_full_address(esc_url( $event->permalink ));
-		echo $deltec_location_html;
-	} else {
-		// If the user does not want to display the full address, don't add anything to the HTML output
-		$deltec_location_html = '';
-	}
-	?>
+		<?php if ($deltec_display_full_address == 1) {
+			$deltec_location_html = '<span class= "deltec-street-address">' . tribe_get_full_address(esc_url( $event->permalink )) . '</span>';
+			echo $deltec_location_html;
+		} else {
+			$deltec_location_html = '';
+		}
+		?>
+	</span>
 </p>
