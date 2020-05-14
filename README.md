@@ -149,9 +149,9 @@ As great as the block editor is it can cause issues, sometimes. For events that 
 * Released on May 13, 2020
 * Added: Stable tag updated to 3.2
 * Added: Tested up to tag changed to 5.4.1 as support with WordPress 5.4.1 has been confirmed
-* Added: New CSS class system for the information that is added to the tooltip by the plugin to allow for greater control. New CSS classes for use are: `deltec-tooltip-message`, `deltec-location-name-prefix`, `deltec-location-name`, and `deltec-street-address`. See the [Arbitrary Section on CSS Classes](https://github.com/mike-weiner/display-event-locations-tec#css-classes) on the WordPress Repository page for this plugin or on the Github repository for more information
+* Added: New CSS class system for the information that is added to the tooltip by the plugin to allow for greater control. New CSS classes for use are: `.deltec-tooltip-message`, `.deltec-location-name-prefix`, `.deltec-location-name`, and `.deltec-street-address`. See the [Arbitrary Section on CSS Classes](https://github.com/mike-weiner/display-event-locations-tec#css-classes) on the Github Repository README for more information
 * Fixed: Fixed typos within README
-* Removed: Old CSS class `deltec-tribe-events-location` has been removed in place of the new robust CSS class system to allow for greater control of the stylization of the location information within tooltip (See Above)
+* Removed: Old CSS class `.deltec-tribe-events-location` has been removed in place of the new robust CSS class system to allow for greater control of the stylization of the location information within tooltip (See Above)
 * Removed: Excess comments have been removed from the template override files for the tooltip
 * Edited: plugin.php
 * Edited: README.md
@@ -312,10 +312,10 @@ As great as the block editor is it can cause issues, sometimes. For events that 
 ## Upgrade Notice
 
 ### 3.2
-Today's update brings a revamp of the CSS class structure for all information that this plugin adds to the tooltip in your monthly view! You can now control the stylization of all of the individual components that can be added to the tooltip to display your event's location and its street address (if enabled). You can find more detailed information about the new CSS class structure in the Arbitrary section of the [README](https://github.com/mike-weiner/display-event-locations-tec#css-classes). Support for WordPress 5.4.1 has also been confirmed in testing. As always, please let us know if you experience any issues!
+Today's update brings a revamp of the CSS class structure for all information that this plugin adds to the tooltip in your monthly view! You can now control the stylization of all of the individual components that can be added to the tooltip to display your event's location and its street address (if enabled). You can find more detailed information about the new CSS class structure in the Arbitrary section on CSS Classes of the Github Repository[README](https://github.com/mike-weiner/display-event-locations-tec#css-classes). Support for WordPress 5.4.1 has also been confirmed in testing. As always, please let us know if you experience any issues!
 
 ### 3.1
-Happy Saturday! Lots of small things are in the works -- Support for Wordpress 5.4 that is slated to be released at the end of March has been tested and confirmed. A new admin error message will now be displayed if The Events Calendar is not activated when Display Event Location for The Events Calendar is active. Other small source code spring cleaning has ocurred (See the changelog for more details.). As always, thank you for the support and let us know if you encounter any issues!
+Happy Saturday! Lots of small things are in the works -- Support for WordPress 5.4 that is slated to be released at the end of March has been tested and confirmed. A new admin error message will now be displayed if The Events Calendar is not activated when Display Event Location for The Events Calendar is active. Other small source code spring cleaning has ocurred (See the changelog for more details.). As always, thank you for the support and let us know if you encounter any issues!
 
 ### 3.0.2
 More quick updates are on the horizon! Code has been cleaned and further simplified, and plugin names have been made consistent. Please let us know if you experience any issues!
