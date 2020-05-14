@@ -90,7 +90,7 @@ In version 3.2 of this plugin, a robust CSS class system was implemented to allo
 
 To change the font-size of the venue/location name and street address add the CSS code below to your website.
 
-`deltec-tooltip-message {
+`.deltec-tooltip-message {
 	font-size: 14px;
 }`
 
@@ -146,10 +146,10 @@ As great as the block editor is it can cause issues, sometimes. For events that 
 ## Changelog
 
 ### 3.2
-* Released on xxxxx xx, 2020
+* Released on May 13, 2020
 * Added: Stable tag updated to 3.2
-* Added: Tested up to tag changed to 5.4.1 as support with Wordpress 5.4.1 has been confirmed
-* Added: New CSS class system for the information that is added to the tooltip by the plugin to allow for greater control. New CSS classes for use are: `deltec-tooltip-message`, `deltec-location-name-prefix`, `deltec-location-name`, and `deltec-street-address`. See the Arbitrary Section on the Wordpress Repository page for this plugin or on the Github repository for more information
+* Added: Tested up to tag changed to 5.4.1 as support with WordPress 5.4.1 has been confirmed
+* Added: New CSS class system for the information that is added to the tooltip by the plugin to allow for greater control. New CSS classes for use are: `deltec-tooltip-message`, `deltec-location-name-prefix`, `deltec-location-name`, and `deltec-street-address`. See the [Arbitrary Section on CSS Classes](https://github.com/mike-weiner/display-event-locations-tec#css-classes) on the WordPress Repository page for this plugin or on the Github repository for more information
 * Fixed: Fixed typos within README
 * Removed: Old CSS class `deltec-tribe-events-location` has been removed in place of the new robust CSS class system to allow for greater control of the stylization of the location information within tooltip (See Above)
 * Removed: Excess comments have been removed from the template override files for the tooltip
@@ -350,10 +350,10 @@ Initial release!
 ## Arbitrary section
 
 ### CSS Classes:
-* `deltec-tooltip-message` - A `div` or `paragraph` element that surrounds all of the information that is added to the tooltip by this plugin. **Note:** For the new calendar views in The Events Calendar v5.0+ this class is defined by a paragraph element. For the older calendar views, this class is represented by a div element.
-* `deltec-location-name-prefix` - A `span` element that surrounds the prefix message that you can set in the Display Event Location for The Events Calendar settings area in the textfield labeled ***Tooltip Message Before Venue/Location Name***
-* `deltec-location-name` - A `span` element that surrounds the name of the event's venue/location name.
-* `deltec-street-address` - A `span` element that surrounds the all elements of the street addressed for the event's venue/location (if enabled in Display Event Location for The Events Calendar settings area)
+* `.deltec-tooltip-message` - A `div` or `paragraph` element that surrounds all of the information that is added to the tooltip by this plugin. **Note:** For the new calendar views in The Events Calendar v5.0+ this class is defined by a paragraph element. For the older calendar views, this class is represented by a div element.
+* `.deltec-location-name-prefix` - A `span` element that surrounds the prefix message that you can set in the Display Event Location for The Events Calendar settings area in the textfield labeled ***Tooltip Message Before Venue/Location Name***
+* `.deltec-location-name` - A `span` element that surrounds the name of the event's venue/location name.
+* `.deltec-street-address` - A `span` element that surrounds the all elements of the street addressed for the event's venue/location (if enabled in Display Event Location for The Events Calendar settings area)
 
 ### Github Repository
 
