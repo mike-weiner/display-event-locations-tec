@@ -62,7 +62,7 @@ If you still cannot figure out why the location is not displaying, feel free to 
 
 Yes! You can choose to display just the name of the location or the name of the location and the full address of the location underneath the location name. See the [screenshots](https://wordpress.org/plugins/display-event-locations-tec/#screenshots) for all of the different ways you can display information within the tooltip.
 
-See the FAQ titled "How do I display the street address underneath the location name within the tooptip?" (below) to learn how to enable the street address within the tooltip.
+See the FAQ titled "How do I display the street address underneath the location name within the tooltip?" (below) to learn how to enable the street address within the tooltip.
 
 ### How do I change the phrase "Location: " that is displayed before the name of an event's venue/location within the tooltip?
 
@@ -84,6 +84,14 @@ Once the you have removed all of the text in the box, click the blue `Save Chang
 
 Once the page reloads, scroll to the bottom of the page and under the "Preview Tooltip" area, the fake tooltip should display no custom message before the event's venue/location name.
 
+### How do I display the street address underneath the location name within the tooltip?
+
+Hover over `Settings` in the left-hand sidebar within the administration area of your WordPress installation. Click on `Display Event Location for The Events Calendar` from the flyout that appears. 
+
+Once the page loads, click the checkbox for the `Show Full Venue Address Inside Tooltip` option. Once the checkbox is selected, click the blue `Save Changes` button. 
+
+Once the page reloads, scroll to the bottom of the page and under the "Preview Tooltip" area, the fake tooltip should display the location and fake street address underneath.
+
 ### How do I change the font size of the event venue/location name and/or street address text within the tooltip?
 
 In version 3.2 of this plugin, a robust CSS class system was implemented to allow for greater control of the stylization of the elements added to the tooltip by this plugin.
@@ -95,14 +103,6 @@ To change the font-size of the venue/location name and street address add the CS
 }`
 
 **Note:** This CSS is very basic and is just meant as a starting point. It could be overwritten by a more specific CSS call. Please see the [Arbitrary Section](https://wordpress.org/plugins/display-event-locations-tec/) on the WordPress Repository page or on the [Github Repository README](https://github.com/mike-weiner/display-event-locations-tec#css-classes).
-
-### How do I display the street address underneath the location name within the tooltip?
-
-Hover over `Settings` in the left-hand sidebar within the administration area of your WordPress installation. Click on `Display Event Location for The Events Calendar` from the flyout that appears. 
-
-Once the page loads, click the checkbox for the `Show Full Venue Address Inside Tooltip` option. Once the checkbox is selected, click the blue `Save Changes` button. 
-
-Once the page reloads, scroll to the bottom of the page and under the "Preview Tooltip" area, the fake tooltip should display the location and fake street address underneath.
 
 ### How do I change the name and/or street address for event locations? 
 
@@ -116,8 +116,7 @@ Your website must use The Events Calendar 4.8 or The Events Calendar Pro 4.8 or 
 
 ### Does this plugin change the tooltip for both regular and featured events?
 
-Yes! This will plugin will display the event venue name and location (if you have enabled the address to be displayed) for both regular and featured events! 
-See the [screenshots](https://wordpress.org/plugins/display-event-locations-tec/#screenshots) to see how this would look!
+Yes! This will plugin will display the event venue name and location (if you have enabled the address to be displayed) for both regular and featured events! See the [screenshots](https://wordpress.org/plugins/display-event-locations-tec/#screenshots) to see how this would look!
 
 ### Will this plugin work on both the legacy and v2 calendar views?
 
@@ -125,7 +124,7 @@ Yes! This plugin modifies both the old calendar views (legacy) and the new calen
 
 ### Does this plugin work for events created with the block editor?
 
-Yes! This plugin will modify the tooltip for events created with the the block editor for both the standard or pro versions of `The Events Calendar` or ` The Events Calendar Pro`.
+Yes! This plugin will modify the tooltip for events created with the the block editor for both the standard or pro versions of `The Events Calendar` or `The Events Calendar Pro`.
 
 ### I am having issues with the tooltip not showing the venue name and/or address with events created with the block editor. Why?
 
@@ -199,7 +198,7 @@ As great as the block editor is it can cause issues, sometimes. For events that 
 ### 3.0 
 * Released on February 7, 2020
 * Added: Support for overriding the tooltip on the new v2 calendar views has been added. (This allows you to display the venue/location name and address (if you have enabled it) within the tooltip.)
-* Added: 9 new screenshots (screenshots 1-9) have been added to the Wordpress Plugin listing page to reflect what the tooltip in the legacy and v2 calendar views with the location and/or address displayed for an event.
+* Added: 9 new screenshots (screenshots 1-9) have been added to the WordPress Plugin listing page to reflect what the tooltip in the legacy and v2 calendar views with the location and/or address displayed for an event.
 * Added: This plugin will now allow for template overrides that you already have in your active theme folder. It will first use the templates within our plugin and will then check your active theme directory for any additional templates. 
 * Added: All functions and files have been documented and typos have been removed (please, let us know if you find any others).
 * Fixed: Fixed a bug that prevented tooltip from displaying for events that did not have an venue/location set.
@@ -288,7 +287,7 @@ As great as the block editor is it can cause issues, sometimes. For events that 
 * Added: All setting fields are sanitized before being added to an array that is saved in the wp_ database
 * Added: Saved settings & options are now removed from your database upon the uninstalling of the Display Event Location for The Events Calendar Plugin
 * Added: Quick links to our settings page & support page can be found within our plugin listing on the Plugins page. 
-* Tested: Support for Wordpress 5.2.2+
+* Tested: Support for WordPress 5.2.2+
 * Tested: Support for The Events Calendar 4.9.4+
 * Tested: Support for PHP 7.0+
 * Fixed: Unneeded HTML has been removed from all tooltip.php files
