@@ -352,7 +352,7 @@ Initial release!
 * `.deltec-tooltip-message` - A `div` or `paragraph` element that surrounds all of the information that is added to the tooltip by this plugin. **Note:** For the new calendar views in The Events Calendar v5.0+ this class is defined by a paragraph element. For the older calendar views, this class is represented by a div element.
 * `.deltec-location-name-prefix` - A `span` element that surrounds the prefix message that you can set in the Display Event Location for The Events Calendar settings area in the textfield labeled ***Tooltip Message Before Venue/Location Name***
 * `.deltec-location-name` - A `span` element that surrounds the name of the event's venue/location name.
-* `.deltec-street-address` - A `span` element that surrounds the all elements of the street addressed for the event's venue/location (if enabled in Display Event Location for The Events Calendar settings area)
+* `.deltec-street-address` - A `span` element that surrounds the all elements of the street address for the event's venue/location (if enabled in Display Event Location for The Events Calendar settings area)
 
 ### Github Repository
 
