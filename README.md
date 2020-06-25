@@ -56,7 +56,7 @@ If you still aren't seeing the location displayed within the tooltip, you can al
 
 If you still cannot figure out why the location is not displaying, feel free to submit a support ticket and we will be more than happy to help you!
 
-> TLDR; Sometimes a small change is difficult. Give it a few minutes, and if you get frustrated we are here to help you! [Submit a support ticket](https://wordpress.org/support/plugin/display-event-locations-tec/) on Wordpress.org or [open a new issue](https://github.com/mike-weiner/display-event-locations-tec/issues) on the Github repository and we'll help get you up and running! :)
+> TLDR; Sometimes a small change is difficult. Give it a few minutes, and if you get frustrated we are here to help you! [Submit a support ticket](https://wordpress.org/support/plugin/display-event-locations-tec/) on WordPress.org or [open a new issue](https://github.com/mike-weiner/display-event-locations-tec/issues) on the Github repository and we'll help get you up and running! :)
 
 ### Does this plugin display anything other than the name of the event's location?
 
@@ -296,7 +296,7 @@ As great as the block editor is it can cause issues, sometimes. For events that 
 
 ### 2.0.1
 * Released on September 5, 2019
-* Added: Support for WordPress 5.3.2 has been tested and confirmed
+* Added: Support for WordPress 5.2.3 has been tested and confirmed
 
 ### 2.0
 * Released on July 8, 2019
@@ -362,10 +362,10 @@ Happy New Year!! Version 2.1 is a small, powerful update to welcome the new deca
 Version 2.0.1 is a very minor update. Support with WordPress 5.2.3 has been tested and confirmed. Thank you for your support!
 
 ### 2.0
-Version 2.0 is a major quality of life overhaul. There are too many small changes here and there to cover. Let me give you a quick-ish overview. You can now quickly change the message that is displayed on the tooltip when a user hovers over an event on your website's calendar. This is done through the Display Event Locations for The Events Calendar settings page. You can find this within the Settings area of your site's backend as a sub-menu page of the Settings dropdown/flyout. Unneeded code & increased security measures have been implemented. All of our saved settings are now removed upon you uninstalling our plugin from your website. We have also done extensive testing with the latest versions of WordPress, The Events Calendar, and PHP 7.0. All human typos have also been dealt with. Thank you for sticking with me! You should notice lots of little improvements as you use the plugin. Please let me know what features you would like to see next!  
+Version 2.0 is a major quality of life overhaul. There are too many small changes here and there to cover. Let me give you a quick-ish overview. You can now quickly change the message that is displayed on the tooltip when a user hovers over an event on your website's calendar. This is done through the Display Event Locations for The Events Calendar settings page. You can find this within the Settings area of your site's backend as a sub-menu page of the Settings dropdown/flyout. Unneeded code & increased security measures have been implemented. All of our saved settings are now removed upon you uninstalling our plugin from your website. I have also done extensive testing with the latest versions of WordPress and The Events Calendar. All human typos have also been dealt with. Thank you for sticking with me! You should notice lots of little improvements as you use the plugin. Please let me know what features you would like to see next!  
 
 ### 1.1
-Version 1.1 addresses and fixes the need to deactivate and then reactivate the Modern Tribe Events System plugin. Feel free to activate our plugin and go about your business!
+Version 1.1 addresses and fixes the need to deactivate and then reactivate the Modern Tribe Events System plugin. Feel free to activate our plugin and go about your business.
 
 ### 1.0.1
 Fixed typos in readme.txt. Added Logos. Changed CSS Class from `tribe-events-location` to `deltec-tribe-events-location`.
@@ -376,7 +376,7 @@ Initial release!
 ## Arbitrary section
 
 ### CSS Classes:
-* `.deltec-tooltip-message` - A `div` or `paragraph` element that surrounds all of the information that is added to the tooltip by this plugin. **Note:** For the new calendar views in The Events Calendar v5.0+ this class is defined by a paragraph element. For the older calendar views, this class is represented by a div element.
+* `.deltec-tooltip-message` - A `div` or `paragraph` element that surrounds all of the information that is added to the tooltip by this plugin. **Note:** For the new v2 calendar views available in The Events Calendar v5.0+ this class is defined by a paragraph element. For the legacy calendar views, this class is represented by a div element.
 * `.deltec-location-name-prefix` - A `span` element that surrounds the prefix message that you can set in the Display Event Location for The Events Calendar settings area in the textfield labeled ***Tooltip Message Before Venue/Location Name***
 * `.deltec-location-name` - A `span` element that surrounds the name of the event's venue/location name.
 * `.deltec-street-address` - A `span` element that surrounds the all elements of the street address for the event's venue/location (if enabled in Display Event Location for The Events Calendar settings area)
