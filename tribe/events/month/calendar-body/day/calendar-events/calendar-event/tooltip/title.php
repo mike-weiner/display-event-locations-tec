@@ -35,8 +35,7 @@ $deltec_display_full_address = empty(get_option('deltec_options')['display-full-
 		class="tribe-events-calendar-month__calendar-event-tooltip-title-link tribe-common-anchor-thin"
 	>
 		<?php
-		// phpcs:ignore
-		echo $event->title;
+			echo $event->title;
 		?>
 	</a>
 </h3>

@@ -10,8 +10,8 @@ Contributors: [vikings412](https://profiles.wordpress.org/vikings412/) <br>
 Donate Link: https://paypal.me/michaelw13 <br>
 Tags: events, customization, modern-tribe, override, template <br>
 Requires at least: 4.6 <br>
-Tested up to: 5.4.1 <br>
-Stable tag: 3.2 <br>
+Tested up to: 5.4.2 <br>
+Stable tag: 3.3 <br>
 Requires PHP: 5.6 <br>
 License: GPLv2 or later <br>
 License URI: https://www.gnu.org/licenses/gpl-2.0.html <br>
@@ -36,9 +36,9 @@ The plugin can be downloaded and installed right from your WordPress administrat
 
 ### From the Github Repository
 
-Go to the [releases](https://github.com/mike-weiner/display-event-locations-tec/releases) section of the repository and download the `wordpress-display-event-locations-tec.zip` from the most recent release.
+Go to the [releases](https://github.com/mike-weiner/display-event-locations-tec/releases) section of the repository and download the `wordpress-[version]-display-event-locations-tec.zip` from the most recent release.
 
-Once you have downloaded the `wordpress-display-event-locations-tec.zip` from the releases section of this repo sign into the backend of your WordPress website. From your WordPress administration panel, go to `Plugins > Add New` and click the gray `Upload Plugin` button at the top of the page. Select the `wordpress-display-event-locations-tec.zip` file to upload from your machine when prompted.
+Once you have downloaded the `wordpress-[version]-display-event-locations-tec.zip` from the releases section of this repo sign into the backend of your WordPress website. From your WordPress administration panel, go to `Plugins > Add New` and click the gray `Upload Plugin` button at the top of the page. Select the `wordpress-[version]-display-event-locations-tec.zip` file to upload from your machine when prompted.
 
 WordPress will install the plugin. Once the installation is complete, you will be able to activate the plugin and begin using it! Enjoy! 
 
@@ -144,6 +144,30 @@ As great as the block editor is it can cause issues, sometimes. For events that 
 
 ## Changelog
 
+### 3.3
+* Released on June 24, 2020
+* Added: Tested up to tag changed to 5.4.2 as support with WordPress 5.4.2 has been confirmed
+* Added: Stable tag changed to 3.3 to reflect latest version
+* Added: Support with The Events Calendar 5.1.4 has been confirmed
+* Added: Support with The Events Calendar PRO 5.1.3 has been confirmed
+* Fixed: Removed excess HTML from `tooltip.php` in `/tribe-events/month/`
+* Fixed: New Author URI that will link out to my new personal website
+* Fixed: Clarified the description of `.deltec-tooltip-message` in the CSS classes area of the arbitrary section of the README
+* Fixed: Fixed the typo in admin warning that is displayed with The Events Calendar is not activated on the site
+* Fixed: Fixed typos in `plugin.php` file
+* Fixed: Fixed the typo in special thanks section of the README
+* Fixed: Fixed typos in previous upgrade notices within the README
+* Fixed: Fixed typos in the comments of `settings-callbacks.php` in `includes/settings-page/`
+* Fixed: Fixed typos in the comments of `settings-page.php` in `includes/settings-page/`
+* Fixed: Fixed typos in the comments of `settings-validate.php` in `includes/settings-page/`
+* Edited: `plugin.php`
+* Edited: `README.md`
+* Edited: `includes/settings-page/settings-callbacks.php`
+* Edited: `includes/settings-page/settings-page.php`
+* Edited: `includes/settings-page/settings-validate.php`
+* Edited: `/tribe/events/month/calendar-body/day/calendar-events/calendar-event/tooltip/title.php`
+* Edited: `/tribe-events/month/tooltip.php`
+
 ### 3.2
 * Released on May 13, 2020
 * Added: Stable tag updated to 3.2
@@ -247,7 +271,7 @@ As great as the block editor is it can cause issues, sometimes. For events that 
 ### 2.1
 * Released on January 8, 2020
 * Added: The event street address can now be displayed within the tooltip underneath the location name.
-* Added: Uninstallation Hook (Your settings for this plugin will now be deleted from the wp_ database when you uninstall this plugin.)
+* Added: Uninstall Hook (Your settings for this plugin will now be deleted from the wp_ database when you uninstall this plugin.)
 * Added: An additional line break has been added to featured event tooltips to make things more readable!
 * Added: Travis CI has been implemented to automatically check for any syntax and compatibility issues with modern and common versions of PHP. 
 * Added: New screenshots of the plugin to show the new feature of being able to add the street address to the tooltip.
@@ -310,6 +334,9 @@ As great as the block editor is it can cause issues, sometimes. For events that 
 
 ## Upgrade Notice
 
+### 3.3
+Today's update continues quality of life improvements to help better your experience while also working to keep our footprint on your installation to a minimum. Unnecessary code has been removed. Typos continue to be fixed. Comments have been simplified. Documentation has been reworded for clarity. Updated developer contact information and URIs have been put into place. -- As always, if you experience any issues open a support ticket and I'll get you up and running. Have a great, productive day!
+
 ### 3.2
 Today's update brings a revamp of the CSS class structure for all information that this plugin adds to the tooltip in your monthly view! You can now control the stylization of all of the individual components that can be added to the tooltip to display your event's location and its street address (if enabled). You can find more detailed information about the new CSS class structure in the Arbitrary section on CSS Classes of the Github Repository[README](https://github.com/mike-weiner/display-event-locations-tec#css-classes). Support for WordPress 5.4.1 has also been confirmed in testing. As always, please let us know if you experience any issues!
 
@@ -355,7 +382,6 @@ Initial release!
 * `.deltec-street-address` - A `span` element that surrounds the all elements of the street address for the event's venue/location (if enabled in Display Event Location for The Events Calendar settings area)
 
 ### Github Repository
-
 The Github Repository can be found here: https://github.com/mike-weiner/display-event-locations-tec.
 
 ### References:

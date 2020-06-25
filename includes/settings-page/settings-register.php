@@ -30,7 +30,7 @@ function deltec_register_settings(){
         ['id' => 'pre-venue-message', 'label' => "Enter the message/phrase that you would like to display before the event location name in the tooltip."] // Array that contains data for the callback function
     );
 
-    // Adds setting field for chekcbox to display full address or not inside of tooltip
+    // Adds setting field for checkbox to display full address or not inside of tooltip
     add_settings_field (
         'display-full-address', // Setting ID
         'Show Full Venue Address Inside Tooltip', // Title of the setting displayed on the page

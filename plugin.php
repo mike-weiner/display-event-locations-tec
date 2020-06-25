@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: Display Event Location for The Events Calendar
- * Plugin URI: https://thetechsurge.com/
+ * Plugin URI: https://michaelweiner.org/
  * Description: Add the event venue/location to the tooltip that is displayed on hover over in the month view of the calendar when using The Events Calendar or The Events Calendar Pro by Modern Tribe.
  * Author: Michael Weiner
- * Author URI: https://thetechsurge.com/
- * Version: 3.2
+ * Author URI: https://michaelweiner.org/
+ * Version: 3.3
  * License: GPL2+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  */
@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-// Call dependecies to other files for admin views
+// Call dependencies to other files for admin views
 if (is_admin()) {
     require_once plugin_dir_path(__FILE__) . 'includes/settings-page/admin-menu.php';
     require_once plugin_dir_path(__FILE__) . 'includes/settings-page/settings-page.php';
@@ -42,10 +42,10 @@ function deltec_tribe_custom_template_paths_legacy_views ( string $file, string 
     // Variable to store complete path to plugin with trailing slash
     $deltec_base_plugin_path = trailingslashit( plugin_dir_path( __FILE__ ) );
 
-    // Variable to store commplete path to active theme with trailing slash
+    // Variable to store complete path to active theme with trailing slash
     $deltec_active_theme_path = trailingslashit( get_stylesheet_directory() );
 
-    // Put custom temapltes in order of priority for legacy calendar views (up to The Events Calendar 4.9.14)
+    // Put custom templates in order of priority for legacy calendar views (up to The Events Calendar 4.9.14)
     // Check this plugin for template overrides and then the current theme for template overrides for every template being loaded 
 	$deltec_template_paths_legacy = [
 		'deltec_plugin_tec_legacy'   => $deltec_base_plugin_path . 'tribe-events/' . $template,
@@ -93,7 +93,7 @@ function deltec_tribe_custom_template_paths_v2_views( $folders ) {
     // Variable to store complete path to plugin with trailing slash
     $deltec_base_plugin_path = trailingslashit( plugin_dir_path( __FILE__ ) );
 
-    // Variable to store commplete path to active theme with trailing slash
+    // Variable to store complete path to active theme with trailing slash
     $deltec_active_theme_path = trailingslashit( get_stylesheet_directory() );
 
     /*
@@ -127,18 +127,18 @@ add_filter( 'tribe_template_theme_path_list', 'deltec_tribe_custom_template_path
 function deltec_error_install_tec_plugin() {
     global $pagenow; // Get pagenow global variable
 
-    // Delcare a variable to store the url for TEC WP plugin directory listing to display within iframe
+    // Declare a variable to store the url for TEC WP plugin directory listing to display within iframe
     $deltec_url = 'plugin-install.php?tab=plugin-information&plugin=the-events-calendar&TB_iframe=true';
 
     // If the current page is the plugins page and the current user has administration privileges
     if ( $pagenow == 'plugins.php' && current_user_can( 'manage_options' ) ) {
 
-        // Display error message to user that is non-dissmissable
+        // Display error message to user that is non-dismissible
         echo '<div class="error"><p>'
         .sprintf(
             '%1s <a href="%2s" class="thickbox" title="%3s">%4s</a>.',
 
-            esc_html__( 'Display Event Location for The Events Calendar requires The Events Claendar to function properly. Please, install and activate the latest version of', 'tribe-events-calendar' ),
+            esc_html__( 'Display Event Location for The Events Calendar requires The Events Calendar to function properly. Please, install and activate the latest version of', 'tribe-events-calendar' ),
             esc_url( $deltec_url ),
             esc_html__( 'The Events Calendar', 'tribe-events-calendar' ),
             esc_html__( 'The Events Calendar', 'tribe-events-calendar' )
@@ -150,7 +150,7 @@ function deltec_error_install_tec_plugin() {
 
 
 /**
- * Check to determine if The Events Calendar pluin is activated anytime a plugin is activated or deactivated
+ * Check to determine if The Events Calendar plugin is activated anytime a plugin is activated or deactivated
  * 
  * @see deltec_error_install_tec_plugin()
  */
@@ -178,14 +178,14 @@ register_activation_hook(__FILE__,'deltec_on_activate');
  * Initialize default deltec_options to WP options database upon installation
  */
 function deltec_on_uninstall() {
-    // Remove deltec_options from the WP database upon uninstallation
+    // Remove deltec_options from the WP database upon deletion
     delete_option('deltec_options'); 
 }
 register_uninstall_hook( __FILE__, 'deltec_on_uninstall' );
 
 
 /**
- * Initialize an array to store the deafult deltec_options for WP to use
+ * Initialize an array to store the default deltec_options for WP to use
  * 
  * @see deltec_on_activate()
  */
@@ -265,11 +265,11 @@ function deltec_tribe_template_data_array ( $json, $event, $additional ){
     // Get the venue being hovered over
     $deltec_venue = tribe_get_venue_id($event);
 
-    // Check to make sure the current event has a venue set before adding data trying to retrive infromation about the venue
+    // Check to make sure the current event has a venue set before adding data trying to retrieve information about the venue
     // If no venue is set, the unaltered json data will be returned
     $deltec_venue_is_set = isset($deltec_venue);
 
-    // If the venue exists get the inforation needed for the tooltip template override
+    // If the venue exists get the information needed for the tooltip template override
     if ($deltec_venue_is_set) {
         $json['venue'] = $deltec_venue;
         $json['venue_link'] = tribe_get_venue_link($deltec_venue, false);

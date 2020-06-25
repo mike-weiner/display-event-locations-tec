@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * 
  * @see deltec_register_settings() located at /includes/settings-register.php
  * 
- * @return string Returns a string containing the sanitized input from the 'Tooltip Message Before Venue/Location Name' textfield
+ * @return string Returns a string containing the sanitized input from the 'Tooltip Message Before Venue/Location Name' text field
  */
 function deltec_validate_options($input)
 {

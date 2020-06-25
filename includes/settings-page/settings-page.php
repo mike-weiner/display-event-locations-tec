@@ -42,7 +42,7 @@ function deltec_display_settings_page() {
             <?php 
 
                 // If the checkbox is not set or not checked -> assign $options a value of 0
-                // If the chekcbox is set -> assign $options a value of 1
+                // If the checkbox is set -> assign $options a value of 1
                 $deltec_checkbox_option = empty(get_option('deltec_options')['display-full-address']) ? 0 : 1;
 
                 // If the user is showing the full address, display this within the tooltip preview as well
