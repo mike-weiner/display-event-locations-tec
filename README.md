@@ -11,7 +11,7 @@ Donate Link: https://paypal.me/michaelw13 <br>
 Tags: events, customization, modern-tribe, override, template <br>
 Requires at least: 4.6 <br>
 Tested up to: 5.4.2 <br>
-Stable tag: 3.3 <br>
+Stable tag: 3.3.1 <br>
 Requires PHP: 5.6 <br>
 License: GPLv2 or later <br>
 License URI: https://www.gnu.org/licenses/gpl-2.0.html <br>
@@ -143,6 +143,16 @@ As great as the block editor is it can cause issues, sometimes. For events that 
 9. This is what the tooltip for a featured event will look like after activating this plugin with the location name and street address enabled with the legacy calendar template.
 
 ## Changelog
+
+### 3.3.1
+* Released on xxxx xx, 2020
+* Fixed: Fixed plugin settings resetting to default values upon update of plugin
+* Fixed: Removed typos in v2.2 Changelog and Upgrade Notice
+* Fixed: Removed typos in v1.1 Changelog and Upgrade Notice
+* Fixed: Removed typos in `CSS Classes` portion of the `Arbitrary Section` of the README
+* Removed: Removed excess `.DS_Store` file in `tribe/events/month/calendar-body/day/calendar-events/calendar-event/tooltip/`
+* Edited: `plugin.php`
+* Edited: `README.md`
 
 ### 3.3
 * Released on June 24, 2020
@@ -333,6 +343,9 @@ As great as the block editor is it can cause issues, sometimes. For events that 
 * Initial release
 
 ## Upgrade Notice
+
+### 3.3.1
+Plugin settings will no longer reset to their default values when you update the plugin or when you reactivate it. Sorry about that. All files within the master branch of the Github repository and the WordPress Plugin Repository SVN repo have been synchronized. The releases being named `wordpress-[version]-display-event-locations-tec.zip` published within the Github `Releases` section have not been affected as they have been accurate.
 
 ### 3.3
 Today's update continues quality of life improvements to help better your experience while also working to keep our footprint on your installation to a minimum. Unnecessary code has been removed. Typos continue to be fixed. Comments have been simplified. Documentation has been reworded for clarity. Updated developer contact information and URIs have been put into place. -- As always, if you experience any issues open a support ticket and I'll get you up and running. Have a great, productive day!
