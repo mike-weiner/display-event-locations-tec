@@ -72,11 +72,11 @@ script:
     if [[ "$WP_TRAVISCI" == "phpcs" ]] ; then
       phpcs
     fi
-  - php -l plugin.php
-  - php -l includes/settings-page/admin-menu.php
-  - php -l includes/settings-page/settings-callbacks.php
-  - php -l includes/settings-page/settings-page.php
-  - php -l includes/settings-page/settings-register.php
-  - php -l includes/settings-page/settings-validate.php
-  - php -l tribe/events/month/calendar-body/day/calendar-events/calendar-event/tooltip/title.php
-  - php -l tribe-events/month/tooltip.php
+  # - php -l plugin.php
+  # - php -l includes/settings-page/admin-menu.php
+  # - php -l includes/settings-page/settings-callbacks.php
+  # - php -l includes/settings-page/settings-page.php
+  # - php -l includes/settings-page/settings-register.php
+  # - php -l includes/settings-page/settings-validate.php
+  # - php -l tribe/events/month/calendar-body/day/calendar-events/calendar-event/tooltip/title.php
+  # - php -l tribe-events/month/tooltip.php
