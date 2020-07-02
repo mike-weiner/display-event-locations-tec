@@ -144,8 +144,13 @@ As great as the block editor is it can cause issues, sometimes. For events that 
 
 ## Changelog
 
-### 3.3.1
+### 3.3.x
 * Released on xxxx xx, 2020
+* Fixed: Added release date for v3.3.1 in the Changelog
+* Edited: `README.md`
+
+### 3.3.1
+* Released on June 26, 2020
 * Fixed: Fixed plugin settings resetting to default values upon update of plugin
 * Fixed: Removed typos in v2.2 Changelog and Upgrade Notice
 * Fixed: Removed typos in v1.1 Changelog and Upgrade Notice
