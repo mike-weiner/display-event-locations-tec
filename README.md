@@ -9,10 +9,10 @@
 Contributors: [vikings412](https://profiles.wordpress.org/vikings412/) <br>
 Donate Link: https://paypal.me/michaelw13 <br>
 Tags: events, customization, modern-tribe, override, template <br>
-Requires at least: 4.6 <br>
-Tested up to: 5.4.2 <br>
-Stable tag: 3.3.1 <br>
-Requires PHP: 5.6 <br>
+Requires at least: 5.0 <br>
+Tested up to: 5.5 <br>
+Stable tag: 3.3.2 <br>
+Requires PHP: 7.0.0 <br>
 License: GPLv2 or later <br>
 License URI: https://www.gnu.org/licenses/gpl-2.0.html <br>
 
@@ -36,9 +36,9 @@ The plugin can be downloaded and installed right from your WordPress administrat
 
 ### From the Github Repository
 
-Go to the [releases](https://github.com/mike-weiner/display-event-locations-tec/releases) section of the repository and download the `wordpress-[version]-display-event-locations-tec.zip` from the most recent release.
+Go to the [releases](https://github.com/mike-weiner/display-event-locations-tec/releases) section of the repository and download the `display-event-locations-tec.[version].zip` from the most recent release.
 
-Once you have downloaded the `wordpress-[version]-display-event-locations-tec.zip` from the releases section of this repo sign into the backend of your WordPress website. From your WordPress administration panel, go to `Plugins > Add New` and click the gray `Upload Plugin` button at the top of the page. Select the `wordpress-[version]-display-event-locations-tec.zip` file to upload from your machine when prompted.
+Once you have downloaded the `display-event-locations-tec.[version].zip` from the releases section of this repo sign into the backend of your WordPress website. From your WordPress administration panel, go to `Plugins > Add New` and click the gray `Upload Plugin` button at the top of the page. Select the `display-event-locations-tec.[version].zip` file to upload from your machine when prompted.
 
 WordPress will install the plugin. Once the installation is complete, you will be able to activate the plugin and begin using it! Enjoy! 
 
@@ -56,7 +56,7 @@ If you still aren't seeing the location displayed within the tooltip, you can al
 
 If you still cannot figure out why the location is not displaying, feel free to submit a support ticket and we will be more than happy to help you!
 
-> TLDR; Sometimes a small change is difficult. Give it a few minutes, and if you get frustrated we are here to help you! [Submit a support ticket](https://wordpress.org/support/plugin/display-event-locations-tec/) on WordPress.org or [open a new issue](https://github.com/mike-weiner/display-event-locations-tec/issues) on the Github repository and we'll help get you up and running! :)
+> TLDR; Sometimes a small change is difficult. Give it a few minutes, and if you get frustrated we are here to help you! [Submit a support ticket](https://wordpress.org/support/plugin/display-event-locations-tec/) on wordpress.org or [open a new issue](https://github.com/mike-weiner/display-event-locations-tec/issues) on the Github repository and we'll help get you up and running! :)
 
 ### Does this plugin display anything other than the name of the event's location?
 
@@ -144,9 +144,16 @@ As great as the block editor is it can cause issues, sometimes. For events that 
 
 ## Changelog
 
-### 3.3.x
-* Released on xxxx xx, 2020
+### 3.3.2
+* Released on July 30, 2020
+* Added: Confirmed support with WordPress v5.5 and updated the `Tested up to` tag accordingly
+* Added: Updated the minimum PHP version to 7.0 as WordPress will soon require that minimum version near the end of the year and updated the `Requires PHP` tag accordingly
+* Added: Updated the minimum WordPress version to 5.0 and updated the `Requires at least` tag accordingly
+* Fixed: Removed `$options` variable storing value of `get_option('deltec_options', deltec_options_default())` in `deltec_on_activate()`
+* Fixed: Changed .zip package name and name in README file from `wordpress-[version]-display-event-locations-tec.zip` to `display-event-locations-tec.[version].zip` to better support manual plugin updates
 * Fixed: Added release date for v3.3.1 in the Changelog
+* Fixed: Changed all appropriate occurrences of "Wordpress" to "WordPress" in the README
+* Edited: `plugin.php`
 * Edited: `README.md`
 
 ### 3.3.1
@@ -349,8 +356,11 @@ As great as the block editor is it can cause issues, sometimes. For events that 
 
 ## Upgrade Notice
 
+### 3.3.2 
+Today's brings a mid-summer quality of life update. I have tested compatibility with WordPress version 5.5 slated to be released on August 11, 2020. I added the missing release date for the v3.3.1 changelog section. The .zip package name provided on the Github releases and in the README has been changed to better support manual plugin updates. You will also find that I have increased the minimum PHP version to 7.0 and the minimum WordPress version to v5.0. WordPress plans to begin requiring PHP v7.0+ at a minimum by the end of 2020 and as PHP 5.6 becomes phased out I want my plugin to be secure and work on modern versions of PHP. You will find that my plugin should work on older versions of PHP (like v5.6) if you are still using older versions but consider upgrading to, at least, PHP v7.0 for security and performance improvements.  As always, open a support ticket if you have any issues with this update.
+
 ### 3.3.1
-Plugin settings will no longer reset to their default values when you update the plugin or when you reactivate it. Sorry about that. All files within the master branch of the Github repository and the WordPress Plugin Repository SVN repo have been synchronized. The releases being named `wordpress-[version]-display-event-locations-tec.zip` published within the Github `Releases` section have not been affected as they have been accurate.
+Plugin settings will no longer reset to their default values when you update the plugin or when you reactivate it. Sorry about that. All files within the master branch of the Github repository and the WordPress Plugin Repository SVN repo have been synchronized. The releases being named `display-event-locations-tec.[version].zip` published within the Github `Releases` section have not been affected as they have been accurate.
 
 ### 3.3
 Today's update continues quality of life improvements to help better your experience while also working to keep our footprint on your installation to a minimum. Unnecessary code has been removed. Typos continue to be fixed. Comments have been simplified. Documentation has been reworded for clarity. Updated developer contact information and URIs have been put into place. -- As always, if you experience any issues open a support ticket and I'll get you up and running. Have a great, productive day!

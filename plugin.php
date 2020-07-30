@@ -5,7 +5,7 @@
  * Description: Add the event venue/location to the tooltip that is displayed on hover over in the month view of the calendar when using The Events Calendar or The Events Calendar Pro by Modern Tribe.
  * Author: Michael Weiner
  * Author URI: https://michaelweiner.org/
- * Version: 3.3.1
+ * Version: 3.3.2
  * License: GPL2+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  */
@@ -169,7 +169,7 @@ add_action( 'plugins_loaded', 'deltec_plugin_init' );
 function deltec_on_activate(){
     // Set the values of the deltec options to their defaults if options do not exist
     if (!get_option('deltec_options')){ 
-        $options = get_option('deltec_options', deltec_options_default());
+        get_option('deltec_options', deltec_options_default());
     }
 }
 // Call deltec_on_activate() when the plugin in activated
