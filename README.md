@@ -10,8 +10,8 @@ Contributors: [vikings412](https://profiles.wordpress.org/vikings412/) <br>
 Donate Link: https://paypal.me/michaelw13 <br>
 Tags: events, customization, modern-tribe, override, template <br>
 Requires at least: 5.0 <br>
-Tested up to: 5.5 <br>
-Stable tag: 3.3.2 <br>
+Tested up to: 5.6 <br>
+Stable tag: 3.3.3 <br>
 Requires PHP: 7.0.0 <br>
 License: GPLv2 or later <br>
 License URI: https://www.gnu.org/licenses/gpl-2.0.html <br>
@@ -143,6 +143,11 @@ As great as the block editor is it can cause issues, sometimes. For events that 
 9. This is what the tooltip for a featured event will look like after activating this plugin with the location name and street address enabled with the legacy calendar template.
 
 ## Changelog
+
+### 3.3.3
+* Released on November 25. 2020
+* Added: Confirmed support with WordPress v5.6 and updated the `Tested up to` tag accordingly
+* Edited: `README.md`
 
 ### 3.3.2
 * Released on July 30, 2020
@@ -355,6 +360,9 @@ As great as the block editor is it can cause issues, sometimes. For events that 
 * Initial release
 
 ## Upgrade Notice
+
+### 3.3.3
+No major updates to report! Lots of work has gone on behind the scenes to make sure my plugin will be WordPress v5.6 compatible when when it is released early next month. You can feel free to safely update knowing things should continue to work. As always, if you have any issues or questions please feel free to submit a support ticket!
 
 ### 3.3.2 
 Today's brings a mid-summer quality of life update. I have tested compatibility with WordPress version 5.5 slated to be released on August 11, 2020. I added the missing release date for the v3.3.1 changelog section. The .zip package name provided on the Github releases and in the README has been changed to better support manual plugin updates. You will also find that I have increased the minimum PHP version to 7.0 and the minimum WordPress version to v5.0. WordPress plans to begin requiring PHP v7.0+ at a minimum by the end of 2020 and as PHP 5.6 becomes phased out I want my plugin to be secure and work on modern versions of PHP. You will find that my plugin should work on older versions of PHP (like v5.6) if you are still using older versions but consider upgrading to, at least, PHP v7.0 for security and performance improvements.  As always, open a support ticket if you have any issues with this update.
