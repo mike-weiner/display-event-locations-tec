@@ -10,7 +10,7 @@ Contributors: [vikings412](https://profiles.wordpress.org/vikings412/) <br>
 Donate Link: https://paypal.me/michaelw13 <br>
 Tags: events, customization, modern-tribe, override, template <br>
 Requires at least: 5.0 <br>
-Tested up to: 5.7 <br>
+Tested up to: 5.8 <br>
 Stable tag: 3.3.3 <br>
 Requires PHP: 7.0.0 <br>
 License: GPLv2 or later <br>
