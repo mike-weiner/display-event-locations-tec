@@ -1,3 +1,5 @@
+![Deltec Banner](/assets/banner-1544x500.png)
+
 # Display Event Location for The Events Calendar 
 [![Build Status](https://travis-ci.com/mike-weiner/display-event-locations-tec.svg?branch=master)](https://travis-ci.com/mike-weiner/display-event-locations-tec)
 ![WordPress Plugin Downloads](https://img.shields.io/wordpress/plugin/dt/display-event-locations-tec)
@@ -137,12 +139,22 @@ As great as the block editor is it can cause issues, sometimes. For events that 
 3. This is what the tooltip for a regular event will look like after activating this plugin with the location name and street address enabled with the v2 calendar template.
 4. This is what the tooltip for a featured event will look like after activating this plugin with only the location name enabled with the v2 calendar template.
 5. This is what the tooltip for a featured event will look like after activating this plugin with the location name and street address enabled with the v2 calendar template.
-6. This is what the tooltip for a regular event will look like after activating this plugin with only the location name enabled with the legacy calendar template.
-7. This is what the tooltip for a regular event will look like after activating this plugin with the location name and street address enabled with the legacy calendar template.
-8. This is what the tooltip for a featured event will look like after activating this plugin with only the location name enabled with the legacy calendar template.
-9. This is what the tooltip for a featured event will look like after activating this plugin with the location name and street address enabled with the legacy calendar template.
 
 ## Changelog
+
+### 4.0.0
+* Released on December xx, 2021
+* Added: Updated logo and banner assets created by Danielle Attinella
+* Removed: Removed screenshot assets that showed legacy views as they are being retired by The Events Calendar in Q1 '22
+* Added: `assets/banner-772x250.png`
+* Added: `assets/banner-1544x500.png`
+* Deleted: `assets/screenshot-6.png`
+* Deleted: `assets/screenshot-7.png`
+* Deleted: `assets/screenshot-8.png`
+* Deleted: `assets/screenshot-9.png`
+* Edited: `assets/icon-128x128.png`
+* Edited: `assets/icon-256x256.png`
+* Edited: `README.md`
 
 ### 3.3.3
 * Released on November 25, 2020
@@ -361,6 +373,9 @@ As great as the block editor is it can cause issues, sometimes. For events that 
 
 ## Upgrade Notice
 
+### 4.0.0
+A refresh of the assets for the plugin are officially here! A *big* thank you to Danielle Attinella for the amazing work on the new icon and banner image.
+
 ### 3.3.3
 No major updates to report! Lots of work has gone on behind the scenes to make sure my plugin will be WordPress v5.6 compatible when when it is released early next month. You can feel free to safely update knowing things should continue to work. As always, if you have any issues or questions please feel free to submit a support ticket!
 
@@ -433,3 +448,5 @@ Below are resources and references that were used to help develop parts of this 
 
 ### Special Thanks:
 A special thank you to user [@cliffordp](https://github.com/cliffordp) for several helpful gists (linked in the [resources](https://github.com/mike-weiner/display-event-locations-tec#references) section) that were used as boilerplates achieve certain functionality within this plugin.
+
+Thank you to [Danielle Attinella](https://ella-ella.studio) for her amazing work on designing a new icon and banner image for the plugin. Her work is simply superb!
