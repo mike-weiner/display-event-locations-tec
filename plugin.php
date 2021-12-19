@@ -5,7 +5,7 @@
  * Description: Add the event venue/location to the tooltip that is displayed on hover over in the month view of the calendar when using The Events Calendar or The Events Calendar Pro by Modern Tribe.
  * Author: Michael Weiner
  * Author URI: https://michaelweiner.org/
- * Version: 3.3.3
+ * Version: 4.0.0
  * License: GPL2+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  */
@@ -24,45 +24,6 @@ if (is_admin()) {
     require_once plugin_dir_path(__FILE__) . 'includes/settings-page/settings-validate.php';
 }
 
-/**
- * Establish directory paths for the template overrides for LEGACY views within TEC
- * 
- * @link https://gist.github.com/b76421f2490a8b8995493f203e11b331
- * @link https://theeventscalendar.com/knowledgebase/k/custom-additional-template-locations/
- *
- * @see Tribe__Events__Templates::getTemplateHierarchy()
- *
- * @param string $file A string containing the complete file path trying to be loaded
- * @param string $template A string containing the template name to be loaded
- *
- * @return string Returns a string of the full file path to template
- * 
- */
-function deltec_tribe_custom_template_paths_legacy_views ( string $file, string $template ) {
-    // Variable to store complete path to plugin with trailing slash
-    $deltec_base_plugin_path = trailingslashit( plugin_dir_path( __FILE__ ) );
-
-    // Variable to store complete path to active theme with trailing slash
-    $deltec_active_theme_path = trailingslashit( get_stylesheet_directory() );
-
-    // Put custom templates in order of priority for legacy calendar views (up to The Events Calendar 4.9.14)
-    // Check this plugin for template overrides and then the current theme for template overrides for every template being loaded 
-	$deltec_template_paths_legacy = [
-		'deltec_plugin_tec_legacy'   => $deltec_base_plugin_path . 'tribe-events/' . $template,
-		'deltec_active_theme_tec_legacy' => $deltec_active_theme_path . 'tribe-events/' . $template,
-    ];
-
-    // For every custom template file path within $deltec_template_paths_legacy --> check if it exists 
-	foreach ($deltec_template_paths_legacy as $deltec_single_path_legacy) {
-		if (file_exists($deltec_single_path_legacy)) {
-			return $deltec_single_path_legacy;
-		}
-    }
-
-    // If none of the file paths within $deltec_template_paths_legacy use the default template(s) from TEC
-	return $file;
-}
-add_filter('tribe_events_template', 'deltec_tribe_custom_template_paths_legacy_views', 10, 2);
 
 /**
  * Establish directory paths for the template overrides for v2 views within TEC
@@ -251,41 +212,4 @@ function deltec_register_meta_links ($deltec_links, $deltec_file) {
     return $deltec_links;
 }
 add_filter('plugin_row_meta',  'deltec_register_meta_links', 10, 2);
-
-
-/**
- * Returns json with additional information for tooltip to be used with javascript templating functions for tooltip
- * 
- * @see tribe_events_template_data_array()
- *
- * @param $json       
- * @param $event 
- * @param $additional 
- *
- * @return string Returns a string containing json that will be used with javascript templating
- */
-function deltec_tribe_template_data_array ( $json, $event, $additional ){
-    // Get the venue being hovered over
-    $deltec_venue = tribe_get_venue_id($event);
-
-    // Check to make sure the current event has a venue set before adding data trying to retrieve information about the venue
-    // If no venue is set, the unaltered json data will be returned
-    $deltec_venue_is_set = isset($deltec_venue);
-
-    // If the venue exists get the information needed for the tooltip template override
-    if ($deltec_venue_is_set) {
-        $json['venue'] = $deltec_venue;
-        $json['venue_link'] = tribe_get_venue_link($deltec_venue, false);
-        $json['venue_title'] = tribe_get_venue($deltec_venue);
-        $json['venue_address'] = tribe_get_address($deltec_venue);
-        $json['venue_city'] = tribe_get_city($deltec_venue);
-        $json['venue_state'] = tribe_get_state($deltec_venue);
-        $json['venue_zip'] = tribe_get_zip($deltec_venue);
-        $json['venue_country'] = tribe_get_country($deltec_venue);
-    }
-
-    // Return the json that will be used with javascript templating
-    return $json;
-}
-add_filter('tribe_events_template_data_array', 'deltec_tribe_template_data_array', 10, 3);
 
