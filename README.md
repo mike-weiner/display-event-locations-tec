@@ -1,3 +1,5 @@
+![Deltec Banner](/assets/banner-1544x500.png)
+
 # Display Event Location for The Events Calendar 
 [![Build Status](https://travis-ci.com/mike-weiner/display-event-locations-tec.svg?branch=master)](https://travis-ci.com/mike-weiner/display-event-locations-tec)
 ![WordPress Plugin Downloads](https://img.shields.io/wordpress/plugin/dt/display-event-locations-tec)
@@ -10,8 +12,8 @@ Contributors: [vikings412](https://profiles.wordpress.org/vikings412/) <br>
 Donate Link: https://paypal.me/michaelw13 <br>
 Tags: events, customization, modern-tribe, override, template <br>
 Requires at least: 5.0 <br>
-Tested up to: 5.8 <br>
-Stable tag: 3.3.3 <br>
+Tested up to: 5.9 <br>
+Stable tag: 4.0.0 <br>
 Requires PHP: 7.0.0 <br>
 License: GPLv2 or later <br>
 License URI: https://www.gnu.org/licenses/gpl-2.0.html <br>
@@ -94,7 +96,7 @@ Once the page reloads, scroll to the bottom of the page and under the "Preview T
 
 ### How do I change the font size of the event venue/location name and/or street address text within the tooltip?
 
-In version 3.2 of this plugin, a robust CSS class system was implemented to allow for greater control of the stylization of the elements added to the tooltip by this plugin.
+In version 3.2 of this plugin, a CSS class system was implemented to allow for greater control of the stylization of the elements added to the tooltip by this plugin.
 
 To change the font-size of the venue/location name and street address add the CSS code below to your website.
 
@@ -114,13 +116,17 @@ Then select the location that you wish to change the name or address of. Once th
 
 Your website must use The Events Calendar 4.8 or The Events Calendar Pro 4.8 or higher for this plugin to correctly modify the tooltip. If you wish to use the v2 calendar layouts, you much use The Events Calendar 5.0+ or The Events Calendar Pro 5.0+.
 
+**Note:** As of version `4.0.0` of this plugin, support for the legacy views within The Events Calendar has been removed. This is because The Events Calendar will be [removing all legacy view functionality in Q1 '22](https://theeventscalendar.com/blog/news/the-events-calendar-is-retiring-legacy-views/).
+
 ### Does this plugin change the tooltip for both regular and featured events?
 
 Yes! This will plugin will display the event venue name and location (if you have enabled the address to be displayed) for both regular and featured events! See the [screenshots](https://wordpress.org/plugins/display-event-locations-tec/#screenshots) to see how this would look!
 
 ### Will this plugin work on both the legacy and v2 calendar views?
 
-Yes! This plugin modifies both the old calendar views (legacy) and the new calendar views (v2) introduced with The Events Calendar 5.0 and The Events Calendar Pro 5.0.
+No. As of version `4.0.0`, this plugin modifies *only* the the new calendar views (v2) introduced with The Events Calendar 5.0+ and The Events Calendar Pro 5.0+. 
+
+This is because The Events Calendar will be [removing all legacy view functionality in Q1 '22](https://theeventscalendar.com/blog/news/the-events-calendar-is-retiring-legacy-views/).
 
 ### Does this plugin work for events created with the block editor?
 
@@ -137,12 +143,25 @@ As great as the block editor is it can cause issues, sometimes. For events that 
 3. This is what the tooltip for a regular event will look like after activating this plugin with the location name and street address enabled with the v2 calendar template.
 4. This is what the tooltip for a featured event will look like after activating this plugin with only the location name enabled with the v2 calendar template.
 5. This is what the tooltip for a featured event will look like after activating this plugin with the location name and street address enabled with the v2 calendar template.
-6. This is what the tooltip for a regular event will look like after activating this plugin with only the location name enabled with the legacy calendar template.
-7. This is what the tooltip for a regular event will look like after activating this plugin with the location name and street address enabled with the legacy calendar template.
-8. This is what the tooltip for a featured event will look like after activating this plugin with only the location name enabled with the legacy calendar template.
-9. This is what the tooltip for a featured event will look like after activating this plugin with the location name and street address enabled with the legacy calendar template.
 
 ## Changelog
+
+### 4.0.0
+* Released on December xx, 2021
+* Added: Tested Support with WP v5.9
+* Added: Updated logo and banner assets created by Danielle Attinella
+* Removed: Removed screenshot assets that showed legacy views as they are being retired by The Events Calendar in Q1 '22
+* Added: `assets/banner-772x250.png`
+* Added: `assets/banner-1544x500.png`
+* Deleted: `assets/screenshot-6.png`
+* Deleted: `assets/screenshot-7.png`
+* Deleted: `assets/screenshot-8.png`
+* Deleted: `assets/screenshot-9.png`
+* Deleted: `tribe-events/month/tooltip.php`
+* Edited: `assets/icon-128x128.png`
+* Edited: `assets/icon-256x256.png`
+* Edited: `plugin.php`
+* Edited: `README.md`
 
 ### 3.3.3
 * Released on November 25, 2020
@@ -361,6 +380,9 @@ As great as the block editor is it can cause issues, sometimes. For events that 
 
 ## Upgrade Notice
 
+### 4.0.0
+Happy Holidays! This release gives things a fresh look and removes support for the legacy calendar views. The Events Calendar will be retiring the legacy views in Q1 '22, so if you have been waiting to upgrade now is a great time! If you want to continue to use the legacy calendar views, do not update this plugin. However, this plugin will no longer provide support for legacy views and The Events Calendar will drop support starting in Q1 '22. A refresh of the assets for the plugin help to give the plugin a fresh look before the new year. A *big* thank you to Danielle Attinella for the amazing work on the new icon and banner image.
+
 ### 3.3.3
 No major updates to report! Lots of work has gone on behind the scenes to make sure my plugin will be WordPress v5.6 compatible when when it is released early next month. You can feel free to safely update knowing things should continue to work. As always, if you have any issues or questions please feel free to submit a support ticket!
 
@@ -433,3 +455,5 @@ Below are resources and references that were used to help develop parts of this 
 
 ### Special Thanks:
 A special thank you to user [@cliffordp](https://github.com/cliffordp) for several helpful gists (linked in the [resources](https://github.com/mike-weiner/display-event-locations-tec#references) section) that were used as boilerplates achieve certain functionality within this plugin.
+
+Thank you to [Danielle Attinella](https://ella-ella.studio) for her amazing work on designing a new icon and banner image for the plugin. Her work is simply superb!
