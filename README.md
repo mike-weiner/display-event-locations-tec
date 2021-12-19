@@ -147,7 +147,7 @@ As great as the block editor is it can cause issues, sometimes. For events that 
 ## Changelog
 
 ### 4.0.0
-* Released on December xx, 2021
+* Released on December 19, 2021
 * Added: Tested Support with WP v5.9
 * Added: Updated logo and banner assets created by Danielle Attinella
 * Removed: Removed screenshot assets that showed legacy views as they are being retired by The Events Calendar in Q1 '22
