@@ -23,6 +23,7 @@ php:
     - '7.2'
     - '7.3'
     - '7.4'
+    - '8.0'
 
 # PHP files to check for syntax errors
 script:
@@ -33,4 +34,3 @@ script:
   - php -l includes/settings-page/settings-register.php
   - php -l includes/settings-page/settings-validate.php
   - php -l tribe/events/month/calendar-body/day/calendar-events/calendar-event/tooltip/title.php
-  - php -l tribe-events/month/tooltip.php
