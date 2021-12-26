@@ -1,12 +1,10 @@
 ![Deltec Banner](/assets/banner-1544x500.png)
 
 # Display Event Location for The Events Calendar 
-[![Build Status](https://travis-ci.com/mike-weiner/display-event-locations-tec.svg?branch=master)](https://travis-ci.com/mike-weiner/display-event-locations-tec)
 ![WordPress Plugin Downloads](https://img.shields.io/wordpress/plugin/dt/display-event-locations-tec)
 ![WordPress Plugin Activations](https://img.shields.io/wordpress/plugin/installs/display-event-locations-tec)
 ![WordPress Plugin Version](https://img.shields.io/wordpress/plugin/v/display-event-locations-tec)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/mike-weiner/display-event-locations-tec)
-
 
 Contributors: [vikings412](https://profiles.wordpress.org/vikings412/) <br>
 Donate Link: https://paypal.me/michaelw13 <br>
@@ -22,7 +20,7 @@ This plugin works with The Events Calendar by Modern Tribe. It changes the popup
 
 ## Description
 
-This plugin overrides the template for the tooltip that is displayed when a user hovers over an event on the month display of The Events Calendar and The Events Calendar Pro. The name of the event's venue/location that is entered with the event will be displayed under the date and time that the event occurs. The full street address for the location can also be enabled to be displayed directly underneath the name of the venue of the event. The venue/location name and address are pulled in from the events system itself for each individual event. All of the other elements of the tooltip remain unchanged.
+This plugin overrides the template for the tooltip that is displayed when a user hovers over an event on the full month calendar view created by The Events Calendar or The Events Calendar Pro plugin. The name of the event's venue/location that is entered with the event will be displayed under the date and time that the event occurs. The full street address for the location can also be displayed. All of the other elements of the tooltip remain unchanged.
 
 [The Events Calendar](https://theeventscalendar.com/product/wordpress-events-calendar/) and [The Events Calendar Pro](https://theeventscalendar.com/product/wordpress-events-calendar-pro/) are WordPress plugins developed by [Modern Tribe](https://tri.be). 
 
@@ -34,17 +32,17 @@ This section describes how to install the plugin and activate it on your WordPre
 
 The official Display Event Location for The Events Calendar WordPress Plugin can be found at: [https://wordpress.org/plugins/display-event-locations-tec/](https://wordpress.org/plugins/display-event-locations-tec/).
 
-The plugin can be downloaded and installed right from your WordPress administration area by going to `Plugins > Add New` and searching for "Display Event Location for The Events Calendar by Weiner" and clicking "Install" and then by clicking the blue "Activate" after the installation has completed.
+The plugin can be downloaded and installed right from your WordPress administration area by going to `Plugins > Add New` and searching for `Display Event Location for The Events Calendar by Weiner` and clicking "Install". Once the installation completes, click the blue "Activate" button to activate the plugin on your website.
 
 ### From the Github Repository
 
-Go to the [releases](https://github.com/mike-weiner/display-event-locations-tec/releases) section of the repository and download the `display-event-locations-tec.[version].zip` from the most recent release.
+Go to the [releases](https://github.com/mike-weiner/display-event-locations-tec/releases) section of the repository and download the `.zip` named `display-event-locations-tec.[version].zip` from the most recent release listed in the repository.
 
-Once you have downloaded the `display-event-locations-tec.[version].zip` from the releases section of this repo sign into the backend of your WordPress website. From your WordPress administration panel, go to `Plugins > Add New` and click the gray `Upload Plugin` button at the top of the page. Select the `display-event-locations-tec.[version].zip` file to upload from your machine when prompted.
+Once you have downloaded the `display-event-locations-tec.[version].zip` from the releases section of the repository sign into the backend of your WordPress website. From your WordPress administration panel, go to `Plugins > Add New` and click the gray `Upload Plugin` button at the top of the page. Select the `display-event-locations-tec.[version].zip` file to upload from your machine when prompted.
 
 WordPress will install the plugin. Once the installation is complete, you will be able to activate the plugin and begin using it! Enjoy! 
 
-If you have any questions or issues please open a [new issue on the Github repository](https://github.com/mike-weiner/display-event-locations-tec/issues) or [submit a support ticket](https://wordpress.org/support/plugin/display-event-locations-tec/) on the WordPress Plugin directory listing for the Display Event Location for The Events Calendar plugin.
+If you have any questions or issues please open a [new issue on the Github repository](https://github.com/mike-weiner/display-event-locations-tec/issues) or [submit a support ticket](https://wordpress.org/support/plugin/display-event-locations-tec/) on the WordPress Plugin directory listing for this plugin.
 
 ## Frequently Asked Questions
 
@@ -54,9 +52,9 @@ First, make sure that the plugin 'Display Event Location for The Events Calendar
 
 If the plugin is active and the changes to the tooltip are still not present, try updating an existing event or creating a new test event. Save and publish the event. Then, take a peak at your calendar on the front-end of your website. The changes to the tooltip should now be reflected!
 
-If you still aren't seeing the location displayed within the tooltip, you can also try viewing your calendar in a different browser or try clearing your browser's cache and then viewing your calendar again.
+If you still aren't seeing the location displayed within the tooltip, you can also try viewing your calendar in a different browser or try clearing your browser's cache and then viewing your calendar again. It is common that the monthly calendar view gets cached in your browser or by your website's hosting service. A clearing of all website and server cache fixes most issues.
 
-If you still cannot figure out why the location is not displaying, feel free to submit a support ticket and we will be more than happy to help you!
+If you still cannot figure out why the location is not displaying, feel free to [submit a support ticket](https://wordpress.org/support/plugin/display-event-locations-tec/)) and we will be more than happy to help you!
 
 > TLDR; Sometimes a small change is difficult. Give it a few minutes, and if you get frustrated we are here to help you! [Submit a support ticket](https://wordpress.org/support/plugin/display-event-locations-tec/) on wordpress.org or [open a new issue](https://github.com/mike-weiner/display-event-locations-tec/issues) on the Github repository and we'll help get you up and running! :)
 
@@ -70,13 +68,13 @@ See the FAQ titled "How do I display the street address underneath the location 
 
 Hover over `Settings` in the left-hand sidebar within the administration area of your WordPress website. Click on `Display Event Location for The Events Calendar` from the flyout that appears. 
 
-Once the page loads, click the edit the text within the `Tooltip Message Before Venue/Location Name` textbox.
+Once the page loads, edit the text within the `Tooltip Message Before Venue/Location Name` textbox.
 
-Once the you have edited the message to what you would like, click the blue `Save Changes` button. 
+Once the you have edited the message, click the blue `Save Changes` button. 
 
 Once the page reloads, scroll to the bottom of the page and under the "Preview Tooltip" area, the fake tooltip should display your custom message before the event's venue/location name.
 
-### How do I remove the phrase "Location: " that is displayed before the name of an event's venue/location within the tooltip so nothing is displayed before the event venue/location name?
+### How do I remove the phrase that is displayed before the name of an event's venue/location within the tooltip so nothing is displayed before the event venue/location name?
 
 Hover over `Settings` in the left-hand sidebar within the administration area of your WordPress website. Click on `Display Event Location for The Events Calendar` from the flyout that appears. 
 
@@ -90,13 +88,13 @@ Once the page reloads, scroll to the bottom of the page and under the "Preview T
 
 Hover over `Settings` in the left-hand sidebar within the administration area of your WordPress installation. Click on `Display Event Location for The Events Calendar` from the flyout that appears. 
 
-Once the page loads, click the checkbox for the `Show Full Venue Address Inside Tooltip` option. Once the checkbox is selected, click the blue `Save Changes` button. 
+Once the page loads, click the checkbox for the `Show Full Venue Address Inside Tooltip` option. Once the checkbox is checked, click the blue `Save Changes` button. 
 
 Once the page reloads, scroll to the bottom of the page and under the "Preview Tooltip" area, the fake tooltip should display the location and fake street address underneath.
 
 ### How do I change the font size of the event venue/location name and/or street address text within the tooltip?
 
-In version 3.2 of this plugin, a CSS class system was implemented to allow for greater control of the stylization of the elements added to the tooltip by this plugin.
+In version `3.2` of this plugin, a CSS class system was implemented to allow for greater control of the stylization of the elements added to the tooltip by this plugin.
 
 To change the font-size of the venue/location name and street address add the CSS code below to your website.
 
@@ -104,7 +102,7 @@ To change the font-size of the venue/location name and street address add the CS
 	font-size: 14px;
 }`
 
-**Note:** This CSS is very basic and is just meant as a starting point. It could be overwritten by a more specific CSS call. Please see the [Arbitrary Section](https://wordpress.org/plugins/display-event-locations-tec/) on the WordPress Repository page or on the [Github Repository README](https://github.com/mike-weiner/display-event-locations-tec#css-classes).
+**Note:** This CSS is very basic and is just meant as a starting point. It could be overwritten by a more specific CSS call. Please see the [Arbitrary Section](https://wordpress.org/plugins/display-event-locations-tec/) on the WordPress Repository page or on the [Github Repository README](https://github.com/mike-weiner/display-event-locations-tec#css-classes) for a detailed list of the CSS classes in use by this plugin.
 
 ### How do I change the name and/or street address for event locations? 
 
@@ -124,7 +122,7 @@ Yes! This will plugin will display the event venue name and location (if you hav
 
 ### Will this plugin work on both the legacy and v2 calendar views?
 
-No. As of version `4.0.0`, this plugin modifies *only* the the new calendar views (v2) introduced with The Events Calendar 5.0+ and The Events Calendar Pro 5.0+. 
+No. As of version `4.0.0`, this plugin modifies ***only*** the the new calendar views (v2 views) introduced with The Events Calendar 5.0+ and The Events Calendar Pro 5.0+. 
 
 This is because The Events Calendar will be [removing all legacy view functionality in Q1 '22](https://theeventscalendar.com/blog/news/the-events-calendar-is-retiring-legacy-views/).
 
@@ -150,6 +148,7 @@ As great as the block editor is it can cause issues, sometimes. For events that 
 * Released on December 19, 2021
 * Added: Tested Support with WP v5.9
 * Added: Updated logo and banner assets created by Danielle Attinella
+* Removed: Support for modifying the tooltip in the legacy views has been removed. This is because The Events Calendar will be [removing all legacy view functionality in Q1 '22](https://theeventscalendar.com/blog/news the-events-calendar-is-retiring-legacy-views/).
 * Removed: Removed screenshot assets that showed legacy views as they are being retired by The Events Calendar in Q1 '22
 * Added: `assets/banner-772x250.png`
 * Added: `assets/banner-1544x500.png`
@@ -381,7 +380,7 @@ As great as the block editor is it can cause issues, sometimes. For events that 
 ## Upgrade Notice
 
 ### 4.0.0
-Happy Holidays! This release gives things a fresh look and removes support for the legacy calendar views. The Events Calendar will be retiring the legacy views in Q1 '22, so if you have been waiting to upgrade now is a great time! If you want to continue to use the legacy calendar views, do not update this plugin. However, this plugin will no longer provide support for legacy views and The Events Calendar will drop support starting in Q1 '22. A refresh of the assets for the plugin help to give the plugin a fresh look before the new year. A *big* thank you to Danielle Attinella for the amazing work on the new icon and banner image.
+Happy Holidays! This release gives things a fresh look and removes support for the legacy calendar views. If you have been waiting to upgrade your calendar to the new v2 views, now is a great time! If you want to continue to use the legacy calendar views, do not update this plugin. Do be aware that this plugin will no longer provide support for legacy views and The Events Calendar will drop support starting in Q1 '22. A refresh of the assets for the plugin help to give the plugin a fresh look before the new year. A *big* thank you to Danielle Attinella for the amazing work on the new icon and banner image.
 
 ### 3.3.3
 No major updates to report! Lots of work has gone on behind the scenes to make sure my plugin will be WordPress v5.6 compatible when when it is released early next month. You can feel free to safely update knowing things should continue to work. As always, if you have any issues or questions please feel free to submit a support ticket!
@@ -456,4 +455,4 @@ Below are resources and references that were used to help develop parts of this 
 ### Special Thanks:
 A special thank you to user [@cliffordp](https://github.com/cliffordp) for several helpful gists (linked in the [resources](https://github.com/mike-weiner/display-event-locations-tec#references) section) that were used as boilerplates achieve certain functionality within this plugin.
 
-Thank you to [Danielle Attinella](https://ella-ella.studio) for her amazing work on designing a new icon and banner image for the plugin. Her work is simply superb!
+Thank you to [Danielle Attinella](https://ella-ella.studio) for her amazing work on designing a new icon and banner image for the plugin.
