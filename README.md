@@ -148,7 +148,7 @@ As great as the block editor is it can cause issues, sometimes. For events that 
 * Released on December 19, 2021
 * Added: Tested Support with WP v5.9
 * Added: Updated logo and banner assets created by Danielle Attinella
-* Removed: Support for modifying the tooltip in the legacy views has been removed. This is because The Events Calendar will be [removing all legacy view functionality in Q1 '22](https://theeventscalendar.com/blog/news the-events-calendar-is-retiring-legacy-views/).
+* Removed: Support for modifying the tooltip in the legacy views has been removed.
 * Removed: Removed screenshot assets that showed legacy views as they are being retired by The Events Calendar in Q1 '22
 * Added: `assets/banner-772x250.png`
 * Added: `assets/banner-1544x500.png`
