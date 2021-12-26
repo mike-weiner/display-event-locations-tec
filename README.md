@@ -54,7 +54,7 @@ If the plugin is active and the changes to the tooltip are still not present, tr
 
 If you still aren't seeing the location displayed within the tooltip, you can also try viewing your calendar in a different browser or try clearing your browser's cache and then viewing your calendar again. It is common that the monthly calendar view gets cached in your browser or by your website's hosting service. A clearing of all website and server cache fixes most issues.
 
-If you still cannot figure out why the location is not displaying, feel free to [submit a support ticket](https://wordpress.org/support/plugin/display-event-locations-tec/)) and we will be more than happy to help you!
+If you still cannot figure out why the location is not displaying, feel free to [submit a support ticket](https://wordpress.org/support/plugin/display-event-locations-tec/) and we will be more than happy to help you!
 
 > TLDR; Sometimes a small change is difficult. Give it a few minutes, and if you get frustrated we are here to help you! [Submit a support ticket](https://wordpress.org/support/plugin/display-event-locations-tec/) on wordpress.org or [open a new issue](https://github.com/mike-weiner/display-event-locations-tec/issues) on the Github repository and we'll help get you up and running! :)
 
