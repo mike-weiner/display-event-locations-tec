@@ -53,7 +53,7 @@ $deltec_display_full_address = empty(get_option('deltec_options')['display-full-
 		?>
 
 		<?php if ($deltec_display_full_address == 1) {
-			$deltec_location_html = '<span class= "deltec-street-address">' . tribe_get_full_address(esc_url( $event->permalink )) . '</span>';
+			$deltec_location_html = '<span class= "deltec-street-address">' . tribe_get_full_address() . '</span>';
 			echo $deltec_location_html;
 		} else {
 			$deltec_location_html = '';

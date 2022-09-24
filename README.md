@@ -11,7 +11,7 @@ Donate Link: https://paypal.me/michaelw13 <br>
 Tags: events, customization, modern-tribe, override, template <br>
 Requires at least: 5.0 <br>
 Tested up to: 6.0 <br>
-Stable tag: 4.0.0 <br>
+Stable tag: 4.1.0 <br>
 Requires PHP: 7.0.0 <br>
 License: GPLv2 or later <br>
 License URI: https://www.gnu.org/licenses/gpl-2.0.html <br>
@@ -143,6 +143,12 @@ As great as the block editor is it can cause issues, sometimes. For events that 
 5. This is what the tooltip for a featured event will look like after activating this plugin with the location name and street address enabled with the v2 calendar template.
 
 ## Changelog
+
+### 4.1.0
+* Released on September 23, 2022
+* Fixed: Fixed a bug that caused the full street address not to be displayed even if the user had it set to display on the plugin's setting page.
+* Edited: `/tribe/events/month/calendar-body/day/calendar-events/calendar-event/tooltip/title.php`
+* Edited: `README.md`
 
 ### 4.0.0
 * Released on December 19, 2021
@@ -378,6 +384,9 @@ As great as the block editor is it can cause issues, sometimes. For events that 
 * Initial release
 
 ## Upgrade Notice
+
+### 4.1.0
+This update contains a small bug fix. There was a bug related to the full street address not displaying, even when you had it set to be displayed in our plugin's settings page. If you have any other issues after updating, please feel free to reach out and open a support ticket.
 
 ### 4.0.0
 Happy Holidays! This release gives things a fresh look and removes support for the legacy calendar views. If you have been waiting to upgrade your calendar to the new v2 views, now is a great time! If you want to continue to use the legacy calendar views, do not update this plugin. Do be aware that this plugin will no longer provide support for legacy views and The Events Calendar will drop support starting in Q1 '22. A refresh of the assets for the plugin help to give the plugin a fresh look before the new year. A *big* thank you to Danielle Attinella for the amazing work on the new icon and banner image.
