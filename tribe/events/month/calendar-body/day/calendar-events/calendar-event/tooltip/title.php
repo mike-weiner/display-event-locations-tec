@@ -44,20 +44,21 @@ $deltec_display_full_address = empty(get_option('deltec_options')['display-full-
 	<span class= "deltec-tribe-events-location">
 		
 		<?php
-		if ( tribe_address_exists( esc_url( $event->permalink ) ) ) {
-			$deltec_venue_name = tribe_get_venue( esc_url( $event->permalink ) );
-
-			$deltec_tooltip_message_and_venue_name = '<span class= "deltec-location-name-prefix">' . $deltec_tooltip_message . '</span><span class= "deltec-location-name"> ' . $deltec_venue_name . '</span><br>';
-			echo $deltec_tooltip_message_and_venue_name;
-		}
+			$deltec_venue_name = tribe_get_venue();
+			
+			if ( !empty($deltec_venue_name) ) {
+				$deltec_tooltip_message_and_venue_name = '<span class= "deltec-location-name-prefix">' . $deltec_tooltip_message . '</span><span class= "deltec-location-name"> ' . $deltec_venue_name . '</span><br>';
+				echo $deltec_tooltip_message_and_venue_name;
+			}
 		?>
 
-		<?php if ($deltec_display_full_address == 1) {
-			$deltec_location_html = '<span class= "deltec-street-address">' . tribe_get_full_address() . '</span>';
-			echo $deltec_location_html;
-		} else {
-			$deltec_location_html = '';
-		}
+		<?php 
+			if ( tribe_address_exists() == 1 && $deltec_display_full_address == 1 ) {
+				$deltec_location_html = '<span class= "deltec-street-address">' . tribe_get_full_address() . '</span>';
+				echo $deltec_location_html;
+			} else {
+				$deltec_location_html = '';
+			}
 		?>
 	</span>
 </p>

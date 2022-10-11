@@ -11,7 +11,7 @@ Donate Link: https://paypal.me/michaelw13 <br>
 Tags: events, customization, modern-tribe, override, template <br>
 Requires at least: 5.0 <br>
 Tested up to: 6.0 <br>
-Stable tag: 4.1.0 <br>
+Stable tag: 4.2.0 <br>
 Requires PHP: 7.0.0 <br>
 License: GPLv2 or later <br>
 License URI: https://www.gnu.org/licenses/gpl-2.0.html <br>
@@ -143,6 +143,13 @@ As great as the block editor is it can cause issues, sometimes. For events that 
 5. This is what the tooltip for a featured event will look like after activating this plugin with the location name and street address enabled with the v2 calendar template.
 
 ## Changelog
+
+### 4.2.0
+* Released on October 11, 2022
+* Fixed: Fixed a bug that kept the event venue name and location from displaying on venues without an address.
+* Edited: `/tribe/events/month/calendar-body/day/calendar-events/calendar-event/tooltip/title.php`
+* Edited: `plugin.php`
+* Edited: `README.md`
 
 ### 4.1.0
 * Released on September 23, 2022
@@ -384,6 +391,9 @@ As great as the block editor is it can cause issues, sometimes. For events that 
 * Initial release
 
 ## Upgrade Notice
+
+### 4.2.0
+This update contains another small bug fix. Several users reported that the location name and address would not display after upgrading to The Events Calendar v6.0+. This was caused by venues that were created without specifying a street address. Updating to version 4.2.0 of this plugin corrects that bug. Thank you to user [hakonknappen](https://wordpress.org/support/users/hakonknappen/) and [dcw4](https://wordpress.org/support/users/dcw4/) on the Wordpress.org support forum for [reporting the issue](https://wordpress.org/support/topic/the-venue-isnt-displayd-in-tooltip-after-upgrading-the-events-calendar/). 
 
 ### 4.1.0
 This update contains a small bug fix. There was a bug related to the full street address not displaying, even when you had it set to be displayed in our plugin's settings page. If you have any other issues after updating, please feel free to reach out and open a support ticket.
