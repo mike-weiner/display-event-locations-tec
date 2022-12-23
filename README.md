@@ -24,7 +24,7 @@ This plugin overrides the template for the tooltip that is displayed when a user
 
 [The Events Calendar](https://theeventscalendar.com/product/wordpress-events-calendar/) and [The Events Calendar Pro](https://theeventscalendar.com/product/wordpress-events-calendar-pro/) are WordPress plugins developed by [Modern Tribe](https://tri.be).
 
-[![Watch the video](https://img.youtube.com/vi/Kv3kx8YvzA4/default.jpg)](https://www.youtube.com/watch?v=Kv3kx8YvzA4)
+The following video explains what this plugin does, how to install it, and how to configure it. Watch it here: [https://www.youtube.com/watch?v=Kv3kx8YvzA4](https://www.youtube.com/watch?v=Kv3kx8YvzA4)
 
 ## Installation
 
