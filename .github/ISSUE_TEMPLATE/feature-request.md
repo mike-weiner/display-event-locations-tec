@@ -1,7 +1,7 @@
 ---
 name: Feature Request
-about: Suggest an idea for this project
-title: "[FR]:"
+about: Suggest an idea for this plugin
+title: "[Feature Request]: "
 labels: enhancement
 assignees: mike-weiner
 
