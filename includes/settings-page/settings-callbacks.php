@@ -1,6 +1,6 @@
 <?php
 
- /**
+/**
  *  Exit plugin if it is being accessed directly
  */
 if ( ! defined( 'ABSPATH' ) ) {
@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 
- /**
+/**
  * Callback function for tooltip settings section on the deltec settings page
  * 
  * @see deltec_register_settings() located at /includes/settings-register.php
@@ -38,11 +38,10 @@ function deltec_callback_pre_venue_message_text_field($args) {
 }
 
 
- /**
+/**
  * Callback function for the display-full-address field on the deltec settings page
  * 
- * @see deltec_register_settings 
- *           /includes/settings-register.php
+ * @see deltec_register_settings() located at /includes/settings-register.php
  */
 function deltec_callback_show_full_address_checkbox($args) {
     // Get the option for the check box to display the full address from the Display Event Location for The Events Calendar settings page 

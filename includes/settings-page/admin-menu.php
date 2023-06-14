@@ -1,6 +1,6 @@
 <?php
 
- /**
+/**
  *  Exit plugin if it is being accessed directly
  */
 if ( ! defined( 'ABSPATH' ) ) {
@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 
- /**
+/**
  * Add submenu page for 'Display Event Location for The Events Calendar' under the Settings tab
  */
 function deltec_settings_page_add_sub_level_menu() {

@@ -1,6 +1,6 @@
 <?php
 
- /**
+/**
  * Exit file if it is being accessed directly
  */
 if ( ! defined( 'ABSPATH' ) ) {
@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 
- /**
+/**
  * Validate & Clean settings fields on the deltec settings page
  * 
  * @see deltec_register_settings() located at /includes/settings-register.php

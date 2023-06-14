@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 
- /**
+/**
  *  Register settings for the deltec_settings_page
  */
 function deltec_register_settings(){

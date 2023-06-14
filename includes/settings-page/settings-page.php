@@ -8,13 +8,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 
- /**
+/**
  *  Add items to the Display Event Location for The Events Calendar settings page
  */
 function deltec_display_settings_page() {
     // Check to make sure the user has access to the page
     if (!current_user_can('manage_options')) {
-        return; // If they do not have the needed permissions to view this page -> return nothing
+        return;
     }
     ?>
 
@@ -22,7 +22,7 @@ function deltec_display_settings_page() {
         <h1><?php echo esc_html(get_admin_page_title()); ?></h1>
         <form action="options.php" method="post">
             <?php
-            //Output Security Fields
+            //Output Settings Fields
             settings_fields( 'deltec_options');
 
             //Output Setting Sections
@@ -40,12 +40,8 @@ function deltec_display_settings_page() {
         <p>Event Title<br />
             <strong><?php $deltec_options = get_option('deltec_options'); $tooltip_message = $deltec_options['pre-venue-message']; echo $tooltip_message ?> </strong>Event Location Name<br />
             <?php 
-
-                // If the checkbox is not set or not checked -> assign $options a value of 0
-                // If the checkbox is set -> assign $options a value of 1
                 $deltec_checkbox_option = empty(get_option('deltec_options')['display-full-address']) ? 0 : 1;
 
-                // If the user is showing the full address, display this within the tooltip preview as well
                 if ($deltec_checkbox_option == 1) {
                     $deltec_html = '<strong>Fake Address 1234<br /> Fake City, Fake State Zip Code <br /> Country</strong>';
                     echo $deltec_html;

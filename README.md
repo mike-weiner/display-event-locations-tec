@@ -9,14 +9,14 @@
 Contributors: [vikings412](https://profiles.wordpress.org/vikings412/) <br>
 Donate Link: https://paypal.me/michaelw13 <br>
 Tags: events, customization, modern-tribe, override, template <br>
-Requires at least: 5.0 <br>
+Requires at least: 5.0.0 <br>
 Tested up to: 6.2.0 <br>
-Stable tag: 4.2.0 <br>
+Stable tag: 4.3.0 <br>
 Requires PHP: 7.0.0 <br>
 License: GPLv2 or later <br>
 License URI: https://www.gnu.org/licenses/gpl-2.0.html <br>
 
-This plugin works with The Events Calendar by Modern Tribe. It changes the popup on the month view to include the event's location within the popup.
+This plugin works with The Events Calendar by Modern Tribe. It adds an event's location information to the tooltip on the monthly calendar view.
 
 ## Description
 
@@ -52,7 +52,9 @@ If you have any questions or issues please open a [new issue on the Github repos
 
 First, make sure that the plugin 'Display Event Location for The Events Calendar' is installed and activated on your website. To check this, click on the `Plugins` option from the left-hand administration sidebar in WordPress. Once the page loads, make sure `Display Event Location for The Events Calendar` is activated. Then try viewing your calendar again to see if the tooltip now displays the location of your events.
 
-If the `Display Event Location for The Events Calendar` plugin is activated and the tooltip still does not show the location of events in your calendar, try navigating your calendar to the next month or backwards to the previous month. Then try hovering over events from that month and see if the tooltip is displaying event locations. If you still do not see a location in the tooltip when hovering over events on the monthly calendar, edit the event in question and ensure that a Venue is selected. You can do this by selecting `Events > Venues > Add New` from your WordPress administration area. Additional instructions for creating venues can be found here: [https://theeventscalendar.com/knowledgebase/k/venue-and-organizer-pages/](https://theeventscalendar.com/knowledgebase/k/venue-and-organizer-pages/)
+If the `Display Event Location for The Events Calendar` plugin is activated and the tooltip still does not show the location of events in your calendar, try navigating your calendar to the next month or backwards to the previous month. Then try hovering over events from that month and see if the tooltip is displaying event locations. 
+
+If you still do not see a location in the tooltip when hovering over events on the monthly calendar, edit the event in question and ensure that a venue is selected. You can do this by selecting `Events > Venues > Add New` from your WordPress administration area. Additional instructions for creating venues can be found here: [https://theeventscalendar.com/knowledgebase/k/venue-and-organizer-pages/](https://theeventscalendar.com/knowledgebase/k/venue-and-organizer-pages/)
 
 If you still aren't seeing the location displayed within the tooltip, you can also try viewing your calendar in a different browser or try clearing your browser's cache and then viewing your calendar again. It is common that the monthly calendar view gets cached in your browser or by your website's hosting service. A clearing of all website and server cache fixes most issues.
 
@@ -110,7 +112,7 @@ Yes. This will plugin will display the event's venue name and street address (if
 
 ### Will this plugin work on both the legacy and v2 calendar views?
 
-No. As of version `4.0.0`, this plugin modifies ***only*** the the new calendar views (v2 views) introduced with The Events Calendar 5.0+ and The Events Calendar Pro 5.0+.
+No. As of version `4.0.0` of this plugin, ***only*** the the new calendar views (v2 views) introduced with The Events Calendar 5.0+ and The Events Calendar Pro 5.0+.
 
 ## Screenshots
 
@@ -121,6 +123,28 @@ No. As of version `4.0.0`, this plugin modifies ***only*** the the new calendar 
 5. This is what the tooltip for a featured event will look like after activating this plugin with both the location name and street address enabled in the tooltip.
 
 ## Changelog
+
+### 4.3.0
+* Released on Wednesday, June 14, 2023
+* Added: DELTEC custom templates for The Events Calendar are now found in `/tribe-templates/`.
+* Added: The custom DELTEC tooltip template now uses a WordPress action to inject the event's venue information into the tooltip that is displayed when hovering over an event on the monthly calendar view. This work creates a clear path forward for future template customizations.
+* Added: The WordPress Plugin Repository listing for this plugin now features the `Community` tag.
+* Added: The plugin `README` includes a simpler description on the plugin's functionality and improved clarity to both the installation instructions and the plugin FAQs. All in an effort to make things clearer and less overwhelming to new users.
+* Added: The logic for the custom tooltip template has been moved into `/tribe-templates/month/tooltip-venue.php` and no longer relies on the title template. This decouples the plugin's custom tooltip modification from changes that the developers of The Events Calendar might make to the title portion of the tooltip.
+* Fixed: Code throughout the plugin source code was cleaned and simplified for improved clarity and performance.
+* Removed: DELTEC will no longer look in your active child theme for The Events Calendar templates since all of the custom templates are found within the source code for the DELTEC plugin only.
+* Added: `tribe-templates/`
+* Added: `tribe-templates/month/`
+* Added: `tribe-templates/month/tooltip-venue.php`
+* Renamed: `plugin.php` to `display-event-locations-tec.php`
+* Edited: `display-event-locations-tec.php`
+* Edited: `README.md`
+* Edited: `/includes/settings-page/admin-menu.php`
+* Edited: `/includes/settings-page/settings-callbacks.php`
+* Edited: `/includes/settings-page/settings-page.php`
+* Edited: `/includes/settings-page/settings-register.php`
+* Edited: `/includes/settings-page/settings-validate.php`
+* Removed: `/tribe/events/month/calendar-body/day/calendar-events/calendar-event/tooltip/title.php`
 
 ### 4.2.0
 * Released on October 11, 2022
@@ -369,6 +393,9 @@ No. As of version `4.0.0`, this plugin modifies ***only*** the the new calendar 
 * Initial release.
 
 ## Upgrade Notice
+
+### 4.3.0
+Howdy! I've listed this update as a `minor` release, but there is a lot going on under the hood. The core functionality of this plugin has not changed. In fact, with this release of `v4.3.0` there are no new features or changes that you should see on your end. With that being said, I've been doing a ton of work behind the scenes to clean the source code, simplify logic, and make small improvements in performance. For those that are interested in the technical details, those can be found in the changelog. Long story short, I'm working to make sure that this plugin functions correctly, is efficient, and that it is reliable for you. If you run into any issues with your update, please open a support ticket and I will work with you to resolve any issues. Take care!
 
 ### 4.2.0
 This update contains another small bug fix. Several users reported that the location name and address would not display after upgrading to The Events Calendar v6.0+. This was caused by venues that were created without specifying a street address. Updating to version 4.2.0 of this plugin corrects that bug. Thank you to user [hakonknappen](https://wordpress.org/support/users/hakonknappen/) and [dcw4](https://wordpress.org/support/users/dcw4/) on the Wordpress.org support forum for [reporting the issue](https://wordpress.org/support/topic/the-venue-isnt-displayd-in-tooltip-after-upgrading-the-events-calendar/). 
