@@ -401,6 +401,9 @@ No. As of version `4.0.0` of this plugin, ***only*** the the new calendar views 
 
 ## Upgrade Notice
 
+### 4.4.0
+Another minor update for your consumption. Support for WordPress 6.5.0 has been verified. The other minor change is that starting with WordPress 6.5, this plugin now has a formal dependency on The Events Calendar. Version 4.4.0 should be compatible with all existing installations. Enjoy!
+
 ### 4.3.0
 Howdy! I've listed this update as a `minor` release, but there is a lot going on under the hood. The core functionality of this plugin has not changed. In fact, with this release of `v4.3.0` there are no new features or changes that you should see on your end. With that being said, I've been doing a ton of work behind the scenes to clean the source code, simplify logic, and make small improvements in performance. For those that are interested in the technical details, those can be found in the changelog. Long story short, I'm working to make sure that this plugin functions correctly, is efficient, and that it is reliable for you. If you run into any issues with your update, please open a support ticket and I will work with you to resolve any issues. Take care!
 
