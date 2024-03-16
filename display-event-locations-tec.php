@@ -1,9 +1,10 @@
 <?php
 /**
  * Plugin Name: Display Event Location for The Events Calendar
+ * Requires Plugins: the-events-calendar
  * Plugin URI: https://michaelweiner.org/
  * Description: Display an event's venue (location) in the tooltip of the monthly calendar view when using The Events Calendar or The Events Calendar Pro.
- * Version: 4.3.0
+ * Version: 4.4.0
  * Requires at least: 5.0.0
  * Requires PHP: 7.0.0
  * Author: Michael Weiner
@@ -69,48 +70,6 @@ add_filter( 'tribe_template_theme_path_list', 'deltec_tribe_custom_template_path
 add_action( 'tribe_template_after_include:events/v2/month/calendar-body/day/calendar-events/calendar-event/tooltip/title', function ( $file, $name, $template ) {
     $template->template( 'month/tooltip-venue' );
 }, 10, 3 );
-
-
-/**
- * Displays an admin notice on the plugin page if The Events Calendar is not activated
- * 
- * @see deltec_plugin_init()
- */
-function deltec_error_install_tec_plugin() {
-    global $pagenow;
-
-    // Declare a variable to store the url for The Events Calendar WordPress plugin directory listing to display within iframe
-    $deltec_iframe_url = 'plugin-install.php?tab=plugin-information&plugin=the-events-calendar&TB_iframe=true';
-
-    if ( $pagenow == 'plugins.php' && current_user_can( 'manage_options' ) ) {
-
-        // Display error message to user that is non-dismissible
-        echo '<div class="error"><p>'
-        .sprintf(
-            '%1s <a href="%2s" class="thickbox" title="%3s">%4s</a>.',
-
-            esc_html__( 'Display Event Location for The Events Calendar requires The Events Calendar to function properly. Please, install and activate the latest version of', 'tribe-events-calendar' ),
-            esc_url( $deltec_iframe_url ),
-            esc_html__( 'The Events Calendar', 'tribe-events-calendar' ),
-            esc_html__( 'The Events Calendar', 'tribe-events-calendar' )
-
-            ).
-        '</p></div>';
-    }
-}
-
-
-/**
- * Determines if The Events Calendar plugin is activated anytime a DELTEC is activated or deactivated
- * 
- * @see deltec_error_install_tec_plugin()
- */
-function deltec_plugin_init() {    
-    if ( ! class_exists( 'Tribe__Main' ) ) {
-        add_action( 'admin_notices', 'deltec_error_install_tec_plugin' ); // Call action to display error message to user
-    }
-}
-add_action( 'plugins_loaded', 'deltec_plugin_init' );
 
 
 /**
