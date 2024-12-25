@@ -19,4 +19,4 @@ jobs:
         # Each directory should be separated with new lines.
         #
         # Default: ''
-        exclude-directories: '.github'
+        exclude-directories: './.github'
