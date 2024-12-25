@@ -14,3 +14,9 @@ jobs:
       uses: actions/checkout@v3
     - name: Run plugin check
       uses: wordpress/plugin-check-action@v1
+      with:
+        # List of directories to exclude from checks.
+        # Each directory should be separated with new lines.
+        #
+        # Default: ''
+        exclude-directories: '.github'
