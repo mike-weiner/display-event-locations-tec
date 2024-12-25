@@ -25,6 +25,7 @@ jobs:
         wp dist-archive . ./display-event-locations-tec.zip
         mkdir tmp-build
         unzip display-event-locations-tec.zip -d tmp-build
+        rm tmp-build/.distignore
     - name: Run plugin check
       uses: wordpress/plugin-check-action@v1
       with:
