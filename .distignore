@@ -1,6 +1,6 @@
 .DS_Store
 .distignore
+.git/
 .gitignore
-README.md
 /.github/
-/.git/
+/README.md
