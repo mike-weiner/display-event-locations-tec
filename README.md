@@ -11,7 +11,7 @@ Donate Link: https://paypal.me/michaelw13 <br>
 Tags: events, customization, modern-tribe, override, template <br>
 Requires at least: 5.0.0 <br>
 Tested up to: 6.7.0 <br>
-Stable tag: 4.4.0 <br>
+Stable tag: 4.5.0 <br>
 Requires PHP: 7.0.0 <br>
 License: GPLv2 or later <br>
 License URI: https://www.gnu.org/licenses/gpl-2.0.html <br>
@@ -123,6 +123,21 @@ No. As of version `4.0.0` of this plugin, ***only*** the the new calendar views 
 5. This is what the tooltip for a featured event will look like after activating this plugin with both the location name and street address enabled in the tooltip.
 
 ## Changelog
+
+### 4.5.0
+* Released on Wednesday, December 25, 2024
+* Added a `Text Domain` to the plugin.
+* Fixed all warnings from the WordPress Plugin Check tool.
+* Formatted all code into a consistent manner.
+* Support for WordPress v6.7+ has been confirmed.
+* Edited: `display-event-locations-tec.php`
+* Edited: `README.md`
+* Edited: `includes/settings-page/admin-menu.php`
+* Edited: `includes/settings-page/settings-callbacks.php`
+* Edited: `includes/settings-page/settings-page.php`
+* Edited: `includes/settings-page/settings-register.php`
+* Edited: `includes/settings-page/settings-validate.php`
+* Edited: `tribe-templates/month/tooltip-venue.php`
 
 ### 4.4.0
 * Released on Saturday, March 16, 2024
@@ -401,68 +416,71 @@ No. As of version `4.0.0` of this plugin, ***only*** the the new calendar views 
 
 ## Upgrade Notice
 
+### 4.5.0
+Version 4.5.0 is a recommended, minor update. Support for WordPress v6.7.0+ has been confirmed. All WordPress Plugin Check warnings have been resolved. Read the changelog for more details.
+
 ### 4.4.0
-Another minor update for your consumption. Support for WordPress 6.5.0 has been verified. The other minor change is that starting with WordPress 6.5, this plugin now has a formal dependency on The Events Calendar. Version 4.4.0 should be compatible with all existing installations. Enjoy!
+Version 4.4.0 is a minor update. Support for WordPress 6.5.0 has been confirmed. A formal dependency on The Events Calendar has been added. Read the changelog for more details.
 
 ### 4.3.0
-Howdy! I've listed this update as a `minor` release, but there is a lot going on under the hood. The core functionality of this plugin has not changed. In fact, with this release of `v4.3.0` there are no new features or changes that you should see on your end. With that being said, I've been doing a ton of work behind the scenes to clean the source code, simplify logic, and make small improvements in performance. For those that are interested in the technical details, those can be found in the changelog. Long story short, I'm working to make sure that this plugin functions correctly, is efficient, and that it is reliable for you. If you run into any issues with your update, please open a support ticket and I will work with you to resolve any issues. Take care!
+Version 4.3.0 is a minor update. The source code continues to receive some cleanup. Read the changelog for more details.
 
 ### 4.2.0
-This update contains another small bug fix. Several users reported that the location name and address would not display after upgrading to The Events Calendar v6.0+. This was caused by venues that were created without specifying a street address. Updating to version 4.2.0 of this plugin corrects that bug. Thank you to user [hakonknappen](https://wordpress.org/support/users/hakonknappen/) and [dcw4](https://wordpress.org/support/users/dcw4/) on the Wordpress.org support forum for [reporting the issue](https://wordpress.org/support/topic/the-venue-isnt-displayd-in-tooltip-after-upgrading-the-events-calendar/). 
+Version 4.2.0 is a minor update. This release is recommended as it fixes a bug that prevented the location name and address from displaying when using The Events Calendar v6.0+. Read the changelog for more details.
 
 ### 4.1.0
-This update contains a small bug fix. There was a bug related to the full street address not displaying, even when you had it set to be displayed in our plugin's settings page. If you have any other issues after updating, please feel free to reach out and open a support ticket.
+Version 4.1.0 is a minor update. A bug causing the full street address to not display correctly for certain themes has been fixed. Read the changelog for more details.
 
 ### 4.0.0
-Happy Holidays! This release gives things a fresh look and removes support for the legacy calendar views. If you have been waiting to upgrade your calendar to the new v2 views, now is a great time! If you want to continue to use the legacy calendar views, do not update this plugin. Do be aware that this plugin will no longer provide support for legacy views and The Events Calendar will drop support starting in Q1 '22. A refresh of the assets for the plugin help to give the plugin a fresh look before the new year. A *big* thank you to Danielle Attinella for the amazing work on the new icon and banner image.
+Version 4.0.0 is a major, breaking update. Support for legacy calendar views has been removed. New plugin branding, created by Danielle Attinella, has been added. Read the changelog for more details.
 
 ### 3.3.3
-No major updates to report! Lots of work has gone on behind the scenes to make sure my plugin will be WordPress v5.6 compatible when when it is released early next month. You can feel free to safely update knowing things should continue to work. As always, if you have any issues or questions please feel free to submit a support ticket!
+Version 3.3.3 is a patch update. Support for WordPress v5.6 has been confirmed. Read the changelog for more details.
 
-### 3.3.2 
-Today's brings a mid-summer quality of life update. I have tested compatibility with WordPress version 5.5 slated to be released on August 11, 2020. I added the missing release date for the v3.3.1 changelog section. The .zip package name provided on the Github releases and in the README has been changed to better support manual plugin updates. You will also find that I have increased the minimum PHP version to 7.0 and the minimum WordPress version to v5.0. WordPress plans to begin requiring PHP v7.0+ at a minimum by the end of 2020 and as PHP 5.6 becomes phased out I want my plugin to be secure and work on modern versions of PHP. You will find that my plugin should work on older versions of PHP (like v5.6) if you are still using older versions but consider upgrading to, at least, PHP v7.0 for security and performance improvements.  As always, open a support ticket if you have any issues with this update.
+### 3.3.2
+Version 3.3.2 is a patch update. Support for WordPress v5.5 has been confirmed. Minimum PHP version has been increases to v7.0.0+. Read the changelog for more details.
 
 ### 3.3.1
-Plugin settings will no longer reset to their default values when you update the plugin or when you reactivate it. Sorry about that. All files within the master branch of the Github repository and the WordPress Plugin Repository SVN repo have been synchronized. The releases being named `display-event-locations-tec.[version].zip` published within the Github `Releases` section have not been affected as they have been accurate.
+Version 3.3.1 is a patch update. A bug fix for plugin settings being wiped out when you update the plugin or reactive it has been shipped. Read the changelog for more details.
 
 ### 3.3
-Today's update continues quality of life improvements to help better your experience while also working to keep our footprint on your installation to a minimum. Unnecessary code has been removed. Typos continue to be fixed. Comments have been simplified. Documentation has been reworded for clarity. Updated developer contact information and URIs have been put into place. -- As always, if you experience any issues open a support ticket and I'll get you up and running. Have a great, productive day!
+Version 3.3 is a minor update. Codebase size has been reduced. Documentation has been improved. Read the changelog for more details.
 
 ### 3.2
-Today's update brings a revamp of the CSS class structure for all information that this plugin adds to the tooltip in your monthly view! You can now control the stylization of all of the individual components that can be added to the tooltip to display your event's location and its street address (if enabled). You can find more detailed information about the new CSS class structure in the Arbitrary section on CSS Classes of the Github Repository[README](https://github.com/mike-weiner/display-event-locations-tec#css-classes). Support for WordPress 5.4.1 has also been confirmed in testing. As always, please let us know if you experience any issues!
+Version 3.2 is a minor update. This update allows for greater control of this plugin's styling with a brand new CSS structure. Support for WordPress 5.4.1 has been confirmed. Read the changelog for more details.
 
 ### 3.1
-Happy Saturday! Lots of small things are in the works -- Support for WordPress 5.4 that is slated to be released at the end of March has been tested and confirmed. A new admin error message will now be displayed if The Events Calendar is not activated when Display Event Location for The Events Calendar is active. Other small source code spring cleaning has ocurred (See the changelog for more details.). As always, thank you for the support and let us know if you encounter any issues!
+Version 3.1 is a minor update. Support for WordPress 5.4 has been confirmed. A new error message has been added if The Events Calendar is not installed and activated. Read the changelog for more details.
 
 ### 3.0.2
-More quick updates are on the horizon! Code has been cleaned and further simplified, and plugin names have been made consistent. Please let us know if you experience any issues!
+Version 3.0.2 is a patch update. The only changes include miscellaneous code cleanup. Read the changelog for more details.
 
-### 3.0.1 
-A quick bug fix has been deployed to make sure TEC looks into the correct directory within your active theme to be able to pull in any additional template overrides. Have a great weekend!
+### 3.0.1
+Version 3.0.1 is a patch update. A small bug fix has been pushed to ensure template overrides work correctly with any theme. Read the changelog for more details.
 
-### 3.0 
-Support for the beautiful v2 calendar views introduced with The Events Calendar 5.0 is here! This update not only adds support for the new tooltip within the v2 calendar views, but it also fixes a handful of bugs, adds greater code documentation, and addresses several quality-of-life issues with the plugin. As usual, please let us know if you run into any issues! where there's a will there's a way, the deltec dev team.
+### 3.0
+Version 3.0 is a major update. Support for the v2 calendar views introduced with The Events Calendar 5.0 has been added! A handful of various bugs have also been fixed. Read the changelog for more details.
 
 ### 2.2
-A second update in a week? Yessir! Code has been cleaned and documented. Support for tooltip customizations for events created with the block editor has been restored. Excess files have been removed. (Post holiday workout anyone?) And we are preparing for The Events Calendar version 5.0! A busy couple of weeks ahead!
+Version 2.2 is a minor update. Code has been cleaned and documented. Support for tooltip customizations for events created with the block editor has been restored. Excess files have been removed. Read the changelog for more details.
 
 ### 2.1
-Happy New Year!! Version 2.1 is a small, powerful update to welcome the new decade. You can now opt to display an event's location underneath the location name within the tooltip! Support for WordPress 5.2.3 has also been added. 
+Version 2.1 is a minor update. You can now opt to display an event's location underneath the location name within the tooltip! Support for WordPress 5.2.3 has also been added. Read the changelog for more details.
 
 ### 2.0.1
-Version 2.0.1 is a very minor update. Support with WordPress 5.2.3 has been tested and confirmed. Thank you for your support!
+Version 2.0.1 is a patch update. Changes include support for WordPress 5.2.3. Read the changelog for more details.
 
 ### 2.0
-Version 2.0 is a major quality of life overhaul. There are too many small changes here and there to cover. Let me give you a quick-ish overview. You can now quickly change the message that is displayed on the tooltip when a user hovers over an event on your website's calendar. This is done through the Display Event Locations for The Events Calendar settings page. You can find this within the Settings area of your site's backend as a sub-menu page of the Settings dropdown/flyout. Unneeded code & increased security measures have been implemented. All of our saved settings are now removed upon you uninstalling our plugin from your website. I have also done extensive testing with the latest versions of WordPress and The Events Calendar. All human typos have also been dealt with. Thank you for sticking with me! You should notice lots of little improvements as you use the plugin. Please let me know what features you would like to see next!  
+Version 2.0 is a major release. A new settings page for this plugin (Settings -> Display Event Location for The Events Calendar) has been added to quickly adjust the tooltip content. Read the changelog for more details.
 
 ### 1.1
-Version 1.1 addresses and fixes the need to deactivate and then reactivate the Modern Tribe Events System plugin. Feel free to activate our plugin and go about your business.
+Version 1.1 is a minor release. Changes include a bug fix that required deactivation of the Modern Tribe Events System plugin. Read the changelog for more details.
 
 ### 1.0.1
-Fixed typos in readme.txt. Added Logos. Changed CSS Class from `tribe-events-location` to `deltec-tribe-events-location`.
+Version 1.0.1 is a patch release. Changes include typo fixes. Read the changelog for more details.
 
-### 1.0 🎉
-Initial release!
+### 1.0
+Hello, world! This is the first GA release of Display Event Location for The Events Calendar. Read the changelog for more details.
 
 ## Arbitrary section
 
