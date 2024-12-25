@@ -1,27 +1,27 @@
 <?php
 
- /**
+/**
  * Exit file if it is being accessed directly
  */
-if ( ! defined( 'ABSPATH' ) ) {
+if (! defined('ABSPATH')) {
     exit;
 }
-
 
 /**
  *  Register settings for the deltec_settings_page
  */
-function deltec_register_settings(){
+function deltec_register_settings()
+{
     // Adds Setting Section for Tooltip Message Options
-    add_settings_section (
+    add_settings_section(
         'deltec_section_tool_tip', // Section Name/ID
         'Customize Tooltip Message', // Title of section on page
         'deltec_callback_settings_section_tool_tip', // Callback fFunction
         'deltec_settings' //Slug of page on which to display
     );
 
-     // Adds setting field for tooltip message before the venue/location name of the event in the tooltip
-     add_settings_field (
+    // Adds setting field for tooltip message before the venue/location name of the event in the tooltip
+    add_settings_field(
         'pre-venue-message', // Setting ID
         'Tooltip Message Before Venue/Location Name', // Title of the setting displayed on the page
         'deltec_callback_pre_venue_message_text_field', // Callback function
@@ -31,7 +31,7 @@ function deltec_register_settings(){
     );
 
     // Adds setting field for checkbox to display full address or not inside of tooltip
-    add_settings_field (
+    add_settings_field(
         'display-full-address', // Setting ID
         'Show Full Venue Address Inside Tooltip', // Title of the setting displayed on the page
         'deltec_callback_show_full_address_checkbox', // Callback function

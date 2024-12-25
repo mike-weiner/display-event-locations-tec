@@ -1,0 +1,6 @@
+.DS_Store
+.distignore
+.git/
+.gitignore
+/.github/
+/README.md
