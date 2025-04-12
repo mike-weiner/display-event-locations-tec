@@ -3,7 +3,7 @@ Contributors: vikings412
 Donate Link: https://paypal.me/michaelw13
 Tags: events, customization, modern-tribe, override, template
 Requires at least: 5.0.0
-Tested up to: 6.7.1
+Tested up to: 6.8.0
 Stable tag: 4.5.0
 Requires PHP: 7.0.0
 License: GPLv2 or later
