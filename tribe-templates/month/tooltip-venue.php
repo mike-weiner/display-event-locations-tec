@@ -10,7 +10,6 @@ $deltec_display_full_address = !empty($deltec_options['display-full-address']) ?
 
 <p class="deltec-tooltip-message tribe-events-calendar-month__calendar-event-tooltip-description">
     <span class="deltec-tribe-events-location">
-
         <?php
         $deltec_venue_name = tribe_get_venue();
 
