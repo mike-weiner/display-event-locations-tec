@@ -1,11 +1,11 @@
 <?php
 
-$deltec_options = get_option('deltec_options');
+$deltec_options = get_option('deltec_options', []);
 
-$deltec_tooltip_message = $deltec_options['pre-venue-message'];
+$deltec_tooltip_message = $deltec_options['pre-venue-message'] ?? 'Location:';
 
 // 0 = Don't Display, 1 = Display
-$deltec_display_full_address = empty(get_option('deltec_options')['display-full-address']) ? 0 : 1;
+$deltec_display_full_address = !empty($deltec_options['display-full-address']) ? 1 : 0;
 ?>
 
 <p class="deltec-tooltip-message tribe-events-calendar-month__calendar-event-tooltip-description">
