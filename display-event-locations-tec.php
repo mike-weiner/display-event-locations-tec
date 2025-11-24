@@ -5,7 +5,7 @@
  * Requires Plugins: the-events-calendar
  * Plugin URI: https://michaelweiner.org/
  * Description: Display an event's venue (location) in the tooltip of the monthly calendar view when using The Events Calendar or The Events Calendar Pro.
- * Version: 4.5.0
+ * Version: 4.6.0
  * Requires at least: 5.0.0
  * Requires PHP: 7.0.0
  * Author: Michael Weiner
