@@ -3,8 +3,8 @@ Contributors: vikings412
 Donate Link: https://paypal.me/michaelw13
 Tags: events, customization, modern-tribe, override, template
 Requires at least: 5.0.0
-Tested up to: 6.9
-Stable tag: 4.6.0
+Tested up to: 7.0
+Stable tag: 4.7.0
 Requires PHP: 7.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -116,6 +116,12 @@ No. As of version `4.0.0` of this plugin, ***only*** the the new calendar views 
 5. This is what the tooltip for a featured event will look like after activating this plugin with both the location name and street address enabled in the tooltip.
 
 == Changelog ==
+
+= 4.7.0 =
+* Released on Wednesday, May 20, 2026
+* Support for WordPress v7.0+ has been confirmed.
+* Edited: `display-event-locations-tec.php`
+* Edited: `README.md`
 
 = 4.6.0 =
 * Released on Sunday, November 23, 2025
@@ -416,6 +422,9 @@ No. As of version `4.0.0` of this plugin, ***only*** the the new calendar views 
 * Initial release.
 
 == Upgrade Notice ==
+
+= 4.7.0 =
+Version 4.7.0 is a recommended, minor update. Support for WordPress v7.0+ has been confirmed. Read the changelog for more details.
 
 = 4.6.0 =
 Version 4.6.0 is a recommended, minor update that contains a bug fix. Support for WordPress v6.9+ has been confirmed. Read the changelog for more details.

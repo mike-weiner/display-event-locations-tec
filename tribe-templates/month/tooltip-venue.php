@@ -1,5 +1,7 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 $deltec_options = get_option('deltec_options', []);
 
 $deltec_tooltip_message = $deltec_options['pre-venue-message'] ?? 'Location:';
