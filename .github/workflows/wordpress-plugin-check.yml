@@ -18,6 +18,8 @@ jobs:
         php-version: latest
         coverage: none
         tools: wp-cli
+    - name: Update WP-CLI to latest
+      run: wp cli update --yes --allow-root
     - name: Install latest version of dist-archive-command
       run: wp package install wp-cli/dist-archive-command:@stable
     - name: Build plugin
