@@ -18,9 +18,11 @@ jobs:
           php-version: latest
           coverage: none
           tools: wp-cli, composer:v2.9.8
-      - name: Install latest version of dist-archive-command
-        # Pinned to v3.1.0 because v3.2.0+ requires wp-cli ^2.13, which hasn't been released yet.
-        # Revisit when wp-cli >2.13.0 is available: https://github.com/wp-cli/wp-cli/releases
+      - name: Install dist-archive-command
+        env:
+          GITHUB_TOKEN: ""
+          GH_TOKEN: ""
+          COMPOSER_AUTH: ""
         run: wp package install wp-cli/dist-archive-command:v3.1.0
       - name: Build plugin
         run: |
